@@ -15,3 +15,11 @@
     font-weight: bold;
     cursor: pointer;
 }
+.logo {
+    font-size: 500px;
+    color: red;
+}
+.image > img {
+    height: 100px;
+    width: 100px;
+}
