@@ -1,27 +1,29 @@
 import PropTypes from "prop-types";
+import styles from "../../styles/Home.module.css";
 
-const Navigation = ({ classHeader, classLogo, strongText, spanText }) => (
-    <header className={classHeader}>
-        <a className={classLogo} href="index.html">
-            <strong>{strongText}</strong>
-            <span>{spanText}</span>
-        </a>
-        <nav>
-            <a href="#menu">Menu</a>
-        </nav>
-    </header>
-);
+const Navigation = ({ classStyle, strongText, spanText }) => {
+    const classReserve = `${styles.alt} ${classStyle}`;
+    return (
+        <header id={styles.header} className={classReserve}>
+            <a className={styles.logo} href="/">
+                <strong>{strongText}</strong>
+                <span>{spanText}</span>
+            </a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+    );
+};
 
 Navigation.propTypes = {
-    classHeader: PropTypes.string,
-    classLogo: PropTypes.string,
+    classStyle: PropTypes.string,
     strongText: PropTypes.node.isRequired,
     spanText: PropTypes.node.isRequired,
 };
 
 Navigation.defaultProps = {
-    classHeader: "",
-    classLogo: "",
+    classStyle: "",
 };
 
 export default Navigation;

@@ -1,25 +1,16 @@
 import PropTypes from "prop-types";
+import styles from "../../styles/Home.module.css";
 
-const SectionDescription = ({
-    classInner,
-    classMajor,
-    classActions,
-    classButton,
-    classNext,
-    linkRef,
-    titleText,
-    descriptionText,
-    textButton,
-}) => {
-    const classStarted = `${classButton} ${classNext}`;
+const SectionDescription = ({ linkRef, titleText, descriptionText, textButton }) => {
+    const classStarted = `${styles.button} ${styles.next}`;
     return (
-        <section id="two" className={classMajor}>
-            <div className={classInner}>
-                <header className={classMajor}>
+        <section id={styles.two} className={styles.major}>
+            <div className={styles.inner}>
+                <header className={styles.major}>
                     <h2>{titleText}</h2>
                 </header>
                 <p>{descriptionText}</p>
-                <ul className={classActions}>
+                <ul className={styles.actions}>
                     <li>
                         <a href={linkRef} className={classStarted}>
                             {textButton}
@@ -32,23 +23,10 @@ const SectionDescription = ({
 };
 
 SectionDescription.propTypes = {
-    classInner: PropTypes.string,
-    classMajor: PropTypes.string,
-    classActions: PropTypes.string,
-    classButton: PropTypes.string,
-    classNext: PropTypes.string,
     linkRef: PropTypes.node.isRequired,
     titleText: PropTypes.node.isRequired,
     descriptionText: PropTypes.node.isRequired,
     textButton: PropTypes.node.isRequired,
-};
-
-SectionDescription.defaultProps = {
-    classInner: "",
-    classMajor: "",
-    classActions: "",
-    classButton: "",
-    classNext: "",
 };
 
 export default SectionDescription;

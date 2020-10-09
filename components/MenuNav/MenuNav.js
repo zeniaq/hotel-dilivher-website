@@ -1,19 +1,12 @@
-import PropTypes from "prop-types";
+import styles from "../../styles/Home.module.css";
 
-const MenuNav = ({
-    classButton,
-    classPrimary,
-    classFit,
-    classLinks,
-    classActions,
-    classStacked,
-}) => {
-    const classRegister = `${classButton} ${classPrimary} ${classFit}`;
-    const classSession = `${classButton} ${classFit}`;
-    const classForm = `${classActions} ${classStacked}`;
+const MenuNav = () => {
+    const classRegister = `${styles.button} ${styles.primary} ${styles.fit}`;
+    const classSession = `${styles.btton} ${styles.fit}`;
+    const classForm = `${styles.actions} ${styles.stacked}`;
     return (
-        <nav id="menu">
-            <ul className={classLinks}>
+        <nav id={styles.menu}>
+            <ul className={styles.links}>
                 <li>
                     <a href="index.html">Inicio</a>
                 </li>
@@ -41,24 +34,6 @@ const MenuNav = ({
             </ul>
         </nav>
     );
-};
-
-MenuNav.propTypes = {
-    classButton: PropTypes.string,
-    classPrimary: PropTypes.string,
-    classFit: PropTypes.string,
-    classLinks: PropTypes.string,
-    classActions: PropTypes.string,
-    classStacked: PropTypes.string,
-};
-
-MenuNav.defaultProps = {
-    classButton: "",
-    classPrimary: "",
-    classFit: "",
-    classLinks: "",
-    classActions: "",
-    classStacked: "",
 };
 
 export default MenuNav;

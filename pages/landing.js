@@ -10,48 +10,64 @@ import SectionContact from "../components/SectionContact";
 export default function Home() {
     return (
         <div className={styles.container}>
-            <Navigation strongText="Hotel" spanText="Dilivher" />
+            <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
             <MenuNav />
             <Banner
-                titleText="Tú descanso, nuestra razon de ser."
-                descriptionText="Amplio estacionamiento, area de juegos infantiles,
-                comodidad, esmero y servicio que hará su estancia placentera."
-                textButton="Reservar Ahora"
-                imageSrc="banner.jpg"
+                titleText="Landing"
+                descriptionText="Lorem ipsum dolor sit amet nullam consequat sed veroeros. tempus adipiscing nulla."
+                imageSrc="images/pic07.jpeg"
             />
             <div id={styles.main}>
-                <section id={styles.one} className={styles.tiles}>
+                <section id="one" className={styles.tiles}>
                     <SectionArticle
+                        classImage={styles.image}
+                        classMajor={styles.major}
+                        classLink={styles.link}
                         titleText="Aliquam"
                         descriptionText="Ipsum dolor sit amet"
                         imageSrc="images/pic01.jpeg"
                         linkRef="/landing"
                     />
                     <SectionArticle
+                        classImage={styles.image}
+                        classMajor={styles.major}
+                        classLink={styles.link}
                         titleText="Aliquam"
                         descriptionText="Ipsum dolor sit amet"
                         imageSrc="images/pic02.jpeg"
                         linkRef="/landing"
                     />
                     <SectionArticle
+                        classImage={styles.image}
+                        classMajor={styles.major}
+                        classLink={styles.link}
                         titleText="Aliquam"
                         descriptionText="Ipsum dolor sit amet"
                         imageSrc="images/pic03.jpeg"
                         linkRef="/landing"
                     />
                     <SectionArticle
+                        classImage={styles.image}
+                        classMajor={styles.major}
+                        classLink={styles.link}
                         titleText="Aliquam"
                         descriptionText="Ipsum dolor sit amet"
                         imageSrc="images/pic04.jpeg"
                         linkRef="/landing"
                     />
                     <SectionArticle
+                        classImage={styles.image}
+                        classMajor={styles.major}
+                        classLink={styles.link}
                         titleText="Aliquam"
                         descriptionText="Ipsum dolor sit amet"
                         imageSrc="images/pic05.jpeg"
                         linkRef="/landing"
                     />
                     <SectionArticle
+                        classImage={styles.image}
+                        classMajor={styles.major}
+                        classLink={styles.link}
                         titleText="Aliquam"
                         descriptionText="Ipsum dolor sit amet"
                         imageSrc="images/pic06.jpeg"
@@ -59,6 +75,11 @@ export default function Home() {
                     />
                 </section>
                 <SectionDescription
+                    classInner={styles.inner}
+                    classMajor={styles.major}
+                    classActions={styles.actions}
+                    classButton={styles.button}
+                    classNext={styles.next}
                     linkRef="/landing"
                     titleText="Massa libero"
                     descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
