@@ -1,21 +1,14 @@
 import PropTypes from "prop-types";
+import styles from "../../styles/Home.module.css";
 
-const SectionArticle = ({
-    classImage,
-    classMajor,
-    classLink,
-    titleText,
-    descriptionText,
-    imageSrc,
-    linkRef,
-}) => (
+const SectionArticle = ({ titleText, descriptionText, imageSrc, linkRef }) => (
     <article>
-        <span className={classImage}>
+        <span className={styles.image}>
             <img src={imageSrc} alt={titleText} />
         </span>
-        <header className={classMajor}>
+        <header className={styles.major}>
             <h3>
-                <a href={linkRef} className={classLink}>
+                <a href={linkRef} className={styles.link}>
                     {titleText}
                 </a>
             </h3>
@@ -25,19 +18,10 @@ const SectionArticle = ({
 );
 
 SectionArticle.propTypes = {
-    classImage: PropTypes.string,
-    classMajor: PropTypes.string,
-    classLink: PropTypes.string,
     titleText: PropTypes.node.isRequired,
     descriptionText: PropTypes.node.isRequired,
     imageSrc: PropTypes.node.isRequired,
     linkRef: PropTypes.node.isRequired,
-};
-
-SectionArticle.defaultProps = {
-    classImage: "",
-    classMajor: "",
-    classLink: "",
 };
 
 export default SectionArticle;

@@ -7,7 +7,7 @@ const Footer = () => {
     const classGithub = `${styles.icon} ${styles.brands} ${styles.alt} fa-github`;
     const classLinkedin = `${styles.icon} ${styles.brands} ${styles.alt} fa-linkedin-in`;
     return (
-        <footer id="footer">
+        <footer id={styles.footer}>
             <div className={styles.inner}>
                 <ul className={styles.icons}>
                     <li>

@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.button {
+.input {
     background: #fff;
     border: 3px solid #000;
     padding: 1em;
@@ -15,9 +15,22 @@
     font-weight: bold;
     cursor: pointer;
 }
+.primary {
+    background: rgb(196, 8, 8);
+    border: 3px solid rgb(248, 244, 12);
+    padding: 1em;
+    text-transform: lowercase;
+    font-weight: bold;
+    cursor: pointer;
+}
 .logo {
-    font-size: 500px;
+    font-size: 100px;
+}
+#header {
     color: red;
+}
+.style2 {
+    border: 2px solid blue;
 }
 .image > img {
     height: 100px;

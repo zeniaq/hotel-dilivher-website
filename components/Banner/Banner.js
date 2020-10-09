@@ -1,33 +1,30 @@
 import PropTypes from "prop-types";
+import styles from "../../styles/Home.module.css";
 
-const Banner = ({
-    classInner,
-    classMajor,
-    classContent,
-    classActions,
-    classButton,
-    classNext,
-    classScrolly,
-    titleText,
-    descriptionText,
-    textButton,
-}) => {
-    const classReserve = `${classButton} ${classNext} ${classScrolly}`;
+const Banner = ({ titleText, descriptionText, textButton, imageSrc }) => {
+    const classReserve = `${styles.button} ${styles.next} ${styles.scrolly}`;
     return (
-        <section id="banner" className={classMajor}>
-            <div className={classInner}>
-                <header className={classMajor}>
+        <section id={styles.banner} className={styles.major}>
+            <div className={styles.inner}>
+                {imageSrc !== "" ? (
+                    <span className={styles.image}>
+                        <img src={imageSrc} alt={titleText} />
+                    </span>
+                ) : null}
+                <header className={styles.major}>
                     <h1>{titleText}</h1>
                 </header>
-                <div className={classContent}>
+                <div className={styles.content}>
                     <p>{descriptionText}</p>
-                    <ul className={classActions}>
-                        <li>
-                            <a href="#one" className={classReserve}>
-                                {textButton}
-                            </a>
-                        </li>
-                    </ul>
+                    {textButton !== undefined ? (
+                        <ul className={styles.actions}>
+                            <li>
+                                <a href="#one" className={classReserve}>
+                                    {textButton}
+                                </a>
+                            </li>
+                        </ul>
+                    ) : null}
                 </div>
             </div>
         </section>
@@ -35,26 +32,10 @@ const Banner = ({
 };
 
 Banner.propTypes = {
-    classInner: PropTypes.string,
-    classMajor: PropTypes.string,
-    classContent: PropTypes.string,
-    classActions: PropTypes.string,
-    classButton: PropTypes.string,
-    classNext: PropTypes.string,
-    classScrolly: PropTypes.string,
     titleText: PropTypes.node.isRequired,
     descriptionText: PropTypes.node.isRequired,
     textButton: PropTypes.node.isRequired,
-};
-
-Banner.defaultProps = {
-    classInner: "",
-    classMajor: "",
-    classContent: "",
-    classActions: "",
-    classButton: "",
-    classNext: "",
-    classScrolly: "",
+    imageSrc: PropTypes.node.isRequired,
 };
 
 export default Banner;
