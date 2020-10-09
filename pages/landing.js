@@ -1,15 +1,15 @@
 import MenuNav from "../components/MenuNav";
 import Navigation from "../components/Navigation";
-import SectionArticle from "../components/SectionArticle";
 import Banner from "../components/Banner";
 import styles from "../styles/Home.module.css";
 import SectionDescription from "../components/SectionDescription";
 import Footer from "../components/Footer";
 import SectionContact from "../components/SectionContact";
+import SectionRooms from "../components/SectionRooms";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div id={styles.wrapper}>
             <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
             <MenuNav />
             <Banner
@@ -18,71 +18,39 @@ export default function Home() {
                 imageSrc="images/pic07.jpeg"
             />
             <div id={styles.main}>
-                <section id="one" className={styles.tiles}>
-                    <SectionArticle
-                        classImage={styles.image}
-                        classMajor={styles.major}
-                        classLink={styles.link}
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic01.jpeg"
-                        linkRef="/landing"
+                <SectionDescription
+                    titleText="Sed amet aliquam"
+                    descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna."
+                    classID={styles.one}
+                />
+                <section id={styles.two} className={styles.spotlights}>
+                    <SectionRooms
+                        titleText="Orci maecenas"
+                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
+                        imageSrc="images/pic08.jpeg"
+                        linkRef="/generic"
+                        dataPosition="center center"
                     />
-                    <SectionArticle
-                        classImage={styles.image}
-                        classMajor={styles.major}
-                        classLink={styles.link}
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic02.jpeg"
-                        linkRef="/landing"
+                    <SectionRooms
+                        titleText="Rhoncus magna"
+                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
+                        imageSrc="images/pic09.jpeg"
+                        linkRef="/generic"
+                        dataPosition="top center"
                     />
-                    <SectionArticle
-                        classImage={styles.image}
-                        classMajor={styles.major}
-                        classLink={styles.link}
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic03.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        classImage={styles.image}
-                        classMajor={styles.major}
-                        classLink={styles.link}
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic04.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        classImage={styles.image}
-                        classMajor={styles.major}
-                        classLink={styles.link}
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic05.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        classImage={styles.image}
-                        classMajor={styles.major}
-                        classLink={styles.link}
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic06.jpeg"
-                        linkRef="/landing"
+                    <SectionRooms
+                        titleText="Sed nunc ligula"
+                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
+                        imageSrc="images/pic10.jpeg"
+                        linkRef="/generic"
+                        dataPosition="25% 25%"
                     />
                 </section>
                 <SectionDescription
-                    classInner={styles.inner}
-                    classMajor={styles.major}
-                    classActions={styles.actions}
-                    classButton={styles.button}
-                    classNext={styles.next}
-                    linkRef="/landing"
+                    linkRef="/generic"
                     titleText="Massa libero"
                     descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
+                    classID={styles.one}
                     textButton="Get Started"
                 />
             </div>
