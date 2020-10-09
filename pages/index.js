@@ -9,7 +9,7 @@ import SectionContact from "../components/SectionContact";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div id={styles.wrapper}>
             <Navigation strongText="Hotel" spanText="Dilivher" />
             <MenuNav />
             <Banner
@@ -63,6 +63,7 @@ export default function Home() {
                     titleText="Massa libero"
                     descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
                     textButton="Get Started"
+                    classID={styles.two}
                 />
             </div>
             <SectionContact />
