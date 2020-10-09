@@ -11,11 +11,11 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <Navigation strongText="Hotel" spanText="Dilivher" />
-            <MenuNav />
+            {/* <MenuNav /> */}
             <Banner
                 titleText="Tú descanso, nuestra razon de ser."
-                descriptionText="Amplio estacionamiento, area de juegos infantiles,
-                comodidad, esmero y servicio que hará su estancia placentera."
+                descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
+                descriptionText2="comodidad, esmero y servicio que hará su estancia placentera."
                 textButton="Reservar Ahora"
                 imageSrc="banner.jpg"
             />
