@@ -6,15 +6,26 @@ import SectionDescription from "../components/SectionDescription";
 import Footer from "../components/Footer";
 import SectionContact from "../components/SectionContact";
 import SectionRooms from "../components/SectionRooms";
+import dataRooms from "../components/SectionRooms/rooms";
 
 export default function Home() {
+    const data = dataRooms.map((rooms) => (
+        <SectionRooms
+            titleText={rooms.titleText}
+            descriptionText={rooms.descriptionText}
+            imageSrc={rooms.imageSrc}
+            linkRef={rooms.linkRef}
+            dataPosition={rooms.dataPosition}
+        />
+    ));
     return (
         <div id={styles.wrapper}>
             <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
             <MenuNav />
             <Banner
                 titleText="Landing"
-                descriptionText="Lorem ipsum dolor sit amet nullam consequat sed veroeros. tempus adipiscing nulla."
+                descriptionText1="Lorem ipsum dolor sit amet nullam consequat"
+                descriptionText2="sed veroeros. tempus adipiscing nulla."
                 imageSrc="images/pic07.jpeg"
             />
             <div id={styles.main}>
@@ -24,27 +35,7 @@ export default function Home() {
                     classID={styles.one}
                 />
                 <section id={styles.two} className={styles.spotlights}>
-                    <SectionRooms
-                        titleText="Orci maecenas"
-                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
-                        imageSrc="images/pic08.jpeg"
-                        linkRef="/generic"
-                        dataPosition="center center"
-                    />
-                    <SectionRooms
-                        titleText="Rhoncus magna"
-                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
-                        imageSrc="images/pic09.jpeg"
-                        linkRef="/generic"
-                        dataPosition="top center"
-                    />
-                    <SectionRooms
-                        titleText="Sed nunc ligula"
-                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus."
-                        imageSrc="images/pic10.jpeg"
-                        linkRef="/generic"
-                        dataPosition="25% 25%"
-                    />
+                    {data}
                 </section>
                 <SectionDescription
                     linkRef="/generic"
