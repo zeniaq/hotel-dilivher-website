@@ -11,6 +11,7 @@ import dataRooms from "../components/SectionRooms/rooms";
 export default function Home() {
     const data = dataRooms.map((rooms) => (
         <SectionRooms
+            key={rooms.titleText}
             titleText={rooms.titleText}
             descriptionText={rooms.descriptionText}
             imageSrc={rooms.imageSrc}

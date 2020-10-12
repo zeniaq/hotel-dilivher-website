@@ -11,6 +11,7 @@ import dataArticles from "../components/SectionArticle/articles";
 export default function Home() {
     const data = dataArticles.map((articles) => (
         <SectionArticle
+            key={articles.titleText}
             titleText={articles.titleText}
             descriptionText={articles.descriptionText}
             imageSrc={articles.imageSrc}
