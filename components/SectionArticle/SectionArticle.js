@@ -18,10 +18,17 @@ const SectionArticle = ({ titleText, descriptionText, imageSrc, linkRef }) => (
 );
 
 SectionArticle.propTypes = {
-    titleText: PropTypes.node.isRequired,
-    descriptionText: PropTypes.node.isRequired,
-    imageSrc: PropTypes.node.isRequired,
-    linkRef: PropTypes.node.isRequired,
+    titleText: PropTypes.string,
+    descriptionText: PropTypes.string,
+    imageSrc: PropTypes.string,
+    linkRef: PropTypes.string,
+};
+
+SectionArticle.defaultProps = {
+    titleText: "",
+    descriptionText: "",
+    imageSrc: "",
+    linkRef: "",
 };
 
 export default SectionArticle;
