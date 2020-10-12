@@ -27,15 +27,17 @@ const SectionGeneric = ({
 };
 
 SectionGeneric.propTypes = {
-    titleText: PropTypes.node.isRequired,
+    titleText: PropTypes.string,
     descriptionText1: PropTypes.string,
     descriptionText2: PropTypes.string,
     descriptionText3: PropTypes.string,
-    imageSrc: PropTypes.node.isRequired,
+    imageSrc: PropTypes.string,
 };
 SectionGeneric.defaultProps = {
     descriptionText1: "",
     descriptionText2: "",
     descriptionText3: "",
+    titleText: "",
+    imageSrc: "",
 };
 export default SectionGeneric;

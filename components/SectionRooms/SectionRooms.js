@@ -25,11 +25,19 @@ const SectionRooms = ({ titleText, descriptionText, imageSrc, linkRef, dataPosit
 );
 
 SectionRooms.propTypes = {
-    titleText: PropTypes.node.isRequired,
-    descriptionText: PropTypes.node.isRequired,
-    imageSrc: PropTypes.node.isRequired,
-    linkRef: PropTypes.node.isRequired,
-    dataPosition: PropTypes.node.isRequired,
+    titleText: PropTypes.string,
+    descriptionText: PropTypes.string,
+    imageSrc: PropTypes.string,
+    linkRef: PropTypes.string,
+    dataPosition: PropTypes.string,
+};
+
+SectionRooms.defaultProps = {
+    titleText: "",
+    descriptionText: "",
+    imageSrc: "",
+    linkRef: "",
+    dataPosition: "",
 };
 
 export default SectionRooms;

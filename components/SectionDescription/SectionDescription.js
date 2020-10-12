@@ -10,7 +10,7 @@ const SectionDescription = ({ classID, linkRef, titleText, descriptionText, text
                     <h2>{titleText}</h2>
                 </header>
                 <p>{descriptionText}</p>
-                {textButton !== undefined ? (
+                {textButton ? (
                     <ul className={styles.actions}>
                         <li>
                             <a href={linkRef} className={classStarted}>
@@ -25,11 +25,18 @@ const SectionDescription = ({ classID, linkRef, titleText, descriptionText, text
 };
 
 SectionDescription.propTypes = {
-    linkRef: PropTypes.node.isRequired,
-    titleText: PropTypes.node.isRequired,
-    descriptionText: PropTypes.node.isRequired,
-    textButton: PropTypes.node.isRequired,
-    classID: PropTypes.node.isRequired,
+    linkRef: PropTypes.string,
+    titleText: PropTypes.string,
+    descriptionText: PropTypes.string,
+    textButton: PropTypes.string,
+    classID: PropTypes.string,
+};
+SectionDescription.defaultProps = {
+    linkRef: "",
+    titleText: "",
+    descriptionText: "",
+    textButton: "",
+    classID: "",
 };
 
 export default SectionDescription;

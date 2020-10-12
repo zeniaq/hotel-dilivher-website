@@ -11,13 +11,12 @@ export default function Home() {
     return (
         <div id={styles.wrapper}>
             <Navigation strongText="Hotel" spanText="Dilivher" />
-            {/* <MenuNav /> */}
+            <MenuNav />
             <Banner
                 titleText="Tú descanso, nuestra razon de ser."
                 descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
                 descriptionText2="comodidad, esmero y servicio que hará su estancia placentera."
                 textButton="Reservar Ahora"
-                imageSrc="banner.jpg"
             />
             <div id={styles.main}>
                 <section id={styles.one} className={styles.tiles}>

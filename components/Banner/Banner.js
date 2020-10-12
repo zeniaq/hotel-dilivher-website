@@ -6,22 +6,24 @@ const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, ima
     return (
         <section id={styles.banner} className={styles.major}>
             <div className={styles.inner}>
-                {imageSrc !== "" ? (
+                {imageSrc ? (
                     <span className={styles.image}>
-                        {/* <img src={imageSrc} alt={titleText} /> */}
+                        <img src={imageSrc} alt={titleText} />
                     </span>
                 ) : null}
                 <header className={styles.major}>
                     <h1>{titleText}</h1>
                 </header>
                 <div className={styles.content}>
-                    <p>{descriptionText1}<br></br>
-                    {descriptionText2}
+                    <p>
+                        {descriptionText1}
+                        <br />
+                        {descriptionText2}
                     </p>
-                    {textButton !== undefined ? (
+                    {textButton ? (
                         <ul className={styles.actions}>
                             <li>
-                                <a href="#one" className={classReserve}>
+                                <a href="#one" clssName={classReserve}>
                                     {textButton}
                                 </a>
                             </li>
@@ -34,10 +36,19 @@ const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, ima
 };
 
 Banner.propTypes = {
-    titleText: PropTypes.node.isRequired,
-    descriptionText: PropTypes.node.isRequired,
-    textButton: PropTypes.node.isRequired,
-    imageSrc: PropTypes.node.isRequired,
+    titleText: PropTypes.string,
+    descriptionText1: PropTypes.string,
+    descriptionText2: PropTypes.string,
+    textButton: PropTypes.string,
+    imageSrc: PropTypes.string,
+};
+
+Banner.defaultProps = {
+    titleText: "",
+    descriptionText1: "",
+    descriptionText2: "",
+    textButton: "",
+    imageSrc: "",
 };
 
 export default Banner;

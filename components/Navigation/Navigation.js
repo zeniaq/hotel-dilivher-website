@@ -4,7 +4,7 @@ import styles from "../../styles/Home.module.css";
 const Navigation = ({ classStyle, strongText, spanText }) => {
     const classReserve = `${styles.alt} ${classStyle}`;
     return (
-        <header id={styles.header} className={styles.reveal, styles.alt}>
+        <header id={styles.header} className={classReserve}>
             <a className={styles.logo} href="/">
                 <strong>{strongText}</strong>
                 <span>{spanText}</span>
@@ -18,12 +18,14 @@ const Navigation = ({ classStyle, strongText, spanText }) => {
 
 Navigation.propTypes = {
     classStyle: PropTypes.string,
-    strongText: PropTypes.node.isRequired,
-    spanText: PropTypes.node.isRequired,
+    strongText: PropTypes.string,
+    spanText: PropTypes.string,
 };
 
 Navigation.defaultProps = {
     classStyle: "",
+    strongText: "",
+    spanText: "",
 };
 
 export default Navigation;
