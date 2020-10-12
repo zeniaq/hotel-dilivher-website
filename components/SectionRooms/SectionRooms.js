@@ -36,7 +36,7 @@ SectionRooms.defaultProps = {
     titleText: "",
     descriptionText: "",
     imageSrc: "",
-    linkRef: PropTypes.string,
+    linkRef: "",
     dataPosition: "",
 };
 
