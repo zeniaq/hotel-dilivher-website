@@ -19,8 +19,9 @@ export default function Home() {
             dataPosition={rooms.dataPosition}
         />
     ));
+    const classMainSection = `${styles.two} ${styles.spotlights}`;
     return (
-        <div id={styles.wrapper}>
+        <div className={styles.wrapper}>
             <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
             <MenuNav />
             <Banner
@@ -29,15 +30,13 @@ export default function Home() {
                 descriptionText2="sed veroeros. tempus adipiscing nulla."
                 imageSrc="images/pic07.jpeg"
             />
-            <div id={styles.main}>
+            <div className={styles.main}>
                 <SectionDescription
                     titleText="Sed amet aliquam"
                     descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna."
                     classID={styles.one}
                 />
-                <section id={styles.two} className={styles.spotlights}>
-                    {data}
-                </section>
+                <section className={classMainSection}>{data}</section>
                 <SectionDescription
                     linkRef="/generic"
                     titleText="Massa libero"

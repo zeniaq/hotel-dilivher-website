@@ -18,8 +18,9 @@ export default function Home() {
             linkRef={articles.linkRef}
         />
     ));
+    const classMainSection = `${styles.one} ${styles.tiles}`;
     return (
-        <div id={styles.wrapper}>
+        <div className={styles.wrapper}>
             <Navigation strongText="Hotel" spanText="Dilivher" />
             <MenuNav />
             <Banner
@@ -28,10 +29,8 @@ export default function Home() {
                 descriptionText2="comodidad, esmero y servicio que hará su estancia placentera."
                 textButton="Reservar Ahora"
             />
-            <div id={styles.main}>
-                <section id={styles.one} className={styles.tiles}>
-                    {data}
-                </section>
+            <div className={styles.main}>
+                <section className={classMainSection}>{data}</section>
                 <SectionDescription
                     linkRef="/landing"
                     titleText="Massa libero"

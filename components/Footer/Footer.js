@@ -1,13 +1,13 @@
 import styles from "../../styles/Home.module.css";
 
 const Footer = () => {
-    const classTwitter = `${styles.icon} ${styles.brands} ${styles.alt} fa-twitter`;
-    const classFacebook = `${styles.icon} ${styles.brands} ${styles.alt} fa-facebook-f`;
-    const classInstagram = `${styles.icon} ${styles.brands} ${styles.alt} fa-instagram`;
-    const classGithub = `${styles.icon} ${styles.brands} ${styles.alt} fa-github`;
-    const classLinkedin = `${styles.icon} ${styles.brands} ${styles.alt} fa-linkedin-in`;
+    const classTwitter = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconTwitter}`;
+    const classFacebook = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconFacebook}`;
+    const classInstagram = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconInstagram}`;
+    const classGithub = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconGithub}`;
+    const classLinkedin = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconLinkedin}`;
     return (
-        <footer id={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.inner}>
                 <ul className={styles.icons}>
                     <li>

@@ -6,11 +6,12 @@ import SectionContact from "../components/SectionContact";
 import SectionGeneric from "../components/SectionGeneric/SectionGeneric";
 
 export default function Home() {
+    const classMainSection = `${styles.main} ${styles.alt}`;
     return (
-        <div id={styles.wrapper}>
+        <div className={styles.wrapper}>
             <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
             <MenuNav />
-            <div id={styles.main} className={styles.alt}>
+            <div className={classMainSection}>
                 <SectionGeneric
                     titleText="Generic"
                     imageSrc="images/pic11.jpeg"

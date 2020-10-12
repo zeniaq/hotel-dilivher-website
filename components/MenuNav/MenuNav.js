@@ -5,7 +5,7 @@ const MenuNav = () => {
     const classSession = `${styles.btton} ${styles.fit}`;
     const classForm = `${styles.actions} ${styles.stacked}`;
     return (
-        <nav id={styles.menu}>
+        <nav className={styles.menu}>
             <ul className={styles.links}>
                 <li>
                     <a href="index.html">Inicio</a>
