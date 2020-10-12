@@ -6,8 +6,18 @@ import styles from "../styles/Home.module.css";
 import SectionDescription from "../components/SectionDescription";
 import Footer from "../components/Footer";
 import SectionContact from "../components/SectionContact";
+import dataArticles from "../components/SectionArticle/articles";
 
 export default function Home() {
+    const data = dataArticles.map((articles) => (
+        <SectionArticle
+            key={articles.titleText}
+            titleText={articles.titleText}
+            descriptionText={articles.descriptionText}
+            imageSrc={articles.imageSrc}
+            linkRef={articles.linkRef}
+        />
+    ));
     return (
         <div id={styles.wrapper}>
             <Navigation strongText="Hotel" spanText="Dilivher" />
@@ -20,42 +30,7 @@ export default function Home() {
             />
             <div id={styles.main}>
                 <section id={styles.one} className={styles.tiles}>
-                    <SectionArticle
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic01.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic02.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic03.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic04.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic05.jpeg"
-                        linkRef="/landing"
-                    />
-                    <SectionArticle
-                        titleText="Aliquam"
-                        descriptionText="Ipsum dolor sit amet"
-                        imageSrc="images/pic06.jpeg"
-                        linkRef="/landing"
-                    />
+                    {data}
                 </section>
                 <SectionDescription
                     linkRef="/landing"

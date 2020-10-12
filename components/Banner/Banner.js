@@ -23,7 +23,7 @@ const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, ima
                     {textButton ? (
                         <ul className={styles.actions}>
                             <li>
-                                <a href="#one" clssName={classReserve}>
+                                <a href="#one" className={classReserve}>
                                     {textButton}
                                 </a>
                             </li>

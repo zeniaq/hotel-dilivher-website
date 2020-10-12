@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styles from "../../styles/Home.module.css";
 
 const Navigation = ({ classStyle, strongText, spanText }) => {
-    const classReserve = `${styles.alt} ${classStyle}`;
+    const classReserve = `${styles.alt} ${classStyle} `;
     return (
         <header id={styles.header} className={classReserve}>
             <a className={styles.logo} href="/">
