@@ -7,6 +7,7 @@ const Navigation = ({ classStyle, strongText, spanText }) => {
     const [click, setClick] = useState(false);
     const classReserve = `${styles.alt} ${classStyle} ${styles.header}`;
     useEffect(() => {
+        // eslint-disable-next-line no-undef
         const body = document.querySelector("body");
         body.style.overflow = click ? "hidden" : "visible";
     }, [click]);
@@ -19,7 +20,9 @@ const Navigation = ({ classStyle, strongText, spanText }) => {
                     <span>{spanText}</span>
                 </a>
                 <nav>
-                    <a onClick={() => setClick(!click)}>Menu</a>
+                    <button type="button" onClick={() => setClick(!click)}>
+                        Menu
+                    </button>
                 </nav>
             </header>
             {click ? <MenuNav /> : null}
