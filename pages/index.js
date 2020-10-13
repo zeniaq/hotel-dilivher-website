@@ -1,4 +1,3 @@
-import MenuNav from "../components/MenuNav";
 import Navigation from "../components/Navigation";
 import SectionArticle from "../components/SectionArticle";
 import Banner from "../components/Banner";
@@ -22,7 +21,6 @@ export default function Home() {
     return (
         <div className={styles.wrapper}>
             <Navigation strongText="Hotel" spanText="Dilivher" />
-            <MenuNav />
             <Banner
                 titleText="Tú descanso, nuestra razon de ser."
                 descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
