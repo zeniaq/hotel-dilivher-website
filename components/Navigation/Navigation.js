@@ -1,31 +1,45 @@
 import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import MenuNav from "../MenuNav";
 import styles from "../../styles/Home.module.css";
 
-const Navigation = ({ classStyle, strongText, spanText }) => {
-    const classReserve = `${styles.alt} ${classStyle} `;
+const Navigation = ({ classStyle }) => {
+    const [click, setClick] = useState(false);
+    const classReserve = `${styles.alt} ${classStyle} ${styles.header}`;
+    useEffect(() => {
+        // eslint-disable-next-line no-undef
+        const body = document.querySelector("body");
+        body.style.overflow = click ? "hidden" : "visible";
+    }, [click]);
+
     return (
-        <header id={styles.header} className={classReserve}>
-            <a className={styles.logo} href="/">
-                <strong>{strongText}</strong>
-                <span>{spanText}</span>
-            </a>
-            <nav>
-                <a href="#menu">Menu</a>
-            </nav>
-        </header>
+        <>
+            <header className={classReserve}>
+                <a className={styles.logo} href="/">
+                    <strong>Hotel</strong>
+                    <span>Dilivher</span>
+                </a>
+                <nav>
+                    <button
+                        type="button"
+                        className={click ? styles.noStyleButtonAfter : styles.noStyleButton}
+                        onClick={() => setClick(!click)}
+                    >
+                        {click ? null : "Menu"}
+                    </button>
+                </nav>
+            </header>
+            {click ? <MenuNav /> : null}
+        </>
     );
 };
 
 Navigation.propTypes = {
     classStyle: PropTypes.string,
-    strongText: PropTypes.string,
-    spanText: PropTypes.string,
 };
 
 Navigation.defaultProps = {
     classStyle: "",
-    strongText: "",
-    spanText: "",
 };
 
 export default Navigation;

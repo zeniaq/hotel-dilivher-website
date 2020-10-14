@@ -1,4 +1,3 @@
-import MenuNav from "../components/MenuNav";
 import Navigation from "../components/Navigation";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/Footer";
@@ -6,11 +5,11 @@ import SectionContact from "../components/SectionContact";
 import SectionGeneric from "../components/SectionGeneric/SectionGeneric";
 
 export default function Home() {
+    const classMainSection = `${styles.main} ${styles.alt}`;
     return (
-        <div id={styles.wrapper}>
-            <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
-            <MenuNav />
-            <div id={styles.main} className={styles.alt}>
+        <div className={styles.wrapper}>
+            <Navigation classStyle={styles.style2} />
+            <div className={classMainSection}>
                 <SectionGeneric
                     titleText="Generic"
                     imageSrc="images/pic11.jpeg"

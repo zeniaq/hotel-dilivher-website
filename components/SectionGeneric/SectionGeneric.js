@@ -10,7 +10,7 @@ const SectionGeneric = ({
 }) => {
     const classSpan = `${styles.image} ${styles.main}`;
     return (
-        <section id={styles.one}>
+        <section className={styles.one}>
             <div className={styles.inner}>
                 <header className={styles.major}>
                     <h1>{titleText}</h1>

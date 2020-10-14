@@ -3,8 +3,9 @@ import styles from "../../styles/Home.module.css";
 
 const SectionDescription = ({ classID, linkRef, titleText, descriptionText, textButton }) => {
     const classStarted = `${styles.button} ${styles.next}`;
+    const classDescription = `${classID} ${styles.major}`;
     return (
-        <section id={classID} className={styles.major}>
+        <section id={classID} className={classDescription}>
             <div className={styles.inner}>
                 <header className={styles.major}>
                     <h2>{titleText}</h2>

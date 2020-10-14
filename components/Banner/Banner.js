@@ -3,14 +3,10 @@ import styles from "../../styles/Home.module.css";
 
 const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, imageSrc }) => {
     const classReserve = `${styles.button} ${styles.next} ${styles.scrolly}`;
+    const classBanner = `${styles.banner} ${styles.major}`;
     return (
-        <section id={styles.banner} className={styles.major}>
+        <section className={classBanner} style={{ backgroundImage: `url(${imageSrc})` }}>
             <div className={styles.inner}>
-                {imageSrc ? (
-                    <span className={styles.image}>
-                        <img src={imageSrc} alt={titleText} />
-                    </span>
-                ) : null}
                 <header className={styles.major}>
                     <h1>{titleText}</h1>
                 </header>

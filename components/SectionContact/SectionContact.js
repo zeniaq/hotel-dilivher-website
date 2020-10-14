@@ -1,12 +1,12 @@
 import styles from "../../styles/Home.module.css";
 
 const SectionContact = () => {
-    const classMail = `${styles.icon} ${styles.solid} ${styles.alt} fa-envelope`;
-    const classPhone = `${styles.icon} ${styles.solid} ${styles.alt} fa-phone`;
-    const classUbication = `${styles.icon} ${styles.solid} ${styles.alt} fa-home`;
+    const classMail = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.envelope}`;
+    const classPhone = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.phone}`;
+    const classUbication = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.home}`;
     const classInput = `${styles.field} ${styles.half}`;
     return (
-        <section id={styles.contact}>
+        <section className={styles.contact}>
             <div className={styles.inner}>
                 <section>
                     <form method="post" action="#">

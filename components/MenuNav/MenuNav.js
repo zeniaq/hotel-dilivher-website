@@ -2,22 +2,21 @@ import styles from "../../styles/Home.module.css";
 
 const MenuNav = () => {
     const classRegister = `${styles.button} ${styles.primary} ${styles.fit}`;
-    const classSession = `${styles.btton} ${styles.fit}`;
+    const classSession = `${styles.button} ${styles.fit}`;
     const classForm = `${styles.actions} ${styles.stacked}`;
     return (
-        <nav id={styles.menu}>
+        <nav className={styles.menu}>
             <ul className={styles.links}>
                 <li>
-                    <a href="index.html">Inicio</a>
+                    <a className={styles.menuA} href="/">
+                        Inicio
+                    </a>
                 </li>
                 <li>
-                    <a href="landing.html">Habitaciones</a>
+                    <a href="/landing">Habitaciones</a>
                 </li>
                 <li>
-                    <a href="generic.html">Contacto</a>
-                </li>
-                <li>
-                    <a href="elements.html">Elements</a>
+                    <a href="/generic">Contacto</a>
                 </li>
             </ul>
             <ul className={classForm}>
