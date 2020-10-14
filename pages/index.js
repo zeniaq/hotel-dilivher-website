@@ -20,7 +20,7 @@ export default function Home() {
     const classMainSection = `${styles.one} ${styles.tiles}`;
     return (
         <div className={styles.wrapper}>
-            <Navigation strongText="Hotel" spanText="Dilivher" />
+            <Navigation />
             <Banner
                 titleText="Tú descanso, nuestra razon de ser."
                 descriptionText1="Amplio estacionamiento, area de juegos infantiles,"

@@ -1,4 +1,3 @@
-import MenuNav from "../components/MenuNav";
 import Navigation from "../components/Navigation";
 import Banner from "../components/Banner";
 import styles from "../styles/Home.module.css";
@@ -22,8 +21,7 @@ export default function Home() {
     const classMainSection = `${styles.two} ${styles.spotlights}`;
     return (
         <div className={styles.wrapper}>
-            <Navigation classStyle={styles.style2} strongText="Forty" spanText="By HTML5 Up" />
-            <MenuNav />
+            <Navigation classStyle={styles.style2} />
             <Banner
                 titleText="Landing"
                 descriptionText1="Lorem ipsum dolor sit amet nullam consequat"

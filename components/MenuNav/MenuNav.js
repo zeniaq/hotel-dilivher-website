@@ -8,18 +8,15 @@ const MenuNav = () => {
         <nav className={styles.menu}>
             <ul className={styles.links}>
                 <li>
-                    <a className={styles.menuA} href="index.html">
+                    <a className={styles.menuA} href="/">
                         Inicio
                     </a>
                 </li>
                 <li>
-                    <a href="landing.html">Habitaciones</a>
+                    <a href="/landing">Habitaciones</a>
                 </li>
                 <li>
-                    <a href="generic.html">Contacto</a>
-                </li>
-                <li>
-                    <a href="elements.html">Elements</a>
+                    <a href="/generic">Contacto</a>
                 </li>
             </ul>
             <ul className={classForm}>

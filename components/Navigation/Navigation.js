@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import MenuNav from "../MenuNav";
 import styles from "../../styles/Home.module.css";
 
-const Navigation = ({ classStyle, strongText, spanText }) => {
+const Navigation = ({ classStyle }) => {
     const [click, setClick] = useState(false);
     const classReserve = `${styles.alt} ${classStyle} ${styles.header}`;
     useEffect(() => {
@@ -16,8 +16,8 @@ const Navigation = ({ classStyle, strongText, spanText }) => {
         <>
             <header className={classReserve}>
                 <a className={styles.logo} href="/">
-                    <strong>{strongText}</strong>
-                    <span>{spanText}</span>
+                    <strong>Hotel</strong>
+                    <span>Dilivher</span>
                 </a>
                 <nav>
                     <button type="button" onClick={() => setClick(!click)}>
@@ -32,14 +32,10 @@ const Navigation = ({ classStyle, strongText, spanText }) => {
 
 Navigation.propTypes = {
     classStyle: PropTypes.string,
-    strongText: PropTypes.string,
-    spanText: PropTypes.string,
 };
 
 Navigation.defaultProps = {
     classStyle: "",
-    strongText: "",
-    spanText: "",
 };
 
 export default Navigation;

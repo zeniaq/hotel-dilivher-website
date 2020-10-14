@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styles from "../../styles/Home.module.css";
 
 const SectionArticle = ({ titleText, descriptionText, imageSrc, linkRef }) => (
-    <article style={{backgroundImage: "url(" + imageSrc + ")"}}>
+    <article style={{ backgroundImage: `url(${imageSrc})` }}>
         <header className={styles.major}>
             <h3>
                 <a href={linkRef} className={styles.link}>
