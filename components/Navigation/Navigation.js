@@ -20,8 +20,12 @@ const Navigation = ({ classStyle }) => {
                     <span>Dilivher</span>
                 </a>
                 <nav>
-                    <button type="button" onClick={() => setClick(!click)}>
-                        Menu
+                    <button
+                        type="button"
+                        className={click ? styles.noStyleButtonAfter : styles.noStyleButton}
+                        onClick={() => setClick(!click)}
+                    >
+                        {click ? null : "Menu"}
                     </button>
                 </nav>
             </header>

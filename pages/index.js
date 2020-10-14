@@ -26,6 +26,7 @@ export default function Home() {
                 descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
                 descriptionText2="comodidad, esmero y servicio que hará su estancia placentera."
                 textButton="Reservar Ahora"
+                imageSrc="images/banner.jpg"
             />
             <div className={styles.main}>
                 <section className={classMainSection}>{data}</section>

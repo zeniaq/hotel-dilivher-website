@@ -5,13 +5,8 @@ const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, ima
     const classReserve = `${styles.button} ${styles.next} ${styles.scrolly}`;
     const classBanner = `${styles.banner} ${styles.major}`;
     return (
-        <section className={classBanner}>
+        <section className={classBanner} style={{ backgroundImage: `url(${imageSrc})` }}>
             <div className={styles.inner}>
-                {imageSrc ? (
-                    <span className={styles.image}>
-                        <img src={imageSrc} alt={titleText} />
-                    </span>
-                ) : null}
                 <header className={styles.major}>
                     <h1>{titleText}</h1>
                 </header>
