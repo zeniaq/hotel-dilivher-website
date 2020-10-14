@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Navigation from "../components/Navigation";
 import SectionArticle from "../components/SectionArticle";
 import Banner from "../components/Banner";
@@ -19,27 +20,33 @@ export default function Home() {
     ));
     const classMainSection = `${styles.one} ${styles.tiles}`;
     return (
-        <div className={styles.wrapper}>
-            <Navigation />
-            <Banner
-                titleText="Tú descanso, nuestra razon de ser."
-                descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
-                descriptionText2="comodidad, esmero y servicio que hará su estancia placentera."
-                textButton="Reservar Ahora"
-                imageSrc="images/banner.jpg"
-            />
-            <div className={styles.main}>
-                <section className={classMainSection}>{data}</section>
-                <SectionDescription
-                    linkRef="/landing"
-                    titleText="Massa libero"
-                    descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
-                    textButton="Get Started"
-                    classID={styles.two}
+        <>
+            <Head>
+                <title>Hotel Dilivher :: Home</title>
+                <meta name="description" content="Hotel Dilivher WebSite" />
+            </Head>
+            <div className={styles.wrapper}>
+                <Navigation />
+                <Banner
+                    titleText="Tú descanso, nuestra razon de ser."
+                    descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
+                    descriptionText2="comodidad, esmero y servicio que hará su estancia placentera."
+                    textButton="Reservar Ahora"
+                    imageSrc="images/banner.webp"
                 />
+                <div className={styles.main}>
+                    <section className={classMainSection}>{data}</section>
+                    <SectionDescription
+                        linkRef="/landing"
+                        titleText="Massa libero"
+                        descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
+                        textButton="Get Started"
+                        classID={styles.two}
+                    />
+                </div>
+                <SectionContact />
+                <Footer />
             </div>
-            <SectionContact />
-            <Footer />
-        </div>
+        </>
     );
 }
