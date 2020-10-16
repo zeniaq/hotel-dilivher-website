@@ -26,12 +26,21 @@ export default function Home() {
                 <title>Hotel Dilivher :: Landing</title>
                 <meta name="description" content="Hotel Dilivher WebSite" />
                 <link
-                    rel="stylesheet"
+                    rel="preload"
+                    as="style"
                     href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
                     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
                     crossOrigin="anonymous"
                     media="screen"
+                    onLoad="this.rel='stylesheet'"
                 />
+                <noscript>
+                    <link
+                        href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+                        rel="stylesheet"
+                        media="screen"
+                    />
+                </noscript>
             </Head>
             <div className={styles.wrapper}>
                 <Navigation classStyle={styles.style2} />
