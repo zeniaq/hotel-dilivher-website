@@ -1,7 +1,7 @@
 import styles from "../../styles/Home.module.css";
 
 const SectionContact = () => {
-    const classMail = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.envelope}`;
+    const classMail = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.home}`;
     const classPhone = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.phone}`;
     const classUbication = `${styles.icon} ${styles.solid} ${styles.alt} ${styles.home}`;
     const classInput = `${styles.field} ${styles.half}`;
@@ -47,7 +47,9 @@ const SectionContact = () => {
                 <section className={styles.split}>
                     <section>
                         <div className={styles.contactMethod}>
-                            <span className={classMail} />
+                            <span className={classMail}  >
+                                <img className={styles.home} src="/icons/email.svg" alt="mail icon" />
+                            </span>
                             <h3>Email</h3>
                             <a href="mailto:contacto@hoteldilivher.com">
                                 contacto@hoteldilivher.com
@@ -56,14 +58,18 @@ const SectionContact = () => {
                     </section>
                     <section>
                         <div className={styles.contactMethod}>
-                            <span className={classPhone} />
+                            <span className={classPhone}  >
+                                <img className={styles.home} src="/icons/telefono.svg" alt="phone icon" />
+                            </span>
                             <h3>Teléfono</h3>
                             <span>(+52) 776.761.3602</span>
                         </div>
                     </section>
                     <section>
                         <div className={styles.contactMethod}>
-                            <span className={classUbication} />
+                            <span className={classUbication} >
+                                <img className={styles.home} src="/icons/home.svg" alt="home icon" />
+                            </span>
                             <h3>Ubicación</h3>
                             <span>
                                 Calle 20 de Noviembre No.7

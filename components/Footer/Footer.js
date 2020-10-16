@@ -1,38 +1,38 @@
 import styles from "../../styles/Home.module.css";
 
 const Footer = () => {
-    const classTwitter = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconTwitter}`;
-    const classFacebook = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconFacebook}`;
-    const classInstagram = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconInstagram}`;
-    const classGithub = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconGithub}`;
-    const classLinkedin = `${styles.icon} ${styles.brands} ${styles.alt} ${styles.iconLinkedin}`;
+    const classTwitter = `${styles.icon} ${styles.brands} ${styles.alt}`;
+    const classFacebook = `${styles.icon} ${styles.brands} ${styles.alt}`;
+    const classInstagram = `${styles.icon} ${styles.brands} ${styles.alt}`;
+    const classGithub = `${styles.icon} ${styles.brands} ${styles.alt}`;
+    const classLinkedin = `${styles.icon} ${styles.brands} ${styles.alt}`;
     return (
         <footer className={styles.footer}>
             <div className={styles.inner}>
                 <ul className={styles.icons}>
                     <li>
-                        <a href="#a" className={classTwitter}>
-                            <span className={styles.label}>Twitter</span>
+                        <a href="#a" class={classTwitter}>
+                            <img className={styles.home} src="/icons/twitter.svg" alt="twitter icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="#b" className={classFacebook}>
-                            <span className={styles.label}>Facebook</span>
+                        <a href="#b" class={classFacebook}>
+                            <img className={styles.home} src="/icons/facebook.svg" alt="facebook icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="#c" className={classInstagram}>
-                            <span className={styles.label}>Instagram</span>
+                        <a href="#c" class={classInstagram}>
+                            <img className={styles.home} src="/icons/instagram.svg" alt="instagram icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="#d" className={classGithub}>
-                            <span className={styles.label}>GitHub</span>
+                        <a href="#d" class={classGithub}>
+                            <img className={styles.home} src="/icons/github.svg" alt="github icon" />
                         </a>
                     </li>
                     <li>
-                        <a href="#e" className={classLinkedin}>
-                            <span className={styles.label}>LinkedIn</span>
+                        <a href="#e" class={classLinkedin}>
+                            <img className={styles.home} src="/icons/linkedin.svg" alt="linkedin icon" />
                         </a>
                     </li>
                 </ul>

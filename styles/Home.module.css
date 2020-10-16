@@ -1123,9 +1123,9 @@ button.primary:active,
     -webkit-animation: none;
     -ms-animation: none;
     animation: none;
-    background-color: transparent;
+    background-color:  #242943;
     box-shadow: none;
-    position: absolute;
+    position: fixed;
 }
 
 /* Banner */
@@ -1568,3 +1568,14 @@ body.is-preload .banner > .inner {
     box-shadow: none;
     transition: none;
 }
+
+.home{
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #242943;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+ }
