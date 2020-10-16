@@ -1568,7 +1568,7 @@ body.is-preload .banner > .inner {
     box-shadow: none;
     transition: none;
 }
-
+/* 
 .home{
     background-color: #ffffff;
     border-radius: 100%;
@@ -1578,4 +1578,4 @@ body.is-preload .banner > .inner {
     line-height: 2em;
     text-align: center;
     width: 2em;
- }
+ } */

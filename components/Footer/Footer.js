@@ -9,30 +9,30 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.inner}>
-                <ul className={styles.icons}>
+                <ul className={styles.icons}>                
                     <li>
-                        <a href="#a" class={classTwitter}>
-                            <img className={styles.home} src="/icons/twitter.svg" alt="twitter icon" />
+                        <a href="#a" className={classTwitter}>
+                            <i className="fab fa-twitter"/>
                         </a>
                     </li>
                     <li>
-                        <a href="#b" class={classFacebook}>
-                            <img className={styles.home} src="/icons/facebook.svg" alt="facebook icon" />
+                        <a href="#a" className={classFacebook}>
+                            <i className="fab fa-facebook" />
                         </a>
                     </li>
                     <li>
-                        <a href="#c" class={classInstagram}>
-                            <img className={styles.home} src="/icons/instagram.svg" alt="instagram icon" />
+                        <a href="#a" className={classInstagram}>
+                            <i className="fab fa-instagram" />
                         </a>
                     </li>
                     <li>
-                        <a href="#d" class={classGithub}>
-                            <img className={styles.home} src="/icons/github.svg" alt="github icon" />
+                        <a href="#a" className={classGithub}>
+                            <i className="fab fa-github" />
                         </a>
                     </li>
                     <li>
-                        <a href="#e" class={classLinkedin}>
-                            <img className={styles.home} src="/icons/linkedin.svg" alt="linkedin icon" />
+                        <a href="#a" className={classLinkedin}>
+                            <i className="fab fa-linkedin" />
                         </a>
                     </li>
                 </ul>

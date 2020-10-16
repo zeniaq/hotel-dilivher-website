@@ -48,7 +48,7 @@ const SectionContact = () => {
                     <section>
                         <div className={styles.contactMethod}>
                             <span className={classMail}  >
-                                <img className={styles.home} src="/icons/email.svg" alt="mail icon" />
+                                <i className="fas fa-envelope" />
                             </span>
                             <h3>Email</h3>
                             <a href="mailto:contacto@hoteldilivher.com">
@@ -59,7 +59,7 @@ const SectionContact = () => {
                     <section>
                         <div className={styles.contactMethod}>
                             <span className={classPhone}  >
-                                <img className={styles.home} src="/icons/telefono.svg" alt="phone icon" />
+                                <i className="fas fa-phone-alt" />
                             </span>
                             <h3>Teléfono</h3>
                             <span>(+52) 776.761.3602</span>
@@ -68,7 +68,7 @@ const SectionContact = () => {
                     <section>
                         <div className={styles.contactMethod}>
                             <span className={classUbication} >
-                                <img className={styles.home} src="/icons/home.svg" alt="home icon" />
+                                <i className="fas fa-home" />
                             </span>
                             <h3>Ubicación</h3>
                             <span>

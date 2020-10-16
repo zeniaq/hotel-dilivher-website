@@ -24,6 +24,12 @@ export default function Home() {
             <Head>
                 <title>Hotel Dilivher :: Home</title>
                 <meta name="description" content="Hotel Dilivher WebSite" />
+                <link
+                    rel="stylesheet"
+                    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+                    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+                    crossOrigin="anonymous"
+                />
             </Head>
             <div className={styles.wrapper}>
                 <Navigation />
