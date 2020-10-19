@@ -9,10 +9,10 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.inner}>
-                <ul className={styles.icons}>                
+                <ul className={styles.icons}>
                     <li>
                         <a href="#a" className={classTwitter}>
-                            <i className="fab fa-twitter"/>
+                            <i className="fab fa-twitter" />
                         </a>
                     </li>
                     <li>

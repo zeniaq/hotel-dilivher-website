@@ -1,0 +1,12 @@
+.fill {
+    background: red;
+}
+
+.transparent {
+    background: blue;
+    border: 1em solid red;
+}
+
+.cta {
+    background: green;
+}
