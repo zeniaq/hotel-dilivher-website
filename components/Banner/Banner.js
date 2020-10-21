@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "../../styles/Home.module.css";
+import AnchorList from "../AnchorList/AnchorList";
 
 const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, imageSrc }) => {
     const classReserve = `${styles.button} ${styles.next} ${styles.scrolly}`;
@@ -18,11 +19,11 @@ const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, ima
                     </p>
                     {textButton ? (
                         <ul className={styles.actions}>
-                            <li>
-                                <a href="#one" className={classReserve}>
-                                    {textButton}
-                                </a>
-                            </li>
+                            <AnchorList
+                                linkRef="#one"
+                                styleProp={classReserve}
+                                titleText={textButton}
+                            />
                         </ul>
                     ) : null}
                 </div>

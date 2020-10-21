@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const AnchorList = ({ styleProp, linkRef, titleText, titleText2 }) => {
     return linkRef ? (
-        <li>
+        <li key={titleText}>
             {titleText2 || null}
             {styleProp ? (
                 <a href={linkRef} className={styleProp}>
@@ -13,7 +13,7 @@ const AnchorList = ({ styleProp, linkRef, titleText, titleText2 }) => {
             )}
         </li>
     ) : (
-        <li>{titleText}</li>
+        <li key={titleText}>{titleText}</li>
     );
 };
 AnchorList.propTypes = {

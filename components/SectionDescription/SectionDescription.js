@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "../../styles/Home.module.css";
+import AnchorList from "../AnchorList/AnchorList";
 
 const SectionDescription = ({ classID, linkRef, titleText, descriptionText, textButton }) => {
     const classStarted = `${styles.button} ${styles.next}`;
@@ -13,11 +14,11 @@ const SectionDescription = ({ classID, linkRef, titleText, descriptionText, text
                 <p>{descriptionText}</p>
                 {textButton ? (
                     <ul className={styles.actions}>
-                        <li>
-                            <a href={linkRef} className={classStarted}>
-                                {textButton}
-                            </a>
-                        </li>
+                        <AnchorList
+                            linkRef={linkRef}
+                            styleProp={classStarted}
+                            titleText={textButton}
+                        />
                     </ul>
                 ) : null}
             </div>

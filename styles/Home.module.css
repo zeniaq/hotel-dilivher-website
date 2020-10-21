@@ -1589,9 +1589,10 @@ body.is-preload .banner > .inner {
 }
 
 .i {
-    font-size: 1em;
     padding: 0.5rem;
     border-radius: 100%;
     background-color: #fff;
-    color: #242943;
+    height: 40px;
+    width: 40px;
+    fill: blue;
 }

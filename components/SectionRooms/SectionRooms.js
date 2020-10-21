@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "../../styles/Home.module.css";
+import AnchorList from "../AnchorList/AnchorList";
 
 const SectionRooms = ({ titleText, descriptionText, imageSrc, linkRef, dataPosition }) => (
     <section>
@@ -13,11 +14,11 @@ const SectionRooms = ({ titleText, descriptionText, imageSrc, linkRef, dataPosit
                 </header>
                 <p>{descriptionText}</p>
                 <ul className={styles.actions}>
-                    <li>
-                        <a href={linkRef} className={styles.button}>
-                            Learn More
-                        </a>
-                    </li>
+                    <AnchorList
+                        linkRef={linkRef}
+                        styleProp={styles.button}
+                        titleText="Learn More"
+                    />
                 </ul>
             </div>
         </div>
