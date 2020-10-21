@@ -1,0 +1,59 @@
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}
+
+.icon.alt {
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #242943;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+}
+.i {
+    font-size: 1em;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+}
+a.icon.alt:before {
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+a.icon.alt:hover:before {
+    background-color: #6fc3df;
+}
+
+a.icon.alt:active:before {
+    background-color: #37a6cb;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+}
+
+ul.icons li:last-child {
+    padding-right: 0;
+}
+
+@media screen and (max-width: 736px) {
+    ul.icons li {
+        padding: 0 0.75em 0 0;
+    }
+}
