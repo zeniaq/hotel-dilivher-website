@@ -1,38 +1,32 @@
 import styles from "../../styles/Home.module.css";
+import AnchorList from "../AnchorList/AnchorList";
+import { dataLinks, dataForm } from "../AnchorList/anchors";
 
-const MenuNav = () => {
-    const classRegister = `${styles.button} ${styles.primary} ${styles.fit}`;
-    const classSession = `${styles.button} ${styles.fit}`;
+// eslint-disable-next-line react/prop-types
+const MenuNav = ({ display, setDisplay }) => {
     const classForm = `${styles.actions} ${styles.stacked}`;
-    return (
-        <nav className={styles.menu}>
-            <ul className={styles.links}>
-                <li>
-                    <a className={styles.menuA} href="/">
-                        Inicio
-                    </a>
-                </li>
-                <li>
-                    <a href="/landing">Habitaciones</a>
-                </li>
-                <li>
-                    <a href="/generic">Contacto</a>
-                </li>
-            </ul>
-            <ul className={classForm}>
-                <li>
-                    <a href="#f" className={classRegister}>
-                        Registrarse
-                    </a>
-                </li>
-                <li>
-                    <a href="#d" className={classSession}>
-                        Iniciar Sesión
-                    </a>
-                </li>
-            </ul>
+    const classMenu = `${styles.menu} ${styles.menuMove}`;
+
+    const data1 = dataLinks.map((anchors) => (
+        <AnchorList
+            titleText={anchors.titleText}
+            titleText2={anchors.titleText2}
+            linkRef={anchors.linkRef}
+        />
+    ));
+    const data2 = dataForm.map((anchors) => (
+        <AnchorList
+            titleText={anchors.titleText}
+            linkRef={anchors.linkRef}
+            styleProp={anchors.styleProp}
+        />
+    ));
+    return display ? (
+        <nav onClick={() => setDisplay(!display)} className={classMenu} role="presentation">
+            <ul className={styles.links}>{data1}</ul>
+            <ul className={classForm}>{data2}</ul>
         </nav>
-    );
+    ) : null;
 };
 
 export default MenuNav;

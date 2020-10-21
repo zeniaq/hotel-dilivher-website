@@ -1,20 +1,33 @@
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import MenuNav from "../MenuNav";
 import styles from "../../styles/Home.module.css";
 
-const Navigation = ({ classStyle }) => {
+const Navigation = () => {
     const [click, setClick] = useState(false);
-    const classReserve = `${styles.alt} ${classStyle} ${styles.header}`;
+    const [classAction, setClassAction] = useState(
+        `${styles.alt} ${styles.reveal} ${styles.header}`,
+    );
+
+    function handleAnimation() {
+        // eslint-disable-next-line no-undef
+        if (document.documentElement.scrollTop > 500) {
+            setClassAction(`${styles.reveal} ${styles.header}`);
+        }
+        // eslint-disable-next-line no-undef
+        if (document.documentElement.scrollTop < 500) {
+            setClassAction(`${styles.alt} ${styles.reveal} ${styles.header}`);
+        }
+    }
     useEffect(() => {
         // eslint-disable-next-line no-undef
         const body = document.querySelector("body");
         body.style.overflow = click ? "hidden" : "visible";
-    }, [click]);
-
+        // eslint-disable-next-line no-undef
+        window.onscroll = () => handleAnimation();
+    });
     return (
         <>
-            <header className={classReserve}>
+            <header className={classAction}>
                 <a className={styles.logo} href="/">
                     <strong>Hotel</strong>
                     <span>Dilivher</span>
@@ -22,6 +35,7 @@ const Navigation = ({ classStyle }) => {
                 <nav>
                     <button
                         type="button"
+                        id="menuButton"
                         className={click ? styles.noStyleButtonAfter : styles.noStyleButton}
                         onClick={() => setClick(!click)}
                     >
@@ -29,17 +43,9 @@ const Navigation = ({ classStyle }) => {
                     </button>
                 </nav>
             </header>
-            {click ? <MenuNav /> : null}
+            <MenuNav display={click} setDisplay={setClick} />
         </>
     );
-};
-
-Navigation.propTypes = {
-    classStyle: PropTypes.string,
-};
-
-Navigation.defaultProps = {
-    classStyle: "",
 };
 
 export default Navigation;
