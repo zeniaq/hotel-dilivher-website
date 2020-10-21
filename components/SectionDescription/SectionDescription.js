@@ -6,7 +6,7 @@ const SectionDescription = ({ classID, linkRef, titleText, descriptionText, text
     const classStarted = `${styles.button} ${styles.next}`;
     const classDescription = `${classID} ${styles.major}`;
     return (
-        <section id={classID} className={classDescription}>
+        <section id={classID} className={classDescription} key={classID}>
             <div className={styles.inner}>
                 <header className={styles.major}>
                     <h2>{titleText}</h2>

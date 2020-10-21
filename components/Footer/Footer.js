@@ -5,12 +5,15 @@ import Icon from "../Icon";
 import AnchorList from "../AnchorList/AnchorList";
 
 const Footer = () => {
-    const data = dataSocial.map((icons) => <Icon url={icons.url} iconSrc={icons.iconSrc} />);
+    const data = dataSocial.map((icons) => (
+        <Icon url={icons.url} iconSrc={icons.iconSrc} key={icons.iconSrc} />
+    ));
     const data2 = dataMaster.map((anchors) => (
         <AnchorList
             titleText={anchors.titleText}
             titleText2={anchors.titleText2}
             linkRef={anchors.linkRef}
+            key={anchors.titleText}
         />
     ));
     return (

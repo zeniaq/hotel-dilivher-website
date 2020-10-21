@@ -12,6 +12,7 @@ const SectionContact = () => {
             descriptionText2={icons.descriptionText2}
             linkRef={icons.linkRef}
             iconSrc={icons.iconSrc}
+            key={icons.titleText}
         />
     ));
     const data2 = forms.map((form) => (
@@ -19,10 +20,11 @@ const SectionContact = () => {
             titleText={form.titleText}
             nameField={form.nameField}
             typeInput={form.typeInput}
+            key={form.titleText}
         />
     ));
     return (
-        <section className={styles.contact}>
+        <section className={styles.contact} key="SectionContact">
             <div className={styles.inner}>
                 <section>
                     <form method="post" action="#">
