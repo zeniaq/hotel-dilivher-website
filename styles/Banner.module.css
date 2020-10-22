@@ -4,8 +4,8 @@
     max-width: 65em;
     width: calc(100% - 6em);
 }
-
 .banner {
+    background-color: #242943;
     -moz-align-items: center;
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -27,9 +27,20 @@
     min-height: 22em;
     position: relative;
     top: -3.25em;
+    animation-duration: 3s;
+    animation-name: entry;
+}
+@keyframes entry {
+    from {
+        color: transparent;
+        transform: translate(-5%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
 }
 
-.banner:after {
+.banner::before {
     -moz-transition: opacity 2.5s ease;
     -webkit-transition: opacity 2.5s ease;
     -ms-transition: opacity 2.5s ease;
@@ -50,7 +61,16 @@
     width: 100%;
     z-index: 1;
 }
-
+/* @keyframes entryImage {
+    from {
+        color: transparent;
+        transform: translate(-5%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+        background-image: url("../public/images/banner.webp");
+    }
+} */
 .banner h1 {
     font-size: 3.25em;
 }
