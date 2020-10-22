@@ -27,7 +27,7 @@ const SectionContact = () => {
         <section className={styles.contact} key="SectionContact">
             <div className={styles.inner}>
                 <section>
-                    <form method="post" action="#">
+                    <form name="contact" method="post" data-netlify="true">
                         <div className={styles.fields}>{data2}</div>
                         <FormButton />
                     </form>
