@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/SectionContact.module.css";
 import dataContact from "../Icon/icons";
 import Icon from "../Icon";
 import forms from "../FormInput/forms";

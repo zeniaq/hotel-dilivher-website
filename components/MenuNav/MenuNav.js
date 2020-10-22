@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/MenuNav.module.css";
 import AnchorList from "../AnchorList/AnchorList";
 import { dataLinks, dataForm } from "../AnchorList/anchors";
 

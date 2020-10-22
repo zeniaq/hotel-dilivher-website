@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/FormInput.module.css";
 
 const FormInput = ({ titleText, typeInput, nameField }) => {
     const classInput = `${styles.field} ${styles.half}`;

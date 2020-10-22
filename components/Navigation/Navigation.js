@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MenuNav from "../MenuNav";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Navigation.module.css";
 
 const Navigation = () => {
     const [click, setClick] = useState(false);

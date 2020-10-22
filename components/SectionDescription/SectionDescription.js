@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/SectionDescription.module.css";
 import AnchorList from "../AnchorList/AnchorList";
 
 const SectionDescription = ({ classID, linkRef, titleText, descriptionText, textButton }) => {

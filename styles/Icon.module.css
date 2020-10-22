@@ -1,0 +1,55 @@
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}
+
+.icon.alt {
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #242943;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+}
+.i {
+    font-size: 1em;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: transparent;
+    width: 2em;
+    height: 2em;
+    border: 0;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+}
+
+ul.icons li:last-child {
+    padding-right: 0;
+}
+
+@media screen and (max-width: 736px) {
+    ul.icons li {
+        padding: 0 0.75em 0 0;
+    }
+}
+a.icon {
+    background-color: white;
+}
+a.icon:hover {
+    background-color: #9bf1ff;
+}
+a.icon {
+    transition: background-color 0.1s linear 0.1s;
+}

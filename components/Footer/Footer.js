@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Footer.module.css";
 import { dataSocial } from "../Icon/icons";
 import { dataMaster } from "../AnchorList/anchors";
 import Icon from "../Icon";

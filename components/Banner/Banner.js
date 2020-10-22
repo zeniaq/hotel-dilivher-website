@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Banner.module.css";
 import AnchorList from "../AnchorList/AnchorList";
 
 const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, imageSrc }) => {
