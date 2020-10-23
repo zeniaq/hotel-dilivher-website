@@ -1,6 +1,6 @@
 /* content */
 
-.content > *  {
+.content > * {
     padding: 4em 0 2em 0;
     margin: 0 auto;
     max-width: 65em;
@@ -24,7 +24,6 @@ ul.actions li {
     padding: 0 0 0 1em;
     vertical-align: middle;
 }
-
 
 /* Button */
 
@@ -72,7 +71,6 @@ ul.actions li {
     color: #53e3fb;
 }
 
-
 input[type="submit"].next:before,
 input[type="reset"].next:before,
 input[type="button"].next:before,
@@ -90,7 +88,6 @@ button.next:after,
     opacity: 0;
     z-index: 1;
 }
-
 
 input[type="submit"].primary,
 input[type="reset"].primary,
@@ -124,8 +121,6 @@ button.primary:active,
     background-color: #53e3fb;
 }
 
-/* Spotlights */
-
 .spotlights {
     border-top: 0 !important;
 }
@@ -134,7 +129,7 @@ button.primary:active,
     border-top: 0 !important;
 }
 
-.spotlights > section {
+.spotlights {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -146,7 +141,7 @@ button.primary:active,
     background-color: #2e3450;
 }
 
-.spotlights > section > .image {
+.spotlights > .image {
     background-position: center center;
     background-size: cover;
     border-radius: 0;
@@ -155,13 +150,13 @@ button.primary:active,
     width: 30%;
 }
 
-.spotlights > section > .image img {
+.spotlights > .image img {
     border-radius: 0;
     display: block;
     width: 100%;
 }
 
-.spotlights > section > .image:before {
+.spotlights > .image:before {
     background: rgba(36, 41, 67, 0.9);
     content: "";
     display: block;
@@ -173,7 +168,7 @@ button.primary:active,
     width: 100%;
 }
 
-.spotlights > section > .content {
+.spotlights > .content {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -194,7 +189,13 @@ button.primary:active,
     width: 70%;
 }
 
-.spotlights > section:nth-child(2n) {
+.spotlights > .content > .inner {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 65em;
+}
+
+.spotlights:nth-child(2n) {
     -moz-flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -202,9 +203,50 @@ button.primary:active,
     background-color: #333856;
 }
 
-.spotlights > section:nth-child(2n) > .content {
+.spotlights:nth-child(2n) > .content {
     -moz-align-items: -moz-flex-end;
     -webkit-align-items: -webkit-flex-end;
     -ms-align-items: -ms-flex-end;
     align-items: flex-end;
+}
+
+@media screen and (max-width: 1680px) {
+    .spotlights > .image {
+        width: 40%;
+    }
+
+    .spotlights > .content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .spotlights > .image {
+        width: 45%;
+    }
+
+    .spotlights > .content {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .spotlights {
+        display: block;
+    }
+
+    .spotlights > .image {
+        width: 100%;
+    }
+
+    .spotlights > .content {
+        padding: 4em 3em 2em 3em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .spotlights > .content {
+        padding: 3em 1.5em 1em 1.5em;
+    }
 }

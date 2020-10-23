@@ -3,7 +3,7 @@ import styles from "../../styles/SectionRooms.module.css";
 import AnchorList from "../AnchorList/AnchorList";
 
 const SectionRooms = ({ titleText, descriptionText, imageSrc, linkRef, dataPosition }) => (
-    <section>
+    <section className={styles.spotlights}>
         <a href={linkRef} className={styles.image}>
             <img src={imageSrc} alt={titleText} data-position={dataPosition} />
         </a>
