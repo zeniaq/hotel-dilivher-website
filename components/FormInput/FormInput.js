@@ -24,7 +24,9 @@ export const FormInputButton = () => {
     return (
         <ul className={styles.actions}>
             <li key="SendMessage">
-                <input type="submit" value="Send Message" className={styles.primary} />
+                <button type="submit" className={styles.primary}>
+                    Send Message
+                </button>
             </li>
             <li key="Clear">
                 <input type="reset" value="Clear" />
