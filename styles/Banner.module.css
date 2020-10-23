@@ -27,6 +27,8 @@
     min-height: 22em;
     position: relative;
     top: -3.25em;
+}
+.banner * {
     animation-duration: 3s;
     animation-name: entry;
 }
