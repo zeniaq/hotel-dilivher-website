@@ -6,7 +6,7 @@ const dataForms = [
     },
     {
         titleText: "Email",
-        typeInput: "text",
+        typeInput: "email",
         nameField: "email",
     },
     {

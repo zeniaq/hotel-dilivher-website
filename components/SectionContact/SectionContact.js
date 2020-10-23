@@ -23,11 +23,12 @@ const SectionContact = () => {
             key={form.titleText}
         />
     ));
+
     return (
         <section className={styles.contact} key="SectionContact">
             <div className={styles.inner}>
                 <section>
-                    <form name="contact" method="POST" netlify>
+                    <form name="contact" action="/success" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.fields}>{data2}</div>
                         <FormButton />
