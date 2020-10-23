@@ -1,0 +1,44 @@
+.i {
+    font-size: 1em;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: transparent;
+    width: 2em;
+    height: 2em;
+    border: 0;
+}
+
+.icon.alt {
+    background-color: #ffffff;
+    border-radius: 100%;
+    color: #242943;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+}
+a.icon {
+    background-color: white;
+}
+a.icon:hover {
+    background-color: #9bf1ff;
+}
+a.icon {
+    transition: background-color 0.1s linear 0.1s;
+}
+.contactMethod {
+    margin: 0 0 2em 0;
+    padding-left: 3.25em;
+    position: relative;
+}
+
+.contactMethod .icon {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.contactMethod h3 {
+    margin: 0 0 0.5em 0;
+}

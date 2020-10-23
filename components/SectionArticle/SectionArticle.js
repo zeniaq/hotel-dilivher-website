@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/SectionArticle.module.css";
 
 const SectionArticle = ({ titleText, descriptionText, imageSrc, linkRef }) => (
     <article style={{ backgroundImage: `url(${imageSrc})` }}>

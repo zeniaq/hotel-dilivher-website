@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Icon.module.css";
 
 const Icon = ({ iconSrc, url, linkRef, titleText, descriptionText1, descriptionText2 }) => {
     const classSocial = `${styles.icon} ${styles.brands} ${styles.alt}`;

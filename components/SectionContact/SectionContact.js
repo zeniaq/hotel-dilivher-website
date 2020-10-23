@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/SectionContact.module.css";
 import dataContact from "../Icon/icons";
 import Icon from "../Icon";
 import forms from "../FormInput/forms";
@@ -23,11 +23,13 @@ const SectionContact = () => {
             key={form.titleText}
         />
     ));
+
     return (
         <section className={styles.contact} key="SectionContact">
             <div className={styles.inner}>
                 <section>
-                    <form method="post" action="#">
+                    <form name="contact" action="/success" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.fields}>{data2}</div>
                         <FormButton />
                     </form>
