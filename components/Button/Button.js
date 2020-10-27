@@ -1,18 +1,16 @@
 import PropTypes from "prop-types";
 
-const Button = ({ children, className }) => (
-    <button className={className} type="button">
-        {children}
-    </button>
-);
+import ButtonStyled from "./styled";
+
+const Button = (props) => <ButtonStyled {...props}>{props.children}</ButtonStyled>;
 
 Button.propTypes = {
     children: PropTypes.node.isRequired,
-    className: PropTypes.string,
+    background: PropTypes.string,
 };
 
 Button.defaultProps = {
-    className: "",
+    background: "",
 };
 
 export default Button;
