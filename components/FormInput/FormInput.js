@@ -1,11 +1,9 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/FormInput.module.css";
 import { Div, Label, Input, TextArea, Ul, Li, Button } from "./styled";
 
 const FormInput = ({ titleText, typeInput, nameField, change }) => {
-    const classInput = `${styles.field} ${styles.half}`;
     return typeInput ? (
-        <Div className={classInput} key={titleText}>
+        <Div key={titleText}>
             <Label htmlFor={nameField}>
                 {titleText}
                 <Input
@@ -18,7 +16,7 @@ const FormInput = ({ titleText, typeInput, nameField, change }) => {
             </Label>
         </Div>
     ) : (
-        <Div className={styles.field} key={titleText}>
+        <Div key={titleText}>
             <Label htmlFor={nameField}>
                 {titleText}
                 <TextArea name={nameField} id={nameField} rows="6" onChange={change} required />
@@ -29,11 +27,9 @@ const FormInput = ({ titleText, typeInput, nameField, change }) => {
 
 export const FormInputButton = () => {
     return (
-        <Ul className={styles.actions}>
+        <Ul>
             <Li key="SendMessage">
-                <Button type="submit" className={styles.primary}>
-                    Send Message
-                </Button>
+                <Button type="submit">Send Message</Button>
             </Li>
             <Li key="Clear">
                 <Input type="reset" value="Clear" />

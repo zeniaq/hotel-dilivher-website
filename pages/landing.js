@@ -32,7 +32,7 @@ export default function Home() {
                     titleText="Landing"
                     descriptionText1="Lorem ipsum dolor sit amet nullam consequat"
                     descriptionText2="sed veroeros. tempus adipiscing nulla."
-                    imageSrc="images/pic07.webp"
+                    imageSrc="images/pic07.jpg"
                 />
                 <div className={styles.main}>
                     <SectionDescription
