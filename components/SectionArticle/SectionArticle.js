@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import styles from "../../styles/SectionArticle.module.css";
+import { Article, Header, H3, Anchor, P } from "./styled";
 
 const SectionArticle = ({ titleText, descriptionText, imageSrc, linkRef }) => (
-    <article style={{ backgroundImage: `url(${imageSrc})` }}>
-        <header className={styles.major}>
-            <h3>
-                <a href={linkRef} className={styles.link}>
+    <Article style={{ backgroundImage: `url(${imageSrc})` }}>
+        <Header className={styles.major}>
+            <H3>
+                <Anchor href={linkRef} className={styles.link}>
                     {titleText}
-                </a>
-            </h3>
-            <p>{descriptionText}</p>
-        </header>
-    </article>
+                </Anchor>
+            </H3>
+            <Anchor>{descriptionText}</Anchor>
+        </Header>
+    </Article>
 );
 
 SectionArticle.propTypes = {

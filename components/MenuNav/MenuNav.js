@@ -1,11 +1,9 @@
-import styles from "../../styles/MenuNav.module.css";
 import AnchorList from "../AnchorList/AnchorList";
 import { dataLinks, dataForm } from "../AnchorList/anchors";
+import { Nav, UlLinks, UlForm } from "./styled";
 
 // eslint-disable-next-line react/prop-types
 const MenuNav = ({ display, setDisplay }) => {
-    const classForm = `${styles.actions} ${styles.stacked}`;
-
     const data1 = dataLinks.map((anchors) => (
         <AnchorList
             titleText={anchors.titleText}
@@ -21,10 +19,10 @@ const MenuNav = ({ display, setDisplay }) => {
         />
     ));
     return display ? (
-        <nav onClick={() => setDisplay(!display)} className={styles.menu} role="presentation">
-            <ul className={styles.links}>{data1}</ul>
-            <ul className={classForm}>{data2}</ul>
-        </nav>
+        <Nav onClick={() => setDisplay(!display)} role="presentation">
+            <UlLinks>{data1}</UlLinks>
+            <UlForm>{data2}</UlForm>
+        </Nav>
     ) : null;
 };
 

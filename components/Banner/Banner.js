@@ -1,34 +1,35 @@
 import PropTypes from "prop-types";
 import styles from "../../styles/Banner.module.css";
 import AnchorList from "../AnchorList/AnchorList";
+import { Section, Div, Header, H1, P, Ul } from "./styled";
 
 const Banner = ({ titleText, descriptionText1, descriptionText2, textButton, imageSrc }) => {
     const classReserve = `${styles.button} ${styles.next} ${styles.scrolly}`;
     const classBanner = `${styles.banner} ${styles.major}`;
     return (
-        <section className={classBanner} style={{ backgroundImage: `url(${imageSrc})` }}>
-            <div className={styles.inner}>
-                <header className={styles.major}>
-                    <h1>{titleText}</h1>
-                </header>
-                <div className={styles.content}>
-                    <p>
+        <Section className={classBanner} style={{ backgroundImage: `url(${imageSrc})` }}>
+            <Div className={styles.inner}>
+                <Header className={styles.major}>
+                    <H1>{titleText}</H1>
+                </Header>
+                <Div className={styles.content}>
+                    <P>
                         {descriptionText1}
                         <br />
                         {descriptionText2}
-                    </p>
+                    </P>
                     {textButton ? (
-                        <ul className={styles.actions}>
+                        <Ul className={styles.actions}>
                             <AnchorList
                                 linkRef="#one"
                                 styleProp={classReserve}
                                 titleText={textButton}
                             />
-                        </ul>
+                        </Ul>
                     ) : null}
-                </div>
-            </div>
-        </section>
+                </Div>
+            </Div>
+        </Section>
     );
 };
 

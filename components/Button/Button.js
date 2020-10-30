@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 
 import ButtonStyled from "./styled";
 
-const Button = (props) => <ButtonStyled {...props}>{props.children}</ButtonStyled>;
+const Button = ({ background, children }) => (
+    <ButtonStyled background={background}>{children}</ButtonStyled>
+);
 
 Button.propTypes = {
     children: PropTypes.node.isRequired,

@@ -1,28 +1,22 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/SectionDescription.module.css";
 import AnchorList from "../AnchorList/AnchorList";
+import { Section, Div, Header, H2, Ul, P } from "./styled";
 
 const SectionDescription = ({ classID, linkRef, titleText, descriptionText, textButton }) => {
-    const classStarted = `${styles.button} ${styles.next}`;
-    const classDescription = `${classID} ${styles.major}`;
     return (
-        <section id={classID} className={classDescription} key={classID}>
-            <div className={styles.inner}>
-                <header className={styles.major}>
-                    <h2>{titleText}</h2>
-                </header>
-                <p>{descriptionText}</p>
+        <Section id={classID} key={classID}>
+            <Div>
+                <Header>
+                    <H2>{titleText}</H2>
+                </Header>
+                <P>{descriptionText}</P>
                 {textButton ? (
-                    <ul className={styles.actions}>
-                        <AnchorList
-                            linkRef={linkRef}
-                            styleProp={classStarted}
-                            titleText={textButton}
-                        />
-                    </ul>
+                    <Ul>
+                        <AnchorList linkRef={linkRef} titleText={textButton} />
+                    </Ul>
                 ) : null}
-            </div>
-        </section>
+            </Div>
+        </Section>
     );
 };
 

@@ -9,12 +9,14 @@ const dataContact = [
         titleText: "Teléfono",
         descriptionText1: "(+52) 776.761.3602",
         iconSrc: "icons/phone.svg",
+        linkRef: "tel:(+52) 776.761.3602",
     },
     {
         titleText: "Ubicación",
         descriptionText1: "Calle 20 de Noviembre No.7",
         descriptionText2: "San Pedro Tlachichilco C.P.43730 Acaxochitlán, Hgo.",
         iconSrc: "icons/home.svg",
+        linkRef: "https://goo.gl/maps/NhQStEaYosRMdaGMA",
     },
 ];
 

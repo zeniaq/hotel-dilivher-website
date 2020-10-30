@@ -1,28 +1,24 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/SectionRooms.module.css";
 import AnchorList from "../AnchorList/AnchorList";
+import { Section, Div1, Div2, Ul, Header, H3, P, Img, Anchor } from "./styled";
 
 const SectionRooms = ({ titleText, descriptionText, imageSrc, linkRef, dataPosition }) => (
-    <section className={styles.spotlights}>
-        <a href={linkRef} className={styles.image}>
-            <img src={imageSrc} alt={titleText} data-position={dataPosition} />
-        </a>
-        <div className={styles.content}>
-            <div className={styles.inner}>
-                <header>
-                    <h3>{titleText}</h3>
-                </header>
-                <p>{descriptionText}</p>
-                <ul className={styles.actions}>
-                    <AnchorList
-                        linkRef={linkRef}
-                        styleProp={styles.button}
-                        titleText="Learn More"
-                    />
-                </ul>
-            </div>
-        </div>
-    </section>
+    <Section>
+        <Anchor href={linkRef}>
+            <Img src={imageSrc} alt={titleText} data-position={dataPosition} />
+        </Anchor>
+        <Div1>
+            <Div2>
+                <Header>
+                    <H3>{titleText}</H3>
+                </Header>
+                <P>{descriptionText}</P>
+                <Ul>
+                    <AnchorList linkRef={linkRef} titleText="Learn More" />
+                </Ul>
+            </Div2>
+        </Div1>
+    </Section>
 );
 
 SectionRooms.propTypes = {

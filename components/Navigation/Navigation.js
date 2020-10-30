@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MenuNav from "../MenuNav";
 import styles from "../../styles/Navigation.module.css";
+import { Header, Nav, Span, Strong, Anchor, Button } from "./styled";
 
 const Navigation = () => {
     const [click, setClick] = useState(false);
@@ -27,22 +28,22 @@ const Navigation = () => {
     });
     return (
         <>
-            <header className={classAction}>
-                <a className={styles.logo} href="/">
-                    <strong>Hotel</strong>
-                    <span>Dilivher</span>
-                </a>
-                <nav>
-                    <button
+            <Header className={classAction}>
+                <Anchor href="/">
+                    <Strong>Hotel</Strong>
+                    <Span>Dilivher</Span>
+                </Anchor>
+                <Nav>
+                    <Button
                         type="button"
                         id="menuButton"
                         className={click ? styles.noStyleButtonAfter : styles.noStyleButton}
                         onClick={() => setClick(!click)}
                     >
                         {click ? null : "Menu"}
-                    </button>
-                </nav>
-            </header>
+                    </Button>
+                </Nav>
+            </Header>
             <MenuNav display={click} setDisplay={setClick} />
         </>
     );

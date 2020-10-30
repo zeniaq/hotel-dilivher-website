@@ -1,46 +1,27 @@
 import PropTypes from "prop-types";
-import styles from "../../styles/Icon.module.css";
+import { Li, Anchor, Img, Section, H3, Div } from "./styled";
 
 const Icon = ({ iconSrc, url, linkRef, titleText, descriptionText1, descriptionText2 }) => {
-    const classSocial = `${styles.icon} ${styles.brands} ${styles.alt}`;
-    const classContact = `${styles.icon} ${styles.solid} ${styles.alt}`;
-    const nav = descriptionText2 ? (
-        <span>
-            {descriptionText1}
-            <br />
-            {descriptionText2}
-        </span>
-    ) : (
-        <span>{descriptionText1}</span>
-    );
     return url ? (
-        <li key={iconSrc}>
-            <a href={url} className={classSocial}>
-                <img
-                    className={styles.i}
-                    src={iconSrc}
-                    alt="Social Icon"
-                    width="40px"
-                    height="40px"
-                />
-            </a>
-        </li>
+        <Li key={iconSrc}>
+            <Anchor href={url} typeAnchor="icon">
+                <Img src={iconSrc} alt="Social Icon" width="40px" height="40px" />
+            </Anchor>
+        </Li>
     ) : (
-        <section>
-            <div className={styles.contactMethod}>
-                <span className={classContact}>
-                    <img
-                        className={styles.i}
-                        src={iconSrc}
-                        alt="Contact Icon"
-                        width="40px"
-                        height="40px"
-                    />
-                </span>
-                <h3>{titleText}</h3>
-                {linkRef ? <a href={linkRef}>{descriptionText1}</a> : nav}
-            </div>
-        </section>
+        <Section>
+            <Div>
+                <Anchor typeAnchor="icon" className="contact">
+                    <Img src={iconSrc} alt="Contact Icon" width="40px" height="40px" />
+                </Anchor>
+                <H3>{titleText}</H3>
+                <Anchor href={linkRef}>
+                    {descriptionText1}
+                    <br />
+                    {descriptionText2}
+                </Anchor>
+            </Div>
+        </Section>
     );
 };
 Icon.propTypes = {

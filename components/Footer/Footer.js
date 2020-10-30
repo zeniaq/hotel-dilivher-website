@@ -1,8 +1,8 @@
-import styles from "../../styles/Footer.module.css";
 import { dataSocial } from "../Icon/icons";
 import { dataMaster } from "../AnchorList/anchors";
 import Icon from "../Icon";
 import AnchorList from "../AnchorList/AnchorList";
+import { FooterTag, Div, List1, List2 } from "./styled";
 
 const Footer = () => {
     const data = dataSocial.map((icons) => (
@@ -17,12 +17,14 @@ const Footer = () => {
         />
     ));
     return (
-        <footer className={styles.footer}>
-            <div className={styles.inner}>
-                <ul className={styles.icons}>{data}</ul>
-                <ul className={styles.copyright}>{data2}</ul>
-            </div>
-        </footer>
+        <>
+            <FooterTag>
+                <Div>
+                    <List1>{data}</List1>
+                    <List2>{data2}</List2>
+                </Div>
+            </FooterTag>
+        </>
     );
 };
 export default Footer;

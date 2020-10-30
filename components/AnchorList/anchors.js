@@ -39,7 +39,7 @@ export const dataMaster = [
     },
     {
         titleText2: "Design: ",
-        titleText: "Next JS",
-        linkRef: "https://nextjs.org/",
+        titleText: "HTML5 UP",
+        linkRef: "https://html5up.net/",
     },
 ];

@@ -1,43 +1,44 @@
 import PropTypes from "prop-types";
 import styles from "../../styles/FormInput.module.css";
+import { Div, Label, Input, TextArea, Ul, Li, Button } from "./styled";
 
 const FormInput = ({ titleText, typeInput, nameField, change }) => {
     const classInput = `${styles.field} ${styles.half}`;
     return typeInput ? (
-        <div className={classInput} key={titleText}>
-            <label htmlFor={nameField}>
+        <Div className={classInput} key={titleText}>
+            <Label htmlFor={nameField}>
                 {titleText}
-                <input
+                <Input
                     type={typeInput}
                     name={nameField}
                     id={nameField}
                     onChange={change}
                     required
                 />
-            </label>
-        </div>
+            </Label>
+        </Div>
     ) : (
-        <div className={styles.field} key={titleText}>
-            <label htmlFor={nameField}>
+        <Div className={styles.field} key={titleText}>
+            <Label htmlFor={nameField}>
                 {titleText}
-                <textarea name={nameField} id={nameField} rows="6" onChange={change} required />
-            </label>
-        </div>
+                <TextArea name={nameField} id={nameField} rows="6" onChange={change} required />
+            </Label>
+        </Div>
     );
 };
 
 export const FormInputButton = () => {
     return (
-        <ul className={styles.actions}>
-            <li key="SendMessage">
-                <button type="submit" className={styles.primary}>
+        <Ul className={styles.actions}>
+            <Li key="SendMessage">
+                <Button type="submit" className={styles.primary}>
                     Send Message
-                </button>
-            </li>
-            <li key="Clear">
-                <input type="reset" value="Clear" />
-            </li>
-        </ul>
+                </Button>
+            </Li>
+            <Li key="Clear">
+                <Input type="reset" value="Clear" />
+            </Li>
+        </Ul>
     );
 };
 

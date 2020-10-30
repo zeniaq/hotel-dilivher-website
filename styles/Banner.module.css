@@ -63,19 +63,6 @@
     width: 100%;
     z-index: 1;
 }
-/* @keyframes entryImage {
-    from {
-        color: transparent;
-        transform: translate(-5%, 0);
-    }
-    to {
-        transform: translate(0, 0);
-        background-image: url("../public/images/banner.webp");
-    }
-} */
-.banner h1 {
-    font-size: 3.25em;
-}
 
 .banner > .inner {
     -moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease,
@@ -126,13 +113,6 @@
 
 .banner > .inner .content > :last-child {
     margin-right: 0;
-}
-
-.banner > .inner .content p {
-    font-size: 0.7em;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
 }
 
 .banner.major {
@@ -195,10 +175,8 @@ body.is-preload .banner > .inner {
     .banner {
         padding: 5em 0 1em 0;
         height: auto;
-        margin-bottom: -2.75em;
         max-height: none;
         min-height: 0;
-        top: -2.75em;
     }
 
     .banner h1 {
@@ -365,14 +343,11 @@ ul.actions.fit.stacked {
     color: #53e3fb;
 }
 
-input[type="button"].next,
 .button.next {
     padding-right: 4.5em;
     position: relative;
 }
 
-input[type="button"].next:before,
-input[type="button"].next:after,
 .button.next:before,
 .button.next:after {
     -moz-transition: opacity 0.2s ease-in-out;
@@ -391,33 +366,12 @@ input[type="button"].next:after,
     width: 36px;
 }
 
-input[type="button"].next:before,
 button.next:before,
 .button.next:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
 }
 
-input[type="button"].next:after,
-button.next:after,
-.button.next:after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %239bf1ff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
-    opacity: 0;
-    z-index: 1;
-}
-
-input[type="button"].next:hover:after,
-input[type="button"].next:active:after,
-button.next:hover:after,
-button.next:active:after,
-.button.next:hover:after,
-.button.next:active:after {
-    opacity: 1;
-}
-
 @media screen and (max-width: 1280px) {
-    input[type="submit"].next,
-    input[type="reset"].next,
-    input[type="button"].next,
     button.next,
     .button.next {
         padding-right: 5em;

@@ -3,6 +3,7 @@ import dataContact from "../Icon/icons";
 import Icon from "../Icon";
 import forms from "../FormInput/forms";
 import FormInput, { FormButton } from "../FormInput";
+import { Section, Div, Form, Input } from "./styled";
 
 const SectionContact = () => {
     const data = dataContact.map((icons) => (
@@ -25,18 +26,18 @@ const SectionContact = () => {
     ));
 
     return (
-        <section className={styles.contact} key="SectionContact">
-            <div className={styles.inner}>
-                <section>
-                    <form name="contact" action="/success" method="POST" data-netlify="true">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <div className={styles.fields}>{data2}</div>
+        <Section className={styles.contact} key="SectionContact">
+            <Div className={styles.inner}>
+                <Section>
+                    <Form name="contact" action="/success" method="POST" data-netlify="true">
+                        <Input type="hidden" name="form-name" value="contact" />
+                        <Div className={styles.fields}>{data2}</Div>
                         <FormButton />
-                    </form>
-                </section>
-                <section className={styles.split}>{data}</section>
-            </div>
-        </section>
+                    </Form>
+                </Section>
+                <Section className={styles.split}>{data}</Section>
+            </Div>
+        </Section>
     );
 };
 export default SectionContact;

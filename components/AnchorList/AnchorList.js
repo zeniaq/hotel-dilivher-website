@@ -1,19 +1,20 @@
 import PropTypes from "prop-types";
+import { Li, Anchor } from "./styled";
 
 const AnchorList = ({ styleProp, linkRef, titleText, titleText2 }) => {
     return linkRef ? (
-        <li key={titleText}>
+        <Li key={titleText}>
             {titleText2 || null}
             {styleProp ? (
-                <a href={linkRef} className={styleProp}>
+                <Anchor href={linkRef} className={styleProp}>
                     {titleText}
-                </a>
+                </Anchor>
             ) : (
-                <a href={linkRef}>{titleText}</a>
+                <Anchor href={linkRef}>{titleText}</Anchor>
             )}
-        </li>
+        </Li>
     ) : (
-        <li key={titleText}>{titleText}</li>
+        <Li key={titleText}>{titleText}</Li>
     );
 };
 AnchorList.propTypes = {
