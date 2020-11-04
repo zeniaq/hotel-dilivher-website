@@ -11,7 +11,23 @@ export const Section1 = styled.section`
     overflow-x: hidden;
 `;
 export const Section2 = styled.section``;
-export const Section3 = styled.section``;
+export const Section3 = styled.section`
+    > * {
+        padding: 3em 0.1em 2em;
+        position: relative;
+        padding: 5;
+    }
+
+    > :before {
+        border-top: solid 1px rgba(212, 212, 255, 0.1);
+        content: "";
+        display: block;
+        margin-left: -3em;
+        position: absolute;
+        top: 0;
+        width: calc(100vw + 3em);
+    }
+`;
 export const Div1 = styled.div`
     display: -moz-flex;
     display: -webkit-flex;
@@ -23,7 +39,6 @@ export const Div1 = styled.div`
         border-right: solid 1px rgba(212, 212, 255, 0.1);
         width: 60%;
     }
-
     > :nth-child(2n) {
         padding-left: 3em;
         width: 40%;

@@ -19,6 +19,18 @@ export const Header = styled.header`
     top: 0;
     width: 100%;
     z-index: 10000;
+    ${(props) =>
+        props.menuStyle === "principal"
+            ? `
+    transition: opacity 2.5s ease;
+    transition-delay: 0.75s;
+    animation: none;
+    background-color: transparent;
+    box-shadow: none;
+    position: absolute;`
+            : `
+    animation: reveal-header 0.35s ease;        
+            `};
 `;
 export const Anchor = styled.a`
     border: 0;
@@ -64,4 +76,53 @@ export const Nav = styled.nav`
     height: inherit;
     line-height: inherit;
 `;
-export const Button = styled.button``;
+export const Button = styled.button`
+    ${(props) =>
+        props.buttonStyle === "principal"
+            ? `
+        box-shadow: none;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 2px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='11' x2='24' y2='11' /%3E%3Cline x1='0' y1='21' x2='24' y2='21' /%3E%3Cline x1='0' y1='16' x2='24' y2='16' /%3E%3C/svg%3E");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 24px 32px;
+        content: "";
+        display: block;
+        height: 15;
+        position: absolute;
+        right: 1.5em;
+        top: 0;
+        width: 24px;
+        padding-right: 6em;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none !important;
+        outline: none !important;
+
+        :hover {
+            box-shadow: none;
+            transition: none;
+        }`
+            : `
+        box-shadow: none;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: 24px 32px;
+        content: "";
+        display: block;
+        height: 15;
+        position: absolute;
+        right: 1.5em;
+        top: 0;
+        width: 24px;
+        padding: 0;
+        border: none !important;
+        outline: none !important;
+        
+        :hover {
+            box-shadow: none;
+            transition: none;
+        }    
+    `};
+`;

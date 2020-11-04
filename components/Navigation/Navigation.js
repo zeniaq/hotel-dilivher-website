@@ -1,34 +1,28 @@
 import React, { useState, useEffect } from "react";
 import MenuNav from "../MenuNav";
-import styles from "../../styles/Navigation.module.css";
 import { Header, Nav, Span, Strong, Anchor, Button } from "./styled";
 
 const Navigation = () => {
     const [click, setClick] = useState(false);
-    const [classAction, setClassAction] = useState(
-        `${styles.alt} ${styles.reveal} ${styles.header}`,
-    );
+    const [menuStyle, setMenuStyle] = useState("principal");
 
     function handleAnimation() {
         // eslint-disable-next-line no-undef
         if (document.documentElement.scrollTop > 500) {
-            setClassAction(`${styles.reveal} ${styles.header}`);
+            setMenuStyle("secundary");
         }
         // eslint-disable-next-line no-undef
         if (document.documentElement.scrollTop < 500) {
-            setClassAction(`${styles.alt} ${styles.reveal} ${styles.header}`);
+            setMenuStyle("principal");
         }
     }
     useEffect(() => {
-        // eslint-disable-next-line no-undef
-        const body = document.querySelector("body");
-        body.style.overflow = click ? "hidden" : "visible";
         // eslint-disable-next-line no-undef
         window.onscroll = () => handleAnimation();
     });
     return (
         <>
-            <Header className={classAction}>
+            <Header menuStyle={menuStyle}>
                 <Anchor href="/">
                     <Strong>Hotel</Strong>
                     <Span>Dilivher</Span>
@@ -37,7 +31,7 @@ const Navigation = () => {
                     <Button
                         type="button"
                         id="menuButton"
-                        className={click ? styles.noStyleButtonAfter : styles.noStyleButton}
+                        buttonStyle={click ? "secundary" : "principal"}
                         onClick={() => setClick(!click)}
                     >
                         {click ? null : "Menu"}
