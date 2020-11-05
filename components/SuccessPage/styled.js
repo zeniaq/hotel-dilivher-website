@@ -27,6 +27,14 @@ export const Div2 = styled.div`
 export const Section = styled.section``;
 export const H2 = styled.h2`
     color: black;
+    font-weight: 600;
+    line-height: 1.65;
+    margin: 0 0 1em 0;
+    font-size: 1.75em;
+
+    @media screen and (max-width: 736px) {
+        font-size: 1.5em;
+    }
 `;
 export const Img = styled.img`
     filter: invert(28%) sepia(96%) saturate(1279%) hue-rotate(88deg) brightness(88%) contrast(93%);

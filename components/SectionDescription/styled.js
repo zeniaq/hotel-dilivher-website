@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-    padding: 1.5em 0 0.01em;
+    padding: 4em 0 3em;
     margin: 0 auto;
     max-width: 65em;
     width: calc(100% - 6em);
@@ -27,7 +27,23 @@ export const Header = styled.header`
         width: 100%;
     }
 `;
-export const H2 = styled.h2``;
+export const H2 = styled.h2`
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.65;
+    margin: 0 0 1em 0;
+
+    a {
+        color: inherit;
+        border-bottom: 0;
+    }
+
+    font-size: 1.75em;
+
+    @media screen and (max-width: 736px) {
+        font-size: 1.5em;
+    }
+`;
 export const P = styled.p``;
 export const Ul = styled.ul`
     li {

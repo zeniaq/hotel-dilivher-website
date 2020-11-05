@@ -52,4 +52,19 @@ export const Div = styled.div`
 `;
 export const H3 = styled.h3`
     margin: 0 0 0.5em 0;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.65;
+    margin: 0 0 1em 0;
+
+    a {
+        color: inherit;
+        border-bottom: 0;
+    }
+
+    font-size: 1.35em;
+
+    @media screen and (max-width: 736px) {
+        font-size: 1.25em;
+    }
 `;

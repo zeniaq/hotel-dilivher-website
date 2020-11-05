@@ -32,28 +32,6 @@ section {
     vertical-align: baseline;
 }
 
-article,
-footer,
-header,
-nav,
-section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ul {
-    list-style: none;
-}
-
-input,
-textarea {
-    appearance: none;
-}
-/* Basic */
-
 @media screen and (max-width: 480px) {
     html,
     body {
@@ -73,12 +51,6 @@ html {
 
 body {
     background: #242943;
-}
-/* Type */
-
-body,
-input,
-textarea {
     color: #ffffff;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     font-size: 17pt;
@@ -88,25 +60,19 @@ textarea {
 }
 
 @media screen and (max-width: 1680px) {
-    body,
-    input,
-    textarea {
+    body {
         font-size: 14pt;
     }
 }
 
 @media screen and (max-width: 1280px) {
-    body,
-    input,
-    textarea {
+    body {
         font-size: 12pt;
     }
 }
 
 @media screen and (max-width: 360px) {
-    body,
-    input,
-    textarea {
+    body {
         font-size: 11pt;
     }
 }
@@ -126,8 +92,7 @@ a:active {
     color: #53e3fb !important;
 }
 
-strong,
-b {
+strong {
     color: #ffffff;
     font-weight: 600;
 }
@@ -138,117 +103,4 @@ i {
 
 p {
     margin: 0 0 2em 0;
-}
-
-h1,
-h2,
-h3 {
-    color: #ffffff;
-    font-weight: 600;
-    line-height: 1.65;
-    margin: 0 0 1em 0;
-}
-
-h1 a,
-h2 a,
-h3 a {
-    color: inherit;
-    border-bottom: 0;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 1.75em;
-}
-
-h3 {
-    font-size: 1.35em;
-}
-
-@media screen and (max-width: 736px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h3 {
-        font-size: 1.25em;
-    }
-}
-
-label {
-    color: #ffffff;
-    display: block;
-    font-size: 0.8em;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    margin: 0 0 1em 0;
-    text-transform: uppercase;
-}
-
-/* List */
-
-ul {
-    list-style: disc;
-    margin: 0 0 2em 0;
-    padding-left: 1em;
-}
-
-ul li {
-    padding-left: 0.5em;
-}
-
-/* Button */
-
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-    appearance: none;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-        color 0.2s ease-in-out;
-    background-color: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 2px #ffffff;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 0.8em;
-    font-weight: 600;
-    height: 3.5em;
-    letter-spacing: 0.25em;
-    line-height: 3.5em;
-    padding: 0 1.75em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="reset"]:hover,
-input[type="reset"]:active,
-input[type="button"]:hover,
-input[type="button"]:active,
-button:hover,
-button:active {
-    box-shadow: inset 0 0 0 2px #9bf1ff;
-    color: #9bf1ff;
-}
-
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active,
-button:active {
-    background-color: rgba(155, 241, 255, 0.1);
-    box-shadow: inset 0 0 0 2px #53e3fb;
-    color: #53e3fb;
 }

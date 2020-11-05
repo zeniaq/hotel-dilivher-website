@@ -78,7 +78,23 @@ export const Div2 = styled.div`
     width: 65em;
 `;
 export const Header = styled.header``;
-export const H3 = styled.h1``;
+export const H3 = styled.h3`
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.65;
+    margin: 0 0 1em 0;
+
+    a {
+        color: inherit;
+        border-bottom: 0;
+    }
+
+    font-size: 1.35em;
+
+    @media screen and (max-width: 736px) {
+        font-size: 1.25em;
+    }
+`;
 export const Ul = styled.ul`
     display: -moz-flex;
     display: -webkit-flex;

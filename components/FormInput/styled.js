@@ -1,8 +1,36 @@
 import styled from "styled-components";
 
 export const Div = styled.div``;
-export const Label = styled.label``;
+export const Label = styled.label`
+    color: #ffffff;
+    display: block;
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+`;
 export const Input = styled.input`
+    ${(props) =>
+        props.type !== "reset"
+            ? `
+        color: #ffffff;
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-size: 17pt;
+        font-weight: 300;
+        letter-spacing: 0.025em;
+        line-height: 1.65;
+    
+        @media screen and (max-width: 1680px) {
+            font-size: 14pt;
+        }
+        @media screen and (max-width: 1280px) {
+            font-size: 12pt;
+        }
+        @media screen and (max-width: 360px) {
+            font-size: 11pt;
+        }`
+            : null}
     ${(props) =>
         props.type === "text" || props.type === "email"
             ? `
@@ -27,9 +55,33 @@ export const Input = styled.input`
     `
             : null};
     ${(props) =>
-        props.type === "text"
+        props.type === "reset"
             ? `
-
+            appearance: none;
+            transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            box-shadow: inset 0 0 0 2px #ffffff;
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 0.8em;
+            font-weight: 600;
+            height: 3.5em;
+            letter-spacing: 0.25em;
+            line-height: 3.5em;
+            padding: 0 1.75em;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+            :active,
+            :hover {
+                box-shadow: inset 0 0 0 2px #9bf1ff;
+                color: #9bf1ff;
+            }
     `
             : null};
     ${(props) =>
@@ -49,9 +101,15 @@ export const TextArea = styled.textarea`
     color: inherit;
     display: block;
     outline: 0;
-    padding: 0 1em;
+    padding: 0.75em 1em;
     text-decoration: none;
     width: 100%;
+    font-size: 17pt;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    line-height: 1.65;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+
     :invalid {
         box-shadow: none;
     }
@@ -59,7 +117,17 @@ export const TextArea = styled.textarea`
         border-color: #9bf1ff;
         box-shadow: 0 0 0 2px #9bf1ff;
     }
-    padding: 0.75em 1em;
+    @media screen and (max-width: 1680px) {
+        font-size: 14pt;
+    }
+
+    @media screen and (max-width: 1280px) {
+        font-size: 12pt;
+    }
+
+    @media screen and (max-width: 360px) {
+        font-size: 11pt;
+    }
 `;
 export const Ul = styled.ul`
     display: -moz-flex;
@@ -78,12 +146,30 @@ export const Ul = styled.ul`
 export const Li = styled.li``;
 export const Button = styled.button`
     background-color: #ffffff;
-        box-shadow: none;
-        color: #242943;
-    }
+    box-shadow: none;
+    color: #242943;
+
     :hover,
     :active {
         background-color: #9bf1ff;
         color: #242943 !important;
     }
+
+    appearance: none;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    height: 3.5em;
+    letter-spacing: 0.25em;
+    line-height: 3.5em;
+    padding: 0 1.75em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
 `;

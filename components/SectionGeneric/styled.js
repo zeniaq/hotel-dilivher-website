@@ -27,7 +27,22 @@ export const Header = styled.header`
         width: 100%;
     }
 `;
-export const H1 = styled.h1``;
+export const H1 = styled.h1`
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.65;
+    margin: 0 0 1em 0;
+    font-size: 2.5em;
+
+    a {
+        color: inherit;
+        border-bottom: 0;
+    }
+
+    @media screen and (max-width: 736px) {
+        font-size: 2em;
+    }
+`;
 export const Span = styled.span`
     border: 0;
     display: inline-block;
