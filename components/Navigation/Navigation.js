@@ -18,6 +18,9 @@ const Navigation = () => {
     }
     useEffect(() => {
         // eslint-disable-next-line no-undef
+        const body = document.querySelector("body");
+        body.style.overflow = click ? "hidden" : "visible";
+        // eslint-disable-next-line no-undef
         window.onscroll = () => handleAnimation();
     });
     return (

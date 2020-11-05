@@ -6,7 +6,7 @@ const AnchorList = ({ styleProp, linkRef, titleText, titleText2 }) => {
         <Li key={titleText}>
             {titleText2 || null}
             {styleProp ? (
-                <Anchor href={linkRef} className={styleProp}>
+                <Anchor href={linkRef} anchorStyle={styleProp}>
                     {titleText}
                 </Anchor>
             ) : (

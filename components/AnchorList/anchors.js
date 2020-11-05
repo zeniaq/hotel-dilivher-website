@@ -1,7 +1,3 @@
-import styles from "../../styles/Home.module.css";
-
-const classRegister = `${styles.button} ${styles.primary} ${styles.fit}`;
-const classSession = `${styles.button} ${styles.fit}`;
 export const dataLinks = [
     {
         titleText: "Inicio",
@@ -20,12 +16,12 @@ export const dataForm = [
     {
         titleText: "Registrarse",
         linkRef: "#f",
-        styleProp: classRegister,
+        styleProp: "style1",
     },
     {
         titleText: "Iniciar Sesión",
         linkRef: "g",
-        styleProp: classSession,
+        styleProp: "style2",
     },
 ];
 export const dataMaster = [

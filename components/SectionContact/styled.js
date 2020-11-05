@@ -13,11 +13,9 @@ export const Section1 = styled.section`
 export const Section2 = styled.section``;
 export const Section3 = styled.section`
     > * {
-        padding: 3em 0.1em 2em;
+        padding: 3em 0 1em 3em;
         position: relative;
-        padding: 5;
     }
-
     > :before {
         border-top: solid 1px rgba(212, 212, 255, 0.1);
         content: "";
@@ -27,6 +25,12 @@ export const Section3 = styled.section`
         top: 0;
         width: calc(100vw + 3em);
     }
+    @media screen and (max-width: 980px) {
+        > * {
+            padding: 3em 0 1em 0;
+            position: relative;
+        }
+    }
 `;
 export const Div1 = styled.div`
     display: -moz-flex;
@@ -34,14 +38,22 @@ export const Div1 = styled.div`
     display: -ms-flex;
     display: flex;
     padding: 0 !important;
+
     > :nth-child(2n - 1) {
         padding: 4em 3em 2em 0;
         border-right: solid 1px rgba(212, 212, 255, 0.1);
         width: 60%;
     }
-    > :nth-child(2n) {
-        padding-left: 3em;
-        width: 40%;
+    @media screen and (max-width: 980px) {
+        display: block;
+    }
+
+    @media screen and (max-width: 980px) {
+        > :nth-child(2n - 1) {
+            padding: 4em 0 2em 0;
+            border-right: 0;
+            width: 100%;
+        }
     }
 `;
 export const Div2 = styled.div``;
