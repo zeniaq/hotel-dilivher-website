@@ -31,6 +31,21 @@ export const Header = styled.header`
             : `
     animation: reveal-header 0.35s ease;        
             `};
+            > *{
+            transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+            color: inherit;
+            text-decoration: none;
+            }
+
+            >:hover {
+                border-bottom-color: transparent;
+                color: #9bf1ff !important;
+            }
+            
+            >:active {
+                color: #53e3fb !important;
+            }
+
 `;
 export const Anchor = styled.a`
     border: 0;
