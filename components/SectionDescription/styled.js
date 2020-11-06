@@ -8,9 +8,6 @@ export const Section = styled.section`
 `;
 export const Div = styled.div``;
 export const Header = styled.header`
-    width: -moz-max-content;
-    width: -webkit-max-content;
-    width: -ms-max-content;
     width: max-content;
     margin-bottom: 2em;
 
@@ -44,16 +41,15 @@ export const H2 = styled.h2`
         font-size: 1.5em;
     }
 `;
-export const P = styled.p``;
+export const P = styled.p`
+    margin: 0 0 2em 0;
+`;
 export const Ul = styled.ul`
     li {
         padding: 0 0 0 1em;
         vertical-align: middle;
     }
 
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     cursor: default;
     list-style: none;

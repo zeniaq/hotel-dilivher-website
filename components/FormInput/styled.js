@@ -130,9 +130,6 @@ export const TextArea = styled.textarea`
     }
 `;
 export const Ul = styled.ul`
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     cursor: default;
     list-style: none;

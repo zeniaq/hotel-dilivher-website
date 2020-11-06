@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     background-color: #2a2f4a;
     box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
@@ -31,23 +28,19 @@ export const Header = styled.header`
             : `
     animation: reveal-header 0.35s ease;        
             `};
-            > *{
-            transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-            color: inherit;
-            text-decoration: none;
-            }
-
-            >:hover {
-                border-bottom-color: transparent;
-                color: #9bf1ff !important;
-            }
-            
-            >:active {
-                color: #53e3fb !important;
-            }
-
 `;
 export const Anchor = styled.a`
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+    :hover {
+        border-bottom-color: transparent;
+        color: #9bf1ff !important;
+    }
+    :active {
+        color: #53e3fb !important;
+    }
+
     border: 0;
     display: inline-block;
     font-size: 0.8em;
@@ -63,9 +56,6 @@ export const Anchor = styled.a`
     }
 `;
 export const Strong = styled.strong`
-    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: #ffffff;
     color: #242943;
@@ -76,17 +66,8 @@ export const Strong = styled.strong`
 `;
 export const Span = styled.span``;
 export const Nav = styled.nav`
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
-    -moz-justify-content: -moz-flex-end;
-    -webkit-justify-content: -webkit-flex-end;
-    -ms-justify-content: -ms-flex-end;
     justify-content: flex-end;
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
     flex-grow: 1;
     height: inherit;
     line-height: inherit;

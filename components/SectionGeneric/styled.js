@@ -8,9 +8,6 @@ export const Section = styled.section`
 `;
 export const Div = styled.div``;
 export const Header = styled.header`
-    width: -moz-max-content;
-    width: -webkit-max-content;
-    width: -ms-max-content;
     width: max-content;
     margin-bottom: 2em;
     :first-child {
@@ -54,4 +51,6 @@ export const Span = styled.span`
 export const Img = styled.img`
     width: 100%;
 `;
-export const P = styled.p``;
+export const P = styled.p`
+    margin: 0 0 2em 0;
+`;

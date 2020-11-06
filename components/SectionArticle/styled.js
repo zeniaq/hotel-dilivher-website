@@ -98,18 +98,14 @@ export const Article = styled.article`
     }
 `;
 export const Header = styled.header`
-    width: -moz-max-content;
-    width: -webkit-max-content;
-    width: -ms-max-content;
     width: max-content;
     margin-bottom: 2em;
 
     position: relative;
     z-index: 3;
 
-    > :first-child {
+    :first-child {
         margin-bottom: 0;
-        width: calc(100% + 0.5em);
     }
 
     :first-child:after {
@@ -117,33 +113,35 @@ export const Header = styled.header`
         background-color: #ffffff;
         display: block;
         height: 2px;
-        margin: 0.325em 0 0.5em 0;
-        width: 100%;
+        margin: -2.2em 0 0.5em 0;
+        width: 110%;
     }
 `;
 export const H3 = styled.h3`
-    font-size: 1.75em;
-    @media screen and (max-width: 736px) {
-        font-size: 1.5em;
-    }
     color: #ffffff;
     font-weight: 600;
     line-height: 1.65;
     margin: 0 0 1em 0;
 
-    a {
-        color: inherit;
-        border-bottom: 0;
-    }
-
-    font-size: 1.35em;
+    font-size: 1.75em;
 
     @media screen and (max-width: 736px) {
         font-size: 1.25em;
     }
 `;
 export const Anchor = styled.a`
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+    :hover {
+        border-bottom-color: transparent;
+        color: #9bf1ff !important;
+    }
+    :active {
+        color: #53e3fb !important;
+    }
     color: inherit !important;
+    border-bottom: 0;
 `;
 export const P = styled.p`
     font-size: 0.7em;

@@ -2,9 +2,6 @@ import styled from "styled-components";
 
 export const Li = styled.li`
     a.icon.alt:before {
-        -moz-transition: background-color 0.2s ease-in-out;
-        -webkit-transition: background-color 0.2s ease-in-out;
-        -ms-transition: background-color 0.2s ease-in-out;
         transition: background-color 0.2s ease-in-out;
     }
 
@@ -17,6 +14,16 @@ export const Li = styled.li`
     }
 `;
 export const Anchor = styled.a`
+    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+    color: inherit;
+    text-decoration: none;
+    :hover {
+        border-bottom-color: transparent;
+        color: #9bf1ff !important;
+    }
+    :active {
+        color: #53e3fb !important;
+    }
     ${(props) =>
         props.anchorStyle
             ? `

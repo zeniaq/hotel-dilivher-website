@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Li, Anchor, Img, Section, H3, Div } from "./styled";
+import { Li, Anchor, Span, Img, Section, H3, Div } from "./styled";
 
 const Icon = ({ iconSrc, url, linkRef, titleText, descriptionText1, descriptionText2 }) => {
     return url ? (
@@ -11,9 +11,9 @@ const Icon = ({ iconSrc, url, linkRef, titleText, descriptionText1, descriptionT
     ) : (
         <Section>
             <Div>
-                <Anchor typeAnchor="icon" className="contact">
+                <Span typeAnchor="icon">
                     <Img src={iconSrc} alt="Contact Icon" width="40px" height="40px" />
-                </Anchor>
+                </Span>
                 <H3>{titleText}</H3>
                 <Anchor href={linkRef}>
                     {descriptionText1}

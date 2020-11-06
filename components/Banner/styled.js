@@ -20,13 +20,7 @@ export const Section = styled.section`
     max-height: 50em;
 
     :before {
-        -moz-transition: opacity 2.5s ease;
-        -webkit-transition: opacity 2.5s ease;
-        -ms-transition: opacity 2.5s ease;
         transition: opacity 2.5s ease;
-        -moz-transition-delay: 0.75s;
-        -webkit-transition-delay: 0.75s;
-        -ms-transition-delay: 0.75s;
         transition-delay: 0.75s;
         pointer-events: none;
         background-color: #242943;
@@ -75,12 +69,6 @@ export const Section = styled.section`
     }
 `;
 export const Div1 = styled.div`
-    -moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out, -moz-filter 0.5s ease,
-        -webkit-filter 0.5s ease;
-    -webkit-transition: opacity 1.5s ease, -webkit-transform 0.5s ease-out, -webkit-filter 0.5s ease,
-        -webkit-filter 0.5s ease;
-    -ms-transition: opacity 1.5s ease, -ms-transform 0.5s ease-out, -ms-filter 0.5s ease,
-        -webkit-filter 0.5s ease;
     transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease,
         -webkit-filter 0.5s ease;
     padding: 0 !important;
@@ -88,13 +76,7 @@ export const Div1 = styled.div`
     z-index: 2;
 `;
 export const Div2 = styled.div`
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
     align-items: center;
     margin: 0 0 2em 0;
 
@@ -119,10 +101,6 @@ export const Div2 = styled.div`
     }
 `;
 export const Header = styled.header`
-    width: auto;
-    width: -moz-max-content;
-    width: -webkit-max-content;
-    width: -ms-max-content;
     width: max-content;
     margin-bottom: 2em;
     :first-child {
@@ -145,14 +123,11 @@ export const H1 = styled.h1`
     color: #ffffff;
     font-weight: 600;
     line-height: 1.65;
-    margin: 0 0 1em 0;
 
     a {
         color: inherit;
         border-bottom: 0;
     }
-
-    font-size: 2.5em;
 
     @media screen and (max-width: 736px) {
         font-size: 2em;
@@ -163,6 +138,7 @@ export const P = styled.p`
     font-weight: 600;
     letter-spacing: 0.25em;
     text-transform: uppercase;
+    margin: 3em 2em 2em 0;
 
     @media screen and (max-width: 480px) {
         br {
@@ -176,9 +152,6 @@ export const Ul = styled.ul`
         vertical-align: middle;
     }
 
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     cursor: default;
     list-style: none;

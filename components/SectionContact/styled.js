@@ -33,9 +33,6 @@ export const Section3 = styled.section`
     }
 `;
 export const Div1 = styled.div`
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     padding: 0 !important;
 
