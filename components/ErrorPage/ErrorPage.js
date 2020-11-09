@@ -1,4 +1,4 @@
-import { Div2, Img, H3, Section, Ul } from "./styled";
+import { Div, Img, H3, Section, Ul } from "./styled";
 import AnchorList from "../AnchorList";
 import styles from "../../styles/Home.module.css";
 
@@ -6,7 +6,7 @@ export default function ErrorPage() {
     const classStarted = `${styles.button} ${styles.next}`;
     return (
         <Section>
-            <Div2>
+            <Div>
                 <H3>
                     LO SENTIMOS!
                     <br />
@@ -16,7 +16,7 @@ export default function ErrorPage() {
                 <Ul>
                     <AnchorList styleProp={classStarted} linkRef="/" titleText="Ir al inicio" />
                 </Ul>
-            </Div2>
+            </Div>
         </Section>
     );
 }

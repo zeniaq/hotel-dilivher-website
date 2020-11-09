@@ -1,10 +1,7 @@
-import { Div1, Div2, Section } from "./styled";
-import Navigation from "../Navigation";
+import { Div, Section } from "./styled";
 import SectionArticle from "../SectionArticle";
 import Banner from "../Banner";
 import SectionDescription from "../SectionDescription";
-import Footer from "../Footer";
-import SectionContact from "../SectionContact";
 import dataArticles from "../SectionArticle/articles";
 
 export default function SuccessPage() {
@@ -18,8 +15,7 @@ export default function SuccessPage() {
         />
     ));
     return (
-        <Div1>
-            <Navigation />
+        <>
             <Banner
                 titleText="Tú descanso, nuestra razon de ser."
                 descriptionText1="Amplio estacionamiento, area de juegos infantiles,"
@@ -27,7 +23,7 @@ export default function SuccessPage() {
                 textButton="Reservar Ahora"
                 imageSrc="images/banner.jpg"
             />
-            <Div2>
+            <Div>
                 <Section>{data}</Section>
                 <SectionDescription
                     linkRef="/landing"
@@ -35,9 +31,7 @@ export default function SuccessPage() {
                     descriptionText="Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."
                     textButton="Get Started"
                 />
-            </Div2>
-            <SectionContact />
-            <Footer />
-        </Div1>
+            </Div>
+        </>
     );
 }

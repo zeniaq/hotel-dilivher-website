@@ -1,14 +1,10 @@
-import Head from "next/head";
 import IndexPage from "../components/IndexPage";
+import PrincipalLayout from "../components/PrincipalLayout";
 
 export default function Home() {
     return (
-        <>
-            <Head>
-                <title>Hotel Dilivher :: Home</title>
-                <meta name="description" content="Hotel Dilivher WebSite" />
-            </Head>
+        <PrincipalLayout contact="true" title="Hotel Dilivher :: Home">
             <IndexPage />
-        </>
+        </PrincipalLayout>
     );
 }

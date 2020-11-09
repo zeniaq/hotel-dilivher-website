@@ -29,7 +29,7 @@ export const H2 = styled.h2`
     color: black;
     font-weight: 600;
     line-height: 1.65;
-    margin: 0 0 1em 0;
+    margin: 1em 0 1em 0;
     font-size: 1.75em;
 
     @media screen and (max-width: 736px) {
@@ -54,6 +54,7 @@ export const Ul = styled.ul`
     list-style: none;
     background-color: #242943;
     padding: 0;
+    margin-bottom: 2em;
 
     li {
         padding: 0;

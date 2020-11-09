@@ -1,14 +1,10 @@
-import Head from "next/head";
 import LandingPage from "../components/LandingPage";
+import PrincipalLayout from "../components/PrincipalLayout";
 
 export default function Home() {
     return (
-        <>
-            <Head>
-                <title>Hotel Dilivher :: Landing</title>
-                <meta name="description" content="Hotel Dilivher WebSite" />
-            </Head>
+        <PrincipalLayout contact="true" title="Hotel Dilivher :: Landing Page">
             <LandingPage />
-        </>
+        </PrincipalLayout>
     );
 }
