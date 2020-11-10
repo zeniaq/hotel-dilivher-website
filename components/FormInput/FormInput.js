@@ -38,6 +38,26 @@ export const FormInputButton = () => {
     );
 };
 
+export const FormSignUpButton = () => {
+    return (
+        <Ul>
+            <Li key="SignUp">
+                <Button type="submit">Sign Up</Button>
+            </Li>      
+        </Ul>
+    );
+};
+
+export const FormSignInButton = () => {
+    return (
+        <Ul>
+            <Li key="SignIn">
+                <Button type="submit">Sign In</Button>
+            </Li>   
+        </Ul>
+    );
+};
+
 FormInput.propTypes = {
     titleText: PropTypes.string,
     typeInput: PropTypes.string,

@@ -32,7 +32,7 @@ export const Input = styled.input`
         }`
             : null}
     ${(props) =>
-        props.type === "text" || props.type === "email"
+        props.type === "text" || props.type === "email" || props.type === "tel" || props.type === "password"
             ? `
             appearance: none;
             background: rgba(212, 212, 255, 0.035);
