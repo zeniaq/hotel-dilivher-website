@@ -74,3 +74,47 @@ export const UlForm = styled.ul`
         vertical-align: middle;
     }
 `;
+export const UlEmployee = styled.ul`
+    display: flex;
+    cursor: default;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 2px dotted red;
+    br {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+`;
+export const Li = styled.li`
+    background-color: #faa3a3;
+    width: 300px;
+    vertical-align: middle;
+    text-align: center;
+`;
+export const Anchor = styled.a`
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #faa3a3;
+    color: #242943;
+    :hover,
+    :active {
+        background-color: #9bf1ff;
+    }
+`;
+export const Img = styled.img`
+    width: 40px;
+`;

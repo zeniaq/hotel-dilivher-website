@@ -1,9 +1,9 @@
+import PropTypes from "prop-types";
 import AnchorList from "../AnchorList/AnchorList";
-import { dataLinks, dataForm } from "../AnchorList/anchors";
-import { Nav, UlLinks, UlForm } from "./styled";
-
+import { dataLinks, dataForm, dataEmployee } from "../AnchorList/anchors";
+import { Nav, UlLinks, UlForm, Li, Anchor, Img, UlEmployee } from "./styled";
 // eslint-disable-next-line react/prop-types
-const MenuNav = ({ display, setDisplay }) => {
+const MenuNav = ({ display, setDisplay, typeMenu }) => {
     const data1 = dataLinks.map((anchors) => (
         <AnchorList
             titleText={anchors.titleText}
@@ -18,12 +18,36 @@ const MenuNav = ({ display, setDisplay }) => {
             styleProp={anchors.styleProp}
         />
     ));
+    const data3 = dataEmployee.map((anchors) => (
+        <AnchorList
+            titleText={anchors.titleText}
+            linkRef={anchors.linkRef}
+            styleProp={anchors.styleProp}
+        />
+    ));
     return display ? (
         <Nav onClick={() => setDisplay(!display)} role="presentation">
+            {typeMenu === "Employee" ? (
+                <UlEmployee>
+                    <Li>
+                        <Anchor href="#k">
+                            <Img src="icons/user.svg" alt="Profile icon" />
+                            <br />
+                            Tony Stark <hr /> Director
+                        </Anchor>
+                    </Li>
+                </UlEmployee>
+            ) : null}
             <UlLinks>{data1}</UlLinks>
-            <UlForm>{data2}</UlForm>
+            <UlForm>{typeMenu === "Employee" ? data3 : data2}</UlForm>
         </Nav>
     ) : null;
+};
+MenuNav.propTypes = {
+    typeMenu: PropTypes.string,
+};
+MenuNav.defaultProps = {
+    typeMenu: "",
 };
 
 export default MenuNav;

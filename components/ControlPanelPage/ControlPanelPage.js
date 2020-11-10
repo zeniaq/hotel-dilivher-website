@@ -1,3 +1,3 @@
 export default function ControlPanelPage() {
-    return <></>;
+    return <section />;
 }

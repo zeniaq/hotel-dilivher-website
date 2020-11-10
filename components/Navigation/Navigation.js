@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import MenuNav from "../MenuNav";
 import { Header, Nav, Span, Strong, Anchor, Button } from "./styled";
 
-const Navigation = () => {
+const Navigation = ({ typeMenu }) => {
     const [click, setClick] = useState(false);
     const [menuStyle, setMenuStyle] = useState("principal");
 
@@ -41,9 +42,15 @@ const Navigation = () => {
                     </Button>
                 </Nav>
             </Header>
-            <MenuNav display={click} setDisplay={setClick} />
+            <MenuNav display={click} setDisplay={setClick} typeMenu={typeMenu} />
         </>
     );
+};
+Navigation.propTypes = {
+    typeMenu: PropTypes.string,
+};
+Navigation.defaultProps = {
+    typeMenu: "",
 };
 
 export default Navigation;

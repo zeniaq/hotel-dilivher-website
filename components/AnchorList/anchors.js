@@ -20,10 +20,29 @@ export const dataForm = [
     },
     {
         titleText: "Iniciar Sesión",
-        linkRef: "g",
+        linkRef: "#g",
         styleProp: "style2",
     },
 ];
+
+export const dataEmployee = [
+    {
+        titleText: "Panel de Control",
+        linkRef: "#h",
+        styleProp: "style1",
+    },
+    {
+        titleText: "Configurar Perfil",
+        linkRef: "#i",
+        styleProp: "style2",
+    },
+    {
+        titleText: "Cerrar Sesion",
+        linkRef: "#j",
+        styleProp: "style1",
+    },
+];
+
 export const dataMaster = [
     {
         titleText: "© 2020 Hotel Dilivher",
