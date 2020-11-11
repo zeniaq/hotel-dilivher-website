@@ -53,7 +53,67 @@ export const Input = styled.input`
             }
             height: 2.75em;
     `
-            : null};
+            : null}
+
+            ${(props) =>
+                props.type === "radio"
+                    ? `
+                            -moz-appearance: none;
+                -webkit-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                display: block;
+                float: left;
+                margin-right: -2em;
+                opacity: 0;
+                width: 1em;
+                z-index: -1;
+                text-decoration: none;
+                    color: #ffffff;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-weight: 300;
+                    padding-left: 2.65em;
+                    padding-right: 0.75em;
+                    position: relative;
+                    
+                    :before {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        line-height: 1;
+                        text-transform: none !important;
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        background: rgba(212, 212, 255, 0.035);
+                        content: '';
+                        display: inline-block;
+                        font-size: 0.8em;
+                        height: 2.0625em;
+                        left: 0;
+                        letter-spacing: 0;
+                        line-height: 2.0625em;
+                        position: absolute;
+                        text-align: center;
+                        top: 0;
+                        width: 2.0625em;
+                        border-radius: 100%;
+                    }
+                    :checked  {
+                        background: #ffffff;
+                        border-color: #9bf1ff;
+                        content: '\f00c';
+                        color: #242943;
+                    }
+                    :focus {
+                        box-shadow: 0 0 0 2px #9bf1ff;
+                    }
+                            
+                    `
+                    : null};
     ${(props) =>
         props.type === "reset"
             ? `
@@ -84,6 +144,9 @@ export const Input = styled.input`
             }
     `
             : null};
+
+           
+           
     ${(props) =>
         props.type === "email"
             ? `
@@ -145,6 +208,7 @@ export const Button = styled.button`
     background-color: #ffffff;
     box-shadow: none;
     color: #242943;
+    
 
     :hover,
     :active {
@@ -156,7 +220,7 @@ export const Button = styled.button`
     transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
         color 0.2s ease-in-out;
     border: 0;
-    border-radius: 0;
+    border-radius: 5;
     cursor: pointer;
     display: inline-block;
     font-size: 0.8em;
@@ -164,8 +228,9 @@ export const Button = styled.button`
     height: 3.5em;
     letter-spacing: 0.25em;
     line-height: 3.5em;
-    padding: 0 1.75em;
+    padding: 0 5em;
     text-align: center;
+    align-items: center;
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;

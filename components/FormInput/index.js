@@ -1,4 +1,4 @@
-import FormInput, { FormInputButton, FormSignUpButton, FormSignInButton as FormButton } from "./FormInput";
+import FormInput, { FormInputButton, FormConfirmButton as FormButton } from "./FormInput";
 
 export { FormButton };
 export default FormInput;

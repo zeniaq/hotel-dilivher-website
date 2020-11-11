@@ -1,7 +1,7 @@
 import { SignInForms } from "../FormInput/forms";
 import FormInput, { FormButton } from "../FormInput";
-import { FormSignInButton } from "../FormInput/FormInput";
-import { Section, Div, Div2, Form } from "./styled";
+import { FormConfirmButton } from "../FormInput/FormInput";
+import { Section, Div, Div2, Form, Img, Anchor } from "./styled";
 
 const SignIn = () => {
     const signin1 = SignInForms.map((form) => (
@@ -16,9 +16,14 @@ const SignIn = () => {
     return (
         <Section key="SectionIn">
             <Div>
+                <Anchor>
+                    <Img src="icons/user2.svg" alt="Profile icon" />
+                </Anchor>
                 <Form name="contact" action="/success" method="POST" data-netlify="true">
                     <Div2>{signin1}</Div2>
-                    <FormSignInButton />
+                    <Anchor>
+                        <FormConfirmButton />
+                    </Anchor>
                 </Form>
             </Div>
         </Section>

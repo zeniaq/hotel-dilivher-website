@@ -18,12 +18,12 @@ export default dataForms;
 
 export const SignInForms = [
     {
-        titleText: "User",
+        titleText: "Usuario",
         typeInput: "text",
         nameField: "user",
     },
     {
-        titleText: "Full Name",
+        titleText: "Nombre Completo",
         typeInput: "text",
         nameField: "fullname",
     },
@@ -33,7 +33,7 @@ export const SignInForms = [
         nameField: "email",
     },
     {
-        titleText: "Password",
+        titleText: "Contraseña",
         typeInput: "password",
         nameField: "password",
     },
@@ -41,17 +41,17 @@ export const SignInForms = [
 
 export const SignUpForms = [
     {
-        titleText: "Name",
+        titleText: "Nombre",
         typeInput: "text",
         nameField: "name",
     },
     {
-        titleText: "Last Name",
+        titleText: "Apellidos",
         typeInput: "text",
         nameField: "lastname",
     },
     {
-        titleText: "User",
+        titleText: "Usuario",
         typeInput: "text",
         nameField: "user",
     },
@@ -61,23 +61,56 @@ export const SignUpForms = [
         nameField: "email",
     },
     {
-        titleText: "Landline",
+        titleText: "Telefono fijo",
         typeInput: "tel",
         nameField: "landline",
     },
     {
-        titleText: "Mobile phone",
+        titleText: "Telefono movil",
         typeInput: "tel",
         nameField: "mobilephone",
     },
     {
-        titleText: "Password",
+        titleText: "Contraseña",
         typeInput: "password",
         nameField: "password",
     },
     {
-        titleText: "Confirm Password",
+        titleText: "Confirmar Contraseña",
         typeInput: "password",
         nameField: "confirmpassword",
+    },
+];
+
+export const RegisterUserForms = [
+    {
+        titleText: "Usuario",
+        typeInput: "text",
+        nameField: "user",
+    },
+    {
+        titleText: "Nombre Completo",
+        typeInput: "text",
+        nameField: "fullname",
+    },
+    {
+        titleText: "Email",
+        typeInput: "email",
+        nameField: "email",
+    },
+    {
+        titleText: "Contraseña",
+        typeInput: "password",
+        nameField: "password",
+    },
+    {
+        titleText: "Administrador",
+        typeInput: "radio",
+        nameField: "radio_administrador",
+    },
+    {
+        titleText: "Empleado",
+        typeInput: "radio",
+        nameField: "radio_empleado",
     },
 ];
