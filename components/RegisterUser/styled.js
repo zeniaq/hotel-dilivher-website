@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-> * {
-    padding: 1em 0 2em 0;
-    margin: 0 auto;
-    max-width: 65em;
-    width: calc(100% - 40em);
-    align-items: center;
-    justify-content: center;
-}
-border-bottom: solid 1px rgba(212, 212, 255, 0.1);
-overflow-x: hidden;
+    > * {
+        padding: 1em 0 2em 0;
+        margin: 0 auto;
+        max-width: 65em;
+        width: calc(100% - 40em);
+        align-items: center;
+        justify-content: center;
+    }
+    border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+    overflow-x: hidden;
 `;
 export const Div = styled.div`
-align-items: center;
+    align-items: center;
     justify-content: center;
     padding: 0 !important;
    
@@ -28,8 +28,11 @@ align-items: center;
 `;
 export const Img = styled.img`
     width: 120px;
+<<<<<<< HEAD
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(204deg) brightness(102%) contrast(110%);
   
+=======
+>>>>>>> 66fb7cab6379666a6b51e0f722fbeb477244f0bf
 `;
 export const Label = styled.label``;
 export const Div2 = styled.div``;
@@ -45,9 +48,25 @@ export const Anchor = styled.a`
     width: 100%;
     background-color: transparent;
     color: #242943;
+<<<<<<< HEAD
 
     @media screen and (max-width: 980px) {
         padding: 1em 5em;
     }
     
 `;
+=======
+`;
+export const Anchor2 = styled.a`
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em 8em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: transparent;
+    color: #242943;
+`;
+>>>>>>> 66fb7cab6379666a6b51e0f722fbeb477244f0bf

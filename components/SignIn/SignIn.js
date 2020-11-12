@@ -19,10 +19,10 @@ const SignIn = () => {
                 <Anchor>
                     <Img src="icons/user2.svg" alt="Profile icon" />
                 </Anchor>
-                <Form name="contact" action="/success" method="POST" data-netlify="true">
+                <Form name="contact" action="" method="POST">
                     <Div2>{signin1}</Div2>
                     <Anchor>
-                        <FormButton formType="2" />
+                        <FormButton textButton="Confirmar" />
                     </Anchor>
                 </Form>
             </Div>

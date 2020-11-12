@@ -31,10 +31,23 @@ const FormInput = ({ titleText, typeInput, nameField, min, max, defaultValue, ty
     );
 };
 
-export const FormButton = ({ formType }) => {
+export const FormButton = ({ textButton, typeButton, onClick }) => {
     return (
         <Ul>
-            {formType === "1" ? (
+            {textButton ? (
+                <>
+                    <Li key="Confirm">
+                        <Button
+                            align="center"
+                            type="submit"
+                            typeButton={typeButton}
+                            onClick={onClick}
+                        >
+                            {textButton}
+                        </Button>
+                    </Li>
+                </>
+            ) : (
                 <>
                     <Li key="SendMessage">
                         <Button type="submit">Send Message</Button>
@@ -43,25 +56,7 @@ export const FormButton = ({ formType }) => {
                         <Input type="reset" value="Clear" />
                     </Li>
                 </>
-            ) : null}
-            {formType === "2" ? (
-                <>
-                    <Li key="Confirm">
-                        <Button align="center" type="submit">
-                            Confirmar
-                        </Button>
-                    </Li>
-                </>
-            ) : null}
-            {formType === "3" ? (
-                <>
-                    <Li key="Query">
-                        <Button align="center" type="submit">
-                            Buscar
-                        </Button>
-                    </Li>
-                </>
-            ) : null}
+            )}
         </Ul>
     );
 };
@@ -86,11 +81,15 @@ FormInput.defaultProps = {
     typeForm: "",
 };
 FormButton.propTypes = {
-    formType: PropTypes.string,
+    textButton: PropTypes.string,
+    typeButton: PropTypes.string,
+    onClick: PropTypes.string,
 };
 
 FormButton.defaultProps = {
-    formType: "",
+    textButton: "",
+    typeButton: "",
+    onClick: "",
 };
 
 export default FormInput;

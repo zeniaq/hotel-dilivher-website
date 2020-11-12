@@ -250,4 +250,17 @@ export const Button = styled.button`
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
+    ${(props) =>
+        props.typeButton === "card"
+            ? `
+            appearance: none;
+            background-color: #242943;
+            box-shadow: inset 0 0 0 2px #ffffff;
+            color: #ffffff;
+            :active,
+            :hover {
+                color: #9bf1ff;
+            }
+    `
+            : null}
 `;
