@@ -1,6 +1,6 @@
 import { SignUpForms } from "../FormInput/forms";
 import FormInput, { FormButton } from "../FormInput";
-import { FormConfirmButton } from "../FormInput/FormInput";
+
 import { Section, Div, Div2, Form, Anchor, Img } from "./styled";
 
 const SignUp = () => {
@@ -22,7 +22,7 @@ const SignUp = () => {
                 <Form name="contact" action="/success" method="POST" data-netlify="true">
                     <Div2>{signup1}</Div2>
                     <Anchor>
-                        <FormConfirmButton />
+                        <FormButton formType="2" />
                     </Anchor>
                 </Form>
             </Div>

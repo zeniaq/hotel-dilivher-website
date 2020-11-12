@@ -1,3 +1,9 @@
+import Select from "../Select";
+
 export default function ControlPanelPage() {
-    return <section />;
+    return (
+        <section>
+            <Select />
+        </section>
+    );
 }

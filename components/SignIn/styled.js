@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-> * {
-    padding: 1em 0 2em 0;
-    margin: 0 auto;
-    max-width: 65em;
-    width: calc(100% - 40em);
-}
-border-bottom: solid 1px rgba(212, 212, 255, 0.1);
-overflow-x: hidden;
+    > * {
+        padding: 1em 0 2em 0;
+        margin: 0 auto;
+        max-width: 65em;
+        width: calc(100% - 40em);
+    }
+    border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+    overflow-x: hidden;
 `;
 export const Div = styled.div`
-align-items: center;
+    align-items: center;
     justify-content: center;
 `;
 export const Img = styled.img`
     width: 120px;
 `;
-export const Anchor= styled.a`
+export const Anchor = styled.a`
     color: inherit;
     text-decoration: none;
     cursor: pointer;

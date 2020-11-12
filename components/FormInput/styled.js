@@ -1,6 +1,24 @@
 import styled from "styled-components";
 
 export const Div = styled.div``;
+export const Select = styled.select`
+    color: white;
+    background-color: #2b304a;
+    border: none;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 100%;
+    :invalid {
+        box-shadow: none;
+    }
+    :focus {
+        border-color: #9bf1ff;
+        box-shadow: 0 0 0 2px #9bf1ff;
+    }
+    height: 40px;
+`;
 export const Label = styled.label`
     color: #ffffff;
     display: block;
@@ -9,6 +27,21 @@ export const Label = styled.label`
     letter-spacing: 0.25em;
     margin: 0 0 1em 0;
     text-transform: uppercase;
+    ${(props) =>
+        props.typeForm === "app"
+            ? `
+        color:#241943;
+        margin-left:1em;
+        margin-right:1em;
+        @media screen and (max-width: 736px) {
+            font-size: 11pt;
+        }
+        input{
+            height: 40px;
+            text-align:center;
+        }
+    `
+            : null}
 `;
 export const Input = styled.input`
     ${(props) =>
@@ -31,14 +64,17 @@ export const Input = styled.input`
             font-size: 11pt;
         }`
             : null}
+
     ${(props) =>
-        props.type === "text" || props.type === "email" || props.type === "tel" || props.type === "password"
+        props.type === "text" ||
+        props.type === "email" ||
+        props.type === "tel" ||
+        props.type === "password" ||
+        props.type === "date" ||
+        props.type === "number"
             ? `
-            appearance: none;
-            background: rgba(212, 212, 255, 0.035);
+            background-color: #2b304a;
             border: none;
-            border-radius: 0;
-            color: inherit;
             display: block;
             outline: 0;
             padding: 0 1em;
@@ -56,64 +92,58 @@ export const Input = styled.input`
             : null}
 
             ${(props) =>
-                props.type === "radio"
-                    ? `
-                            -moz-appearance: none;
-                -webkit-appearance: none;
-                -ms-appearance: none;
+        props.type === "radio"
+            ? `
                 appearance: none;
-                display: block;
                 float: left;
                 margin-right: -2em;
                 opacity: 0;
                 width: 1em;
                 z-index: -1;
                 text-decoration: none;
-                    color: #ffffff;
-                    cursor: pointer;
+                color: #ffffff;
+                cursor: pointer;
+                display: inline-block;
+                font-weight: 300;
+                padding-left: 2.65em;
+                padding-right: 0.75em;
+                position: relative;
+                
+                :before {
                     display: inline-block;
-                    font-weight: 300;
-                    padding-left: 2.65em;
-                    padding-right: 0.75em;
-                    position: relative;
-                    
-                    :before {
-                        -moz-osx-font-smoothing: grayscale;
-                        -webkit-font-smoothing: antialiased;
-                        display: inline-block;
-                        font-style: normal;
-                        font-variant: normal;
-                        text-rendering: auto;
-                        line-height: 1;
-                        text-transform: none !important;
-                        font-family: 'Font Awesome 5 Free';
-                        font-weight: 900;
-                        background: rgba(212, 212, 255, 0.035);
-                        content: '';
-                        display: inline-block;
-                        font-size: 0.8em;
-                        height: 2.0625em;
-                        left: 0;
-                        letter-spacing: 0;
-                        line-height: 2.0625em;
-                        position: absolute;
-                        text-align: center;
-                        top: 0;
-                        width: 2.0625em;
-                        border-radius: 100%;
-                    }
-                    :checked  {
-                        background: #ffffff;
-                        border-color: #9bf1ff;
-                        content: '\f00c';
-                        color: #242943;
-                    }
-                    :focus {
-                        box-shadow: 0 0 0 2px #9bf1ff;
-                    }
-                            
-                    `
-                    : null};
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    text-transform: none !important;
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    background: rgba(212, 212, 255, 0.035);
+                    content: '';
+                    display: inline-block;
+                    font-size: 0.8em;
+                    height: 2.0625em;
+                    left: 0;
+                    letter-spacing: 0;
+                    line-height: 2.0625em;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 2.0625em;
+                    border-radius: 100%;
+                }
+                :checked  {
+                    background: #ffffff;
+                    border-color: #9bf1ff;
+                    content: '\f00c';
+                    color: #242943;
+                }
+                :focus {
+                    box-shadow: 0 0 0 2px #9bf1ff;
+                }
+                        
+        `
+            : null};
     ${(props) =>
         props.type === "reset"
             ? `
@@ -144,23 +174,12 @@ export const Input = styled.input`
             }
     `
             : null};
-
-           
-           
-    ${(props) =>
-        props.type === "email"
-            ? `
-
-    `
-            : null};
-    ${(props) => (props.type === "" ? `` : null)};
 `;
 export const TextArea = styled.textarea`
     resize: none;
     appearance: none;
     background: rgba(212, 212, 255, 0.035);
     border: none;
-    border-radius: 0;
     color: inherit;
     display: block;
     outline: 0;
@@ -208,8 +227,6 @@ export const Button = styled.button`
     background-color: #ffffff;
     box-shadow: none;
     color: #242943;
-    
-
     :hover,
     :active {
         background-color: #9bf1ff;
@@ -222,13 +239,12 @@ export const Button = styled.button`
     border: 0;
     border-radius: 5;
     cursor: pointer;
-    display: inline-block;
     font-size: 0.8em;
-    font-weight: 600;
     height: 3.5em;
+    font-weight: 600;
     letter-spacing: 0.25em;
     line-height: 3.5em;
-    padding: 0 5em;
+    padding: 0 1em;
     text-align: center;
     align-items: center;
     text-decoration: none;

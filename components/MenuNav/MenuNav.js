@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import AnchorList from "../AnchorList/AnchorList";
 import { dataLinks, dataForm, dataEmployee } from "../AnchorList/anchors";
-import { Nav, UlLinks, UlForm, Li, Anchor, Img, UlEmployee } from "./styled";
+import { Nav, UlLinks, UlForm, Li, Anchor, Img, UlEmployee, P } from "./styled";
 // eslint-disable-next-line react/prop-types
 const MenuNav = ({ display, setDisplay, typeMenu }) => {
     const data1 = dataLinks.map((anchors) => (
@@ -33,7 +33,9 @@ const MenuNav = ({ display, setDisplay, typeMenu }) => {
                         <Anchor href="#k">
                             <Img src="icons/user.svg" alt="Profile icon" />
                             <br />
-                            Tony Stark <hr /> Director
+                            <P>
+                                Tony Stark <hr /> Director
+                            </P>
                         </Anchor>
                     </Li>
                 </UlEmployee>

@@ -1,3 +1,6 @@
+const date = new Date();
+const dateStart = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+const dateEnd = `${date.getFullYear() + 1}-${date.getMonth() + 1}-${date.getDate()}`;
 export const dataForms = [
     {
         titleText: "Name",
@@ -15,6 +18,31 @@ export const dataForms = [
     },
 ];
 export default dataForms;
+
+export const dataSelect = [
+    {
+        typeInput: "select",
+        titleText: "Tipo Habitacion",
+        nameField: "select",
+        typeForm: "app",
+    },
+    {
+        typeInput: "number",
+        titleText: "No. Personas",
+        min: "1",
+        max: "4",
+        defaultValue: "1",
+        typeForm: "app",
+    },
+    {
+        typeInput: "date",
+        titleText: "Fecha Disponible",
+        defaultValue: dateStart,
+        min: dateStart,
+        max: dateEnd,
+        typeForm: "app",
+    },
+];
 
 export const SignInForms = [
     {

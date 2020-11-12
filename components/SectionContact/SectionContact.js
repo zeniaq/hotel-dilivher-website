@@ -1,9 +1,9 @@
 import dataContact from "../Icon/icons";
 import Icon from "../Icon";
 import forms from "../FormInput/forms";
-import FormInput, { FormButton } from "../FormInput";
+import FormInput from "../FormInput";
 import { Section1, Section2, Section3, Div1, Div2, Form, Input } from "./styled";
-import { FormInputButton } from "../FormInput/FormInput";
+import { FormButton } from "../FormInput/FormInput";
 
 const SectionContact = () => {
     const data = dataContact.map((icons) => (
@@ -32,11 +32,10 @@ const SectionContact = () => {
                     <Form name="contact" action="/success" method="POST" data-netlify="true">
                         <Input type="hidden" name="form-name" value="contact" />
                         <Div2>{data2}</Div2>
-                            <FormInputButton />
-   
+                        <FormButton formType="1" />
                     </Form>
                 </Section2>
-                    <Section3>{data}</Section3>
+                <Section3>{data}</Section3>
             </Div1>
         </Section1>
     );

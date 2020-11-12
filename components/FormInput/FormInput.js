@@ -1,66 +1,96 @@
 import PropTypes from "prop-types";
-import { Div, Label, Input, TextArea, Ul, Li, Button } from "./styled";
+import { Div, Input, TextArea, Ul, Li, Button, Label, Select } from "./styled";
 
-const FormInput = ({ titleText, typeInput, nameField, change }) => {
+const FormInput = ({ titleText, typeInput, nameField, min, max, defaultValue, typeForm }) => {
     return typeInput ? (
         <Div key={titleText}>
-            <Label htmlFor={nameField}>
+            <Label htmlFor={nameField} typeForm={typeForm}>
                 {titleText}
-                <Input
-                    type={typeInput}
-                    name={nameField}
-                    id={nameField}
-                    onChange={change}
-                    required
-                />
+                {typeInput === "select" ? (
+                    <Select name={nameField} id={nameField} required />
+                ) : (
+                    <Input
+                        type={typeInput}
+                        name={nameField}
+                        id={nameField}
+                        min={min}
+                        max={max}
+                        defaultValue={defaultValue}
+                        required
+                    />
+                )}
             </Label>
         </Div>
     ) : (
         <Div key={titleText}>
             <Label htmlFor={nameField}>
                 {titleText}
-                <TextArea name={nameField} id={nameField} rows="6" onChange={change} required />
+                <TextArea name={nameField} id={nameField} rows="6" required />
             </Label>
         </Div>
     );
 };
 
-export const FormInputButton = () => {
+export const FormButton = ({ formType }) => {
     return (
         <Ul>
-            <Li key="SendMessage">
-                <Button type="submit">Send Message</Button>
-            </Li>
-            <Li key="Clear">
-                <Input type="reset" value="Clear" />
-            </Li>
+            {formType === "1" ? (
+                <>
+                    <Li key="SendMessage">
+                        <Button type="submit">Send Message</Button>
+                    </Li>
+                    <Li key="Clear">
+                        <Input type="reset" value="Clear" />
+                    </Li>
+                </>
+            ) : null}
+            {formType === "2" ? (
+                <>
+                    <Li key="Confirm">
+                        <Button align="center" type="submit">
+                            Confirmar
+                        </Button>
+                    </Li>
+                </>
+            ) : null}
+            {formType === "3" ? (
+                <>
+                    <Li key="Query">
+                        <Button align="center" type="submit">
+                            Buscar
+                        </Button>
+                    </Li>
+                </>
+            ) : null}
         </Ul>
     );
 };
-
-export const FormConfirmButton = () => {
-    return (
-        <Ul>
-            <Li key="Confirm">
-                <Button align="center" type="submit">Confirmar</Button>
-            </Li>      
-        </Ul>
-    );
-};
-
 
 FormInput.propTypes = {
     titleText: PropTypes.string,
     typeInput: PropTypes.string,
     nameField: PropTypes.string,
-    change: PropTypes.string,
+    min: PropTypes.string,
+    max: PropTypes.string,
+    defaultValue: PropTypes.string,
+    typeForm: PropTypes.string,
 };
 
 FormInput.defaultProps = {
     titleText: "",
     typeInput: "",
     nameField: "",
-    change: "",
+    min: "",
+    max: "",
+    defaultValue: "",
+    typeForm: "",
+};
+FormButton.propTypes = {
+    formType: PropTypes.string,
+};
+
+FormButton.defaultProps = {
+    formType: "",
 };
 
 export default FormInput;

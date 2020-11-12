@@ -95,12 +95,14 @@ export const Li = styled.li`
     width: 300px;
     vertical-align: middle;
     text-align: center;
+    @media screen and (max-width: 736px) {
+        width: 280px;
+    }
 `;
 export const Anchor = styled.a`
     color: inherit;
     text-decoration: none;
     cursor: pointer;
-    display: inline-block;
     font-size: 0.8em;
     font-weight: 600;
     letter-spacing: 0.25em;
@@ -110,6 +112,8 @@ export const Anchor = styled.a`
     width: 100%;
     background-color: #faa3a3;
     color: #242943;
+    display: flex;
+    justify-content: center;
     :hover,
     :active {
         background-color: #9bf1ff;
@@ -117,4 +121,10 @@ export const Anchor = styled.a`
 `;
 export const Img = styled.img`
     width: 40px;
+    margin-left: 1em;
+    margin-right: 1em;
+`;
+export const P = styled.p`
+    margin-left: 1em;
+    margin-right: 1em;
 `;
