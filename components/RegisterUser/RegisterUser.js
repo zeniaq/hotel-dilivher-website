@@ -1,7 +1,6 @@
 import { RegisterUserForms } from "../FormInput/forms";
 import FormInput, { FormButton } from "../FormInput";
-import { FormConfirmButton } from "../FormInput/FormInput";
-import { Section, Div, Div2, Form, Img, Anchor1, Anchor2 } from "./styled";
+import { Section, Div, Div2, Form, Img, Anchor } from "./styled";
 
 const RegisterUser = () => {
     const register1 = RegisterUserForms.map((form) => (
@@ -16,14 +15,14 @@ const RegisterUser = () => {
     return (
         <Section key="SectionRegister">
             <Div>
-                <Anchor1>
+                <Anchor>
                     <Img src="icons/user2.svg" alt="Profile icon" />
-                </Anchor1>
+                </Anchor>
                 <Form name="contact" action="/success" method="POST" data-netlify="true">
                     <Div2>{register1}</Div2>
-                    <Anchor2>
-                        <FormConfirmButton />
-                    </Anchor2>
+                    <Anchor>
+                        <FormButton formType="2" />
+                    </Anchor>
                 </Form>
             </Div>
         </Section>
