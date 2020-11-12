@@ -28,11 +28,8 @@ export const Div = styled.div`
 `;
 export const Img = styled.img`
     width: 120px;
-<<<<<<< HEAD
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(204deg) brightness(102%) contrast(110%);
   
-=======
->>>>>>> 66fb7cab6379666a6b51e0f722fbeb477244f0bf
 `;
 export const Label = styled.label``;
 export const Div2 = styled.div``;
@@ -48,14 +45,11 @@ export const Anchor = styled.a`
     width: 100%;
     background-color: transparent;
     color: #242943;
-<<<<<<< HEAD
 
     @media screen and (max-width: 980px) {
         padding: 1em 5em;
     }
     
-`;
-=======
 `;
 export const Anchor2 = styled.a`
     color: inherit;
@@ -69,4 +63,3 @@ export const Anchor2 = styled.a`
     background-color: transparent;
     color: #242943;
 `;
->>>>>>> 66fb7cab6379666a6b51e0f722fbeb477244f0bf
