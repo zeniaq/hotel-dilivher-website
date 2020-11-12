@@ -1,29 +1,26 @@
+import PropTypes from "prop-types";
 import { Div1, Div2, Form } from "./styled";
-import FormInput, { FormButton } from "../FormInput";
-import { dataSelect } from "../FormInput/forms";
+import { FormButton } from "../FormInput";
 
-const Select = () => {
-    const data = dataSelect.map((form) => (
-        <FormInput
-            titleText={form.titleText}
-            nameField={form.nameField}
-            typeInput={form.typeInput}
-            typeForm={form.typeForm}
-            key={form.titleText}
-            defaultValue={form.defaultValue}
-            min={form.min}
-            max={form.max}
-        />
-    ));
+const Select = ({ mapSelect, textButton }) => {
     return (
         <>
             <Div1>
                 <Form action="">
-                    <Div2>{data}</Div2>
-                    <FormButton formType="3" />
+                    <Div2>{mapSelect}</Div2>
+                    <FormButton textButton={textButton} />
                 </Form>
             </Div1>
         </>
     );
+};
+Select.propTypes = {
+    textButton: PropTypes.string,
+    mapSelect: PropTypes.string,
+};
+
+Select.defaultProps = {
+    textButton: "",
+    mapSelect: "",
 };
 export default Select;

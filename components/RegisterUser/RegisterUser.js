@@ -1,6 +1,5 @@
 import { RegisterUserForms } from "../FormInput/forms";
 import FormInput, { FormButton } from "../FormInput";
-import { FormConfirmButton } from "../FormInput/FormInput";
 import { Section, Div, Div2, Form, Img, Anchor1, Anchor2 } from "./styled";
 
 const RegisterUser = () => {
@@ -19,10 +18,10 @@ const RegisterUser = () => {
                 <Anchor1>
                     <Img src="icons/user2.svg" alt="Profile icon" />
                 </Anchor1>
-                <Form name="contact" action="/success" method="POST" data-netlify="true">
+                <Form name="contact" action="" method="POST">
                     <Div2>{register1}</Div2>
                     <Anchor2>
-                        <FormConfirmButton />
+                        <FormButton textButton="Confirmar" />
                     </Anchor2>
                 </Form>
             </Div>
