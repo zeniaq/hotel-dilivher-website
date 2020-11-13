@@ -134,11 +134,11 @@ export const RegisterUserForms = [
     {
         titleText: "Administrador",
         typeInput: "radio",
-        nameField: "radio_administrador",
+        nameField: "radioEm",
     },
     {
         titleText: "Empleado",
         typeInput: "radio",
-        nameField: "radio_empleado",
+        nameField: "radioEm",
     },
 ];

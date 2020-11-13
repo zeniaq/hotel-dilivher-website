@@ -94,54 +94,21 @@ export const Input = styled.input`
             ${(props) =>
         props.type === "radio"
             ? `
-                appearance: none;
-                float: left;
-                margin-right: -2em;
-                opacity: 0;
-                width: 1em;
-                z-index: -1;
-                text-decoration: none;
-                color: #ffffff;
-                cursor: pointer;
-                display: inline-block;
-                font-weight: 300;
-                padding-left: 2.65em;
-                padding-right: 0.75em;
-                position: relative;
-                
-                :before {
-                    display: inline-block;
-                    font-style: normal;
-                    font-variant: normal;
-                    text-rendering: auto;
-                    line-height: 1;
-                    text-transform: none !important;
-                    font-family: 'Font Awesome 5 Free';
-                    font-weight: 900;
-                    background: rgba(212, 212, 255, 0.035);
-                    content: '';
-                    display: inline-block;
-                    font-size: 0.8em;
-                    height: 2.0625em;
-                    left: 0;
-                    letter-spacing: 0;
-                    line-height: 2.0625em;
-                    position: absolute;
-                    text-align: center;
-                    top: 0;
-                    width: 2.0625em;
-                    border-radius: 100%;
-                }
-                :checked  {
-                    background: #ffffff;
-                    border-color: #9bf1ff;
-                    content: '\f00c';
-                    color: #242943;
-                }
-                :focus {
-                    box-shadow: 0 0 0 2px #9bf1ff;
-                }
-                        
+            appearance: none;
+            display: block;
+            float: left;
+            margin-right: -2em;
+            opacity: 0;
+            width: 1em;
+            z-index: -1;
+            text-decoration: none;
+			color: #ffffff;
+			cursor: pointer;
+			display: inline-block;
+			font-weight: 300;
+			padding-left: 2.65em;
+			padding-right: 0.75em;
+            position: relative;
         `
             : null};
     ${(props) =>
