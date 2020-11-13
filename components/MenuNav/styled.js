@@ -5,7 +5,7 @@ export const Nav = styled.nav`
     align-items: center;
     width: 100vw;
     height: 100vh;
-    z-index: 999;
+    ${(props) => (props.dataPanel ? `z-index: 500;` : `z-index: 999;`)}
     display: flex;
     flex-direction: column;
     position: fixed;
