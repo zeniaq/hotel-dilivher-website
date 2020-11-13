@@ -1,44 +1,103 @@
 import styled from "styled-components";
 
-export const Article1 = styled.article`
-		margin: 3em;
-`;
-export const Article2 = styled.article`
-align-items: center;
-display: flex;
-transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease, -webkit-filter 1s ease;
-
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-cursor: default;
-
-align-items: center;
-    display: flex;
-`;
-export const Ul = styled.ul`
-display: -moz-flex;
-display: -webkit-flex;
-display: -ms-flex;
-display: flex;
-cursor: default;
-list-style: none;
-margin-left: -1em;
-padding-left: 0;
-`;
 export const Li = styled.li`
+display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 30%;
+	
+	@media screen and (max-width: 736px) {
+        width: 100%;
+    }
+`;
 
-border: solid 1px rgba(212, 212, 255, 0.1);
-		margin-bottom: 2em;
-		padding: 6em;
-`;
 export const P = styled.p`
-font-size: 0.7em;
-font-weight: 600;
-letter-spacing: 0.25em;
-margin-bottom: 0;
-text-transform: uppercase;
-br {
-    display: none;
-} 
+align: center;
+margin-left: 1em;
+color: #242943;
 `;
+
+export const DivCard = styled.div`
+flex-flow: row;
+    background-color: #dfe6ed;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display:block;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 736px) {
+        display: block;
+    }
+`;
+
+export const DivText = styled.div`
+    padding: 0.5em;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 736px) {
+        display: block;
+    }
+`;
+
+export const DivInfo = styled.div``;
+export const Figure = styled.figure`
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    &:after {
+        content: attr(data-title-item);
+        position: absolute;
+        bottom: 0;
+        margin-left: 10px;
+        padding: 6px 8px;
+        max-width: 100%;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        background-color: #26364a;
+        box-sizing: border-box;
+    }
+`;
+
+export const Img = styled.img`
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: all 0.2s linear;
+    &:hover {
+        transform: scale(1.1);
+    }
+`;
+
+export const Strong = styled.strong`
+    font-weight: bold;
+`;
+
+export const Anchor = styled.a`
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: transparent;
+    color: #242943;
+
+    @media screen and (max-width: 980px) {
+        padding: 1em 3em;
+    }
+`;
+
+

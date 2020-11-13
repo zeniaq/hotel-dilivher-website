@@ -1,35 +1,56 @@
-import {  Article1, Article2, P, Ul, Li } from "./styled";
 import PropTypes from "prop-types";
+import {Li, DivCard, Figure, Img, DivText, DivInfo, P, Strong, Anchor } from "./styled";
+import { FormButton } from "../FormInput";
 
-
-const RoomLabels = ({ descriptionText, imageSrc, linkRef }) => (
-    <Article1>
-        <Ul>
-            <Li>
-                <Article2 style={{ backgroundImage: `url(${imageSrc})` }}>
-                    <P>{descriptionText}</P>
-                </Article2>
-            </Li>
-            
-        </Ul>
-    </Article1>
-
-
-);
-
+const RoomLabels = ({
+    roomID,
+    roomName,
+    imageSrc,
+    roomAvailabity,
+    // eslint-disable-next-line react/prop-types
+    setIDRoom,
+    // eslint-disable-next-line react/prop-types
+    IDRoom,
+}) => {
+    return (
+      
+        <Li key={roomID}>
+            <DivCard>
+                <Figure data-title-item={roomName}>
+                    <Img alt={roomName} src={imageSrc} />
+                </Figure>
+                <DivText>
+                    <DivInfo>
+                        <P>
+                            <Strong>Habitacion:</Strong> {roomName}
+                        </P>
+                    </DivInfo>
+                    <Anchor>
+                        <FormButton
+                            textButton="Añadir"
+                            typeButton="card"
+                            onClick={() => {
+                                const ROOM = IDRoom;
+                                ROOM.push(roomID);
+                                setIDRoom(ROOM);
+                            }}
+                        />
+                    </Anchor>
+                </DivText>
+            </DivCard>
+        </Li>
+        
+    );
+};
 RoomLabels.propTypes = {
-
-    descriptionText: PropTypes.string,
+    roomID: PropTypes.string,
+    roomName: PropTypes.string,
     imageSrc: PropTypes.string,
-    linkRef: PropTypes.string,
 };
 
 RoomLabels.defaultProps = {
-
-    descriptionText: "",
+    roomID: "",
+    roomName: "",
     imageSrc: "",
-    linkRef: "",
 };
-
 export default RoomLabels;
-

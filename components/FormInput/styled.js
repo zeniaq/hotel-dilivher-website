@@ -94,21 +94,15 @@ export const Input = styled.input`
             ${(props) =>
         props.type === "radio"
             ? `
-            appearance: none;
             display: block;
             float: left;
-            margin-right: -2em;
-            opacity: 0;
-            width: 1em;
-            z-index: -1;
             text-decoration: none;
 			color: #ffffff;
-			cursor: pointer;
-			display: inline-block;
-			font-weight: 300;
-			padding-left: 2.65em;
-			padding-right: 0.75em;
+			cursor: pointer; 
             position: relative;
+            cursor: default;
+            list-style: none;
+            margin-left: 2.5em;
         `
             : null};
     ${(props) =>
@@ -116,7 +110,7 @@ export const Input = styled.input`
             ? `
             appearance: none;
             transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
-                color 0.2s ease-in-out;
+            color 0.2s ease-in-out;
             background-color: transparent;
             border: 0;
             border-radius: 0;
@@ -220,6 +214,7 @@ export const Button = styled.button`
     ${(props) =>
         props.typeButton === "card"
             ? `
+            margin-left: 1em;
             appearance: none;
             background-color: #242943;
             box-shadow: inset 0 0 0 2px #ffffff;
