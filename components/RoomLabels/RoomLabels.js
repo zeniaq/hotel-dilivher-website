@@ -6,7 +6,6 @@ const RoomLabels = ({
     roomID,
     roomName,
     imageSrc,
-    roomAvailabity,
     // eslint-disable-next-line react/prop-types
     setIDRoom,
     // eslint-disable-next-line react/prop-types

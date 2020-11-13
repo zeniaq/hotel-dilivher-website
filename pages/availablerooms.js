@@ -1,10 +1,10 @@
-import SectionRooms from "../components/SectionRooms";
+import AvailableRooms from "../components/AvailableRooms";
 import PrincipalLayout from "../components/PrincipalLayout";
 
 export default function Home() {
     return (
         <PrincipalLayout title="Hotel Dilivher :: Habitaciones Disponibles" typeMenu="Employee">
-            <SectionRooms />
+            <AvailableRooms />
         </PrincipalLayout>
     );
 }

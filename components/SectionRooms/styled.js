@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const Section = styled.section`
     display: flex;
+    flex-direction: row;
     background-color: #2e3450;
+
     border-top: 0 !important;
+
     * {
         border-top: 0 !important;
     }
@@ -63,6 +66,7 @@ export const H3 = styled.h3`
     }
 
     font-size: 1.35em;
+
     @media screen and (max-width: 736px) {
         font-size: 1.25em;
     }
