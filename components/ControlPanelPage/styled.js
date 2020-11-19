@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const DivMain = styled.div`
+    display: flex;
+`;
+export const DivSecundary = styled.div`
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+`;
 export const DivContainer = styled.div`
     width: 300px;
     border-color: rgba(20, 17, 161, 0.4);
@@ -64,22 +73,82 @@ export const DivMenu = styled.div`
     display: none;
     align-items: center;
     width: 100%;
+    bottom: 10em;
+    padding-bottom: 3.25em;
     @media screen and (max-width: 736px) {
         display: flex;
     }
 `;
 export const Button = styled.button`
-    list-style: none;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    appearance: none;
+    background-color: transparent;
+    line-height: 3em;
+    color: #ffffff;
+    display: block;
+    cursor: pointer;
     font-size: 0.8em;
     font-weight: 600;
-    letter-spacing: 0.1em;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #dfe6ed;
-    margin-bottom: 10px;
-    color: #242943;
-    border-radius: 10px;
+    height: 3.5em;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    :hover {
+        box-shadow: inset 0 0 0 2px #9bf1ff;
+        color: #9bf1ff;
+    }
+    ${(props) =>
+        props.buttonStyle === "principal"
+            ? `
+    position: absolute;
+    top: 0;
+    width: 24px;
+    padding-right: 6em;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none !important;
+    outline: none !important;
+
+    :hover {
+        box-shadow: none;
+        transition: none;
+    }`
+            : `
+    position: absolute;
+    right: 1.5em;
+    top: 0;
+    padding: 0;
+    border: none !important;
+    outline: none !important;
+    :hover {
+        box-shadow: none;
+        transition: none;
+    }    
+`};
+`;
+
+export const Header = styled.header`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2f4a;
+    box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
+    height: 2.5em;
+    margin-top: 3.25em;
+    position: absolute;
+    top: 0;
+    bottom: 10em;
     width: 100%;
+    z-index: 2;
+    ${(props) => (props.click === true ? `margin-top:0; z-index: 99999;` : null)}
+`;
+
+export const Img = styled.img`
+    width: 24px;
+    height: 32px;
+    position: absolute;
+    ${(props) => (props.click ? `right: 0;` : null)}
 `;

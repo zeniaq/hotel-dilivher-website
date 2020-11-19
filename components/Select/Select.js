@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Div1, Div2, Form } from "./styled";
+import { Div1, Form, P } from "./styled";
 import { FormButton } from "../FormInput";
 
 const Select = ({ mapSelect, textButton }) => {
@@ -7,8 +7,10 @@ const Select = ({ mapSelect, textButton }) => {
         <>
             <Div1>
                 <Form action="">
-                    <Div2>{mapSelect}</Div2>
-                    <FormButton textButton={textButton} />
+                    {mapSelect}
+                    <P>
+                        <FormButton textButton={textButton} typeButton="card" />
+                    </P>
                 </Form>
             </Div1>
         </>

@@ -1,20 +1,20 @@
 import PropTypes, { node } from "prop-types";
 import { FormButton } from "../FormInput";
 
-import { Section, Div, Div2, Form, Anchor, Img } from "./styled";
+import { Section, Div, Div2, Form, P, Img } from "./styled";
 
 const SectionForm = ({ children, linkRef }) => {
     return (
         <Section key="SectionUp">
             <Div>
-                <Anchor>
+                <P>
                     <Img src="icons/user2.svg" alt="Profile icon" />
-                </Anchor>
+                </P>
                 <Form name="contact" action={linkRef} method="POST">
                     <Div2>{children}</Div2>
-                    <Anchor>
+                    <P>
                         <FormButton textButton="Confirmar" />
-                    </Anchor>
+                    </P>
                 </Form>
             </Div>
         </Section>

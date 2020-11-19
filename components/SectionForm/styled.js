@@ -10,21 +10,11 @@ export const Section = styled.section`
     border-bottom: solid 1px rgba(212, 212, 255, 0.1);
     overflow-x: hidden;
 `;
-export const Anchor = styled.a`
-    color: inherit;
+export const P = styled.p`
     text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: 1em 12em;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    background-color: transparent;
-    color: #242943;
-
-    @media screen and (max-width: 980px) {
-        padding: 1em 5em;
-    }
+    display: flex;
+    justify-content: center;
+    padding: 1em;
 `;
 export const Div = styled.div`
     align-items: center;
