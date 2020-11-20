@@ -83,7 +83,6 @@ export const UlEmployee = styled.ul`
     justify-content: center;
     align-items: center;
     padding: 0;
-    border: 2px dotted red;
     br {
         padding: 0;
         margin: 0;
@@ -91,13 +90,12 @@ export const UlEmployee = styled.ul`
     }
 `;
 export const Li = styled.li`
-    background-color: #faa3a3;
-    width: 300px;
+    background-color: #dfe6ed;
+    width: 100%;
     vertical-align: middle;
     text-align: center;
-    @media screen and (max-width: 736px) {
-        width: 280px;
-    }
+    border: 0;
+    padding: 0;
 `;
 export const Anchor = styled.a`
     color: inherit;
@@ -106,11 +104,10 @@ export const Anchor = styled.a`
     font-size: 0.8em;
     font-weight: 600;
     letter-spacing: 0.25em;
-    padding: 1em;
+    padding: 0.5em 1em;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
-    background-color: #faa3a3;
     color: #242943;
     display: flex;
     justify-content: center;

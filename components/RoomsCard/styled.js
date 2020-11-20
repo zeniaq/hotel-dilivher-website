@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const P = styled.p`
     color: #242943;
     display: flex;
+    width: 100%;
     @media screen and (max-width: 736px) {
         text-align: center;
         justify-content: center;
-        align-items: center;
+        width: 100%;
     }
 `;
 export const Strong = styled.strong`
@@ -91,12 +92,15 @@ export const DivText = styled.div`
     align-items: center;
     @media screen and (max-width: 736px) {
         display: block;
-        padding: 1.5em;
+        padding: 1em;
     }
 `;
 
 export const DivInfo = styled.div`
     margin-right: 15px;
+    @media screen and (max-width: 736px) {
+        margin: 0;
+    }
 `;
 export const DivButton = styled.div`
     width: 40px;
@@ -106,6 +110,9 @@ export const DivButton = styled.div`
     @media screen and (max-width: 736px) {
         display: flex;
         width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
 `;
 export const ButtonCount = styled.button`

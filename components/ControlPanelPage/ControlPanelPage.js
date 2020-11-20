@@ -2,6 +2,8 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import exportData from "./menus";
+import Table, { Row, TitleCell, ContentCell } from "../Table";
+import { titles, dataRows } from "./tables";
 import {
     Nav,
     H1,
@@ -40,6 +42,16 @@ const ControlPanel = ({ myRol }) => {
             typeForm={data.typeForm}
             nameField={data.nameField}
         />
+    ));
+
+    const titleRow = titles.map((data) => <TitleCell data={data.Value} />);
+    const rows = dataRows.map((data) => (
+        <Row>
+            <ContentCell data={data.name} />
+            <ContentCell data={data.age} />
+            <ContentCell data={data.home} />
+            <ContentCell data={data.mail} />
+        </Row>
     ));
     return (
         <>
@@ -107,6 +119,7 @@ const ControlPanel = ({ myRol }) => {
                             IDRoom={idRoom}
                         />
                     </ul>
+                    <Table titles={titleRow} rows={rows} />
                 </DivSecundary>
             </DivMain>
         </>

@@ -23,6 +23,12 @@ article,
 footer,
 header,
 nav,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
 section {
     margin: 0;
     padding: 0;

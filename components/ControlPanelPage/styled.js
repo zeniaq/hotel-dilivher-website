@@ -139,6 +139,7 @@ export const Header = styled.header`
     height: 2.5em;
     margin-top: 3.25em;
     position: absolute;
+    padding-right: 1.4em;
     top: 0;
     bottom: 10em;
     width: 100%;
