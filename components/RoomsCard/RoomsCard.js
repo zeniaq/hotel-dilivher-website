@@ -5,7 +5,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-return-await */
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     Li,
     DivCard,
@@ -34,6 +34,8 @@ const RoomsCard = ({
     setIDRoom,
     // eslint-disable-next-line react/prop-types
     IDRoom,
+    cancel,
+    setCancel,
 }) => {
     const [count, setCount] = useState(0);
     function Add({ id }) {
@@ -60,6 +62,11 @@ const RoomsCard = ({
             IDRoom.splice(indice, 1);
         }
     }
+
+    useEffect(() => {
+        cancel ? setCount(0) : null;
+        setCancel(false);
+    });
     return (
         <Li key={roomID}>
             <DivNotification>

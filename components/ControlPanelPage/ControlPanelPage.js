@@ -15,17 +15,19 @@ import {
     DivSecundary,
     Header,
     Img,
+    P,
+    DivTable,
 } from "./styled";
 import AnchorList from "../AnchorList";
 import MenuNav from "../MenuNav";
 import RoomsCard from "../RoomsCard";
 import Select from "../Select";
 import { dataSelect } from "../FormInput/forms";
-import FormInput from "../FormInput";
+import FormInput, { FormButton } from "../FormInput";
 
 const ControlPanel = ({ myRol }) => {
     const [click, setClick] = useState(false);
-    const [idRoom, setIdRoom] = useState({});
+    const [cancel, setCancel] = useState(false);
     const dataAdmin = exportData.dataAdmin.map((data) => (
         <AnchorList titleText={data.titleText} linkRef={data.linkRef} />
     ));
@@ -53,6 +55,7 @@ const ControlPanel = ({ myRol }) => {
             <ContentCell data={data.mail} />
         </Row>
     ));
+
     return (
         <>
             <MenuNav
@@ -105,6 +108,8 @@ const ControlPanel = ({ myRol }) => {
                             roomName="Aliquam"
                             roomPrice="2000"
                             roomWC="No"
+                            cancel={cancel}
+                            setCancel={setCancel}
                         />
                         <RoomsCard
                             imageSrc="images/banner.jpg"
@@ -115,11 +120,20 @@ const ControlPanel = ({ myRol }) => {
                             roomName="Aliquam"
                             roomPrice="2000"
                             roomWC="No"
-                            setIDRoom={setIdRoom}
-                            IDRoom={idRoom}
+                            cancel={cancel}
+                            setCancel={setCancel}
                         />
+                        <P>
+                            <FormButton
+                                textButton="Cancelar todo"
+                                typeButton="cancelar"
+                                onClick={() => setCancel(true)}
+                            />
+                        </P>
                     </ul>
-                    <Table titles={titleRow} rows={rows} />
+                    <DivTable>
+                        <Table titles={titleRow} rows={rows} />
+                    </DivTable>
                 </DivSecundary>
             </DivMain>
         </>

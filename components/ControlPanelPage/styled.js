@@ -153,3 +153,11 @@ export const Img = styled.img`
     position: absolute;
     ${(props) => (props.click ? `right: 0;` : null)}
 `;
+export const P = styled.p`
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+`;
+export const DivTable = styled.div`
+    padding: 2em;
+`;
