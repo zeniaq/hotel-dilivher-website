@@ -9,6 +9,12 @@ export const P = styled.p`
         justify-content: center;
         width: 100%;
     }
+    ${(props) =>
+        props.typeCard === "tab"
+            ? `text-align: center;
+            justify-content: center;
+            width: 100%;`
+            : null}
 `;
 export const Strong = styled.strong`
     font-weight: bold;
@@ -31,7 +37,7 @@ export const Li = styled.li`
         line-height: 1.5em;
         text-align: center;
         color: #fff;
-        border-radius: 4em;
+        border-radius: 3px;
         background-color: red;
         font-weight: bold;
         z-index: 9999999;
@@ -43,7 +49,7 @@ export const DivCard = styled.div`
     background-color: #dfe6ed;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 14px;
+    border-radius: 3px;
     overflow: hidden;
     text-decoration: none;
     margin-bottom: 1rem;
@@ -56,6 +62,13 @@ export const DivCard = styled.div`
         justify-content: center;
         align-items: center;
     }
+    ${(props) =>
+        props.typeCard === "tab"
+            ? `display: block;
+            justify-content: center;
+            align-items: center;
+            margin-bottom:0rem;`
+            : null}
 `;
 
 export const Figure = styled.figure`
@@ -63,11 +76,16 @@ export const Figure = styled.figure`
     width: 150px;
     height: 150px;
     margin: 1.5%;
-    border-radius: 1em;
+    border-radius: 3px;
     @media screen and (max-width: 736px) {
         margin: 3%;
         width: 94%;
     }
+    ${(props) =>
+        props.typeCard === "tab"
+            ? `margin: 3%;
+            width: 94%;`
+            : null}
 `;
 
 export const Img = styled.img`
@@ -79,7 +97,7 @@ export const Img = styled.img`
     max-height: 100%;
     object-fit: cover;
     transition: all 0.2s linear;
-    border-radius: 10px;
+    border-radius: 3px;
     &:hover {
         transform: scale(1.1);
     }
@@ -94,6 +112,11 @@ export const DivText = styled.div`
         display: block;
         padding: 1em;
     }
+    ${(props) =>
+        props.typeCard === "tab"
+            ? ` display: block;
+            padding: 1em;`
+            : null}
 `;
 
 export const DivInfo = styled.div`
@@ -101,6 +124,7 @@ export const DivInfo = styled.div`
     @media screen and (max-width: 736px) {
         margin: 0;
     }
+    ${(props) => (props.typeCard === "tab" ? `margin: 0;` : null)}
 `;
 export const DivButton = styled.div`
     width: 40px;
@@ -135,23 +159,23 @@ export const ButtonCount = styled.button`
     ${(props) =>
         props.type === "+"
             ? `
-        border-radius: 0em 0em 2em 2em;
-        background-color: green;
+        border-radius: 0em 0em 3px 3px;
+        background-color: #87c5a4;
         :hover {
-            background-color: #33ff33;
+            background-color: #87c5a4;
         }
         @media screen and (max-width: 736px) {
-            border-radius: 0em 2em 2em 0em;
+            border-radius: 0em 3px 3px 0em;
         }
     `
             : `
-        border-radius: 2em 2em 0em 0em;
-        background-color: red;
+        border-radius: 3px 3px 0em 0em;
+        background-color: #ec8d81;
         :hover {
-            background-color: #ff6666;
+            background-color: #ec8d81;
         }
         @media screen and (max-width: 736px) {
-            border-radius: 2em 0em 0em 2em;
+            border-radius: 3px 0em 0em 3px;
         }
             `}
 `;
@@ -165,7 +189,7 @@ export const Counter = styled.div`
     line-height: 1.5em;
     text-align: center;
     color: #fff;
-    border-radius: 4em;
+    border-radius: 3px;
     background-color: red;
     font-weight: bold;
     z-index: 1;
@@ -178,5 +202,6 @@ export const DivNotification = styled.div`
         width: 90%;
         justify-content: center;
         align-items: center;
+        ${(props) => (props.typeCard === "tab" ? `width:100%;` : null)}
     }
 `;

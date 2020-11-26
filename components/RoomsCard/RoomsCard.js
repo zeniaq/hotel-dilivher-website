@@ -22,6 +22,7 @@ import {
 } from "./styled";
 
 const RoomsCard = ({
+    typeCard,
     roomID,
     roomName,
     imageSrc,
@@ -30,92 +31,73 @@ const RoomsCard = ({
     roomPrice,
     roomWC,
     roomAvailabity,
-    // eslint-disable-next-line react/prop-types
-    setIDRoom,
-    // eslint-disable-next-line react/prop-types
-    IDRoom,
     cancel,
     setCancel,
 }) => {
     const [count, setCount] = useState(0);
-    function Add({ id }) {
+    function Add() {
         count < 4 ? setCount(count + 1) : null;
-        const myActID = id;
-        const ROOM = IDRoom;
-        ROOM.push(id);
-        setIDRoom(ROOM);
-        const myFilter = IDRoom.filter((myRoom) => myRoom === myActID);
-        const roomSelected = myFilter.length;
-        document.getElementById(id).innerHTML = roomSelected;
     }
 
-    function Remove({ id }) {
+    function Remove() {
         count !== 0 ? setCount(count - 1) : null;
-        const countRoom = document.getElementById(id).innerHTML;
-        if (countRoom >= 2) {
-            document.getElementById(id).innerHTML = countRoom - 1;
-            const indice = IDRoom.indexOf(id);
-            IDRoom.splice(indice, 1);
-        } else if (countRoom <= 1) {
-            document.getElementById(id).innerHTML = "";
-            const indice = IDRoom.indexOf(id);
-            IDRoom.splice(indice, 1);
-        }
     }
 
     useEffect(() => {
         cancel ? setCount(0) : null;
-        setCancel(false);
+        typeCard !== "tab" ? setCancel(false) : null;
     });
     return (
         <Li key={roomID}>
-            <DivNotification>
+            <DivNotification typeCard={typeCard}>
                 <Counter>{count}</Counter>
-                <DivCard>
-                    <Figure data-title-item={roomName}>
+                <DivCard typeCard={typeCard}>
+                    <Figure data-title-item={roomName} typeCard={typeCard}>
                         <Img alt={roomName} src={imageSrc} />
                     </Figure>
-                    <DivText>
-                        <DivInfo>
-                            <P>
+                    <DivText typeCard={typeCard}>
+                        <DivInfo typeCard={typeCard}>
+                            <P typeCard={typeCard}>
                                 <Strong>Habitacion:</Strong> {roomName}
                             </P>
-                            <P>
+                            <P typeCard={typeCard}>
                                 <Strong>Baño:</Strong> {roomWC}
                             </P>
                         </DivInfo>
                         <DivInfo>
-                            <P>
+                            <P typeCard={typeCard}>
                                 <Strong>Personas:</Strong> {roomCapacity}
                             </P>
-                            <P>
+                            <P typeCard={typeCard}>
                                 <Strong>Camas:</Strong> {roomBeds}
                             </P>
                         </DivInfo>
                         <DivInfo>
-                            <P>
+                            <P typeCard={typeCard}>
                                 <Strong>Precio:</Strong> ${roomPrice}
                             </P>
-                            <P>
+                            <P typeCard={typeCard}>
                                 <Strong>Disponible:</Strong> {roomAvailabity ? "Si" : "No"}
                             </P>
                         </DivInfo>
-                        <DivButton>
-                            <ButtonCount
-                                type="-"
-                                disabled={count === 0}
-                                onClick={() => Remove(roomID)}
-                            >
-                                -
-                            </ButtonCount>
-                            <ButtonCount
-                                type="+"
-                                disabled={count === 4}
-                                onClick={() => Add(roomID)}
-                            >
-                                +
-                            </ButtonCount>
-                        </DivButton>
+                        {typeCard !== "tab" ? (
+                            <DivButton>
+                                <ButtonCount
+                                    type="-"
+                                    disabled={count === 0}
+                                    onClick={() => Remove(roomID)}
+                                >
+                                    -
+                                </ButtonCount>
+                                <ButtonCount
+                                    type="+"
+                                    disabled={count === 4}
+                                    onClick={() => Add(roomID)}
+                                >
+                                    +
+                                </ButtonCount>
+                            </DivButton>
+                        ) : null}
                     </DivText>
                 </DivCard>
             </DivNotification>
@@ -132,6 +114,7 @@ RoomsCard.propTypes = {
     roomAvailabity: PropTypes.string,
     roomBeds: PropTypes.string,
     imageSrc: PropTypes.string,
+    typeCard: PropTypes.string,
 };
 
 RoomsCard.defaultProps = {
@@ -143,5 +126,6 @@ RoomsCard.defaultProps = {
     roomBeds: "",
     imageSrc: "",
     roomWC: "",
+    typeCard: "",
 };
 export default RoomsCard;

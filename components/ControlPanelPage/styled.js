@@ -64,7 +64,7 @@ export const Ul = styled.ul`
         background-color: #dfe6ed;
         margin-bottom: 10px;
         color: #242943;
-        border-radius: 10px;
+        border-radius: 3px;
         width: 100%;
     }
 `;

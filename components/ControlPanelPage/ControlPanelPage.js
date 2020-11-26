@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import exportData from "./menus";
 import Table, { Row, TitleCell, ContentCell } from "../Table";
 import { titles, dataRows } from "./tables";
+import Tab from "../Tab";
 import {
     Nav,
     H1,
@@ -134,6 +135,7 @@ const ControlPanel = ({ myRol }) => {
                     <DivTable>
                         <Table titles={titleRow} rows={rows} />
                     </DivTable>
+                    <Tab />
                 </DivSecundary>
             </DivMain>
         </>
