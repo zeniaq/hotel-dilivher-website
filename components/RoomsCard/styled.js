@@ -160,7 +160,7 @@ export const ButtonCount = styled.button`
         props.type === "+"
             ? `
         border-radius: 0em 0em 3px 3px;
-        background-color: #87c5a4;
+        background-color: green;
         :hover {
             background-color: #87c5a4;
         }
@@ -170,7 +170,7 @@ export const ButtonCount = styled.button`
     `
             : `
         border-radius: 3px 3px 0em 0em;
-        background-color: #ec8d81;
+        background-color: red;
         :hover {
             background-color: #ec8d81;
         }

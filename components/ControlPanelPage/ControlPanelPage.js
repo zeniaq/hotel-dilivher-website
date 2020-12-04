@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import exportData from "./menus";
 import Table, { Row, TitleCell, ContentCell } from "../Table";
 import { titles, dataRows } from "./tables";
+import Menu, { CardPay, CashPay, TransferPay } from "../PaymentSystem";
 import Tab from "../Tab";
 import {
     Nav,
@@ -29,6 +30,7 @@ import FormInput, { FormButton } from "../FormInput";
 const ControlPanel = ({ myRol }) => {
     const [click, setClick] = useState(false);
     const [cancel, setCancel] = useState(false);
+    const [paySystem, setPaySystem] = useState(0);
     const dataAdmin = exportData.dataAdmin.map((data) => (
         <AnchorList titleText={data.titleText} linkRef={data.linkRef} />
     ));
@@ -136,6 +138,10 @@ const ControlPanel = ({ myRol }) => {
                         <Table titles={titleRow} rows={rows} />
                     </DivTable>
                     <Tab />
+                    {paySystem === 0 ? <Menu setPayState={setPaySystem} /> : null}
+                    {paySystem === 1 ? <CardPay setPayState={setPaySystem} /> : null}
+                    {paySystem === 2 ? <CashPay setPayState={setPaySystem} /> : null}
+                    {paySystem === 3 ? <TransferPay setPayState={setPaySystem} /> : null}
                 </DivSecundary>
             </DivMain>
         </>
