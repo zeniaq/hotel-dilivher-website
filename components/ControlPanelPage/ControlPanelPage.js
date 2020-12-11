@@ -6,6 +6,7 @@ import Table, { Row, TitleCell, ContentCell } from "../Table";
 import { titles, dataRows } from "./tables";
 import Menu, { CardPay, CashPay, TransferPay } from "../PaymentSystem";
 import Tab from "../Tab";
+import ButtonAction from "../Button";
 import {
     Nav,
     H1,
@@ -32,13 +33,14 @@ const ControlPanel = ({ myRol }) => {
     const [cancel, setCancel] = useState(false);
     const [paySystem, setPaySystem] = useState(0);
     const dataAdmin = exportData.dataAdmin.map((data) => (
-        <AnchorList titleText={data.titleText} linkRef={data.linkRef} />
+        <AnchorList titleText={data.titleText} linkRef={data.linkRef} key={data.titleText} />
     ));
     const dataEmployee = exportData.dataEmployee.map((data) => (
-        <AnchorList titleText={data.titleText} linkRef={data.linkRef} />
+        <AnchorList titleText={data.titleText} linkRef={data.linkRef} key={data.titleText} />
     ));
     const inputs = dataSelect.map((data) => (
         <FormInput
+            key={data.titleText}
             typeInput={data.typeInput}
             titleText={data.titleText}
             defaultValue={data.defaultValue}
@@ -49,13 +51,17 @@ const ControlPanel = ({ myRol }) => {
         />
     ));
 
-    const titleRow = titles.map((data) => <TitleCell data={data.Value} />);
+    const titleRow = titles.map((data) => <TitleCell key={data.Value}>{data.Value}</TitleCell>);
     const rows = dataRows.map((data) => (
-        <Row>
-            <ContentCell data={data.name} />
-            <ContentCell data={data.age} />
-            <ContentCell data={data.home} />
-            <ContentCell data={data.mail} />
+        <Row key={data.name}>
+            <ContentCell>{data.name}</ContentCell>
+            <ContentCell>{data.age}</ContentCell>
+            <ContentCell>{data.home}</ContentCell>
+            <ContentCell>
+                <ButtonAction typeButton="confirm" />
+                <ButtonAction typeButton="cancel" />
+                {data.mail}
+            </ContentCell>
         </Row>
     ));
 
@@ -130,7 +136,7 @@ const ControlPanel = ({ myRol }) => {
                             <FormButton
                                 textButton="Cancelar todo"
                                 typeButton="cancelar"
-                                onClick={() => setCancel(true)}
+                                actionEvent={() => setCancel(true)}
                             />
                         </P>
                     </ul>
@@ -138,10 +144,15 @@ const ControlPanel = ({ myRol }) => {
                         <Table titles={titleRow} rows={rows} />
                     </DivTable>
                     <Tab />
-                    {paySystem === 0 ? <Menu setPayState={setPaySystem} /> : null}
-                    {paySystem === 1 ? <CardPay setPayState={setPaySystem} /> : null}
-                    {paySystem === 2 ? <CashPay setPayState={setPaySystem} /> : null}
-                    {paySystem === 3 ? <TransferPay setPayState={setPaySystem} /> : null}
+                    {paySystem === 0 ? (
+                        <Menu setPayState={setPaySystem} />
+                    ) : paySystem === 1 ? (
+                        <CardPay setPayState={setPaySystem} />
+                    ) : paySystem === 2 ? (
+                        <CashPay setPayState={setPaySystem} />
+                    ) : paySystem === 3 ? (
+                        <TransferPay setPayState={setPaySystem} />
+                    ) : null}
                 </DivSecundary>
             </DivMain>
         </>

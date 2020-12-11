@@ -1,3 +1,6 @@
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
 import { Div, Input, TextArea, Ul, Li, Button, Label, Select } from "./styled";
 
@@ -31,7 +34,7 @@ const FormInput = ({ titleText, typeInput, nameField, min, max, defaultValue, ty
     );
 };
 
-export const FormButton = ({ textButton, typeButton, onClick }) => {
+export const FormButton = ({ textButton, typeButton, actionEvent }) => {
     return (
         <Ul>
             {textButton ? (
@@ -41,7 +44,7 @@ export const FormButton = ({ textButton, typeButton, onClick }) => {
                             align="center"
                             type="submit"
                             typeButton={typeButton}
-                            onClick={onClick}
+                            onClick={actionEvent}
                         >
                             {textButton}
                         </Button>
@@ -65,9 +68,9 @@ FormInput.propTypes = {
     titleText: PropTypes.string,
     typeInput: PropTypes.string,
     nameField: PropTypes.string,
-    min: PropTypes.string,
-    max: PropTypes.string,
-    defaultValue: PropTypes.string,
+    min: PropTypes.string || PropTypes.number,
+    max: PropTypes.string || PropTypes.number,
+    defaultValue: PropTypes.any,
     typeForm: PropTypes.string,
 };
 
@@ -77,19 +80,16 @@ FormInput.defaultProps = {
     nameField: "",
     min: "",
     max: "",
-    defaultValue: "",
     typeForm: "",
 };
 FormButton.propTypes = {
     textButton: PropTypes.string,
     typeButton: PropTypes.string,
-    onClick: PropTypes.string,
 };
 
 FormButton.defaultProps = {
     textButton: "",
     typeButton: "",
-    onClick: "",
 };
 
 export default FormInput;

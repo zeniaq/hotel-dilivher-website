@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import MenuNav from "../MenuNav";
@@ -8,20 +9,16 @@ const Navigation = ({ typeMenu }) => {
     const [menuStyle, setMenuStyle] = useState("principal");
 
     function handleAnimation() {
-        // eslint-disable-next-line no-undef
         if (document.documentElement.scrollTop > 500) {
             setMenuStyle("secundary");
         }
-        // eslint-disable-next-line no-undef
         if (document.documentElement.scrollTop < 500) {
             setMenuStyle("principal");
         }
     }
     useEffect(() => {
-        // eslint-disable-next-line no-undef
         const body = document.querySelector("body");
         body.style.overflow = click ? "hidden" : "visible";
-        // eslint-disable-next-line no-undef
         window.onscroll = () => handleAnimation();
     });
     return (
