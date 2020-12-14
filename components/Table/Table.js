@@ -16,19 +16,18 @@ const Table = ({ titles, rows }) => {
 export const Row = ({ children }) => {
     return <Tr>{children}</Tr>;
 };
-export const TitleCell = ({ data }) => {
-    return <Th>{data}</Th>;
+export const TitleCell = ({ children }) => {
+    return <Th>{children}</Th>;
 };
-export const ContentCell = ({ data }) => {
-    return <Td>{data}</Td>;
+export const ContentCell = ({ children }) => {
+    return <Td>{children}</Td>;
 };
 
 Table.propTypes = {
-    titles: PropTypes.string,
+    titles: PropTypes.node.isRequired,
     rows: PropTypes.string,
 };
 Table.defaultProps = {
-    titles: "",
     rows: "",
 };
 
@@ -37,16 +36,11 @@ Row.propTypes = {
 };
 
 TitleCell.propTypes = {
-    data: PropTypes.string,
-};
-TitleCell.defaultProps = {
-    data: "",
+    children: PropTypes.node.isRequired,
 };
 
 ContentCell.propTypes = {
-    data: PropTypes.string,
+    children: PropTypes.node.isRequired,
 };
-ContentCell.defaultProps = {
-    data: "",
-};
+
 export default Table;

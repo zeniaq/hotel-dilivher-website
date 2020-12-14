@@ -54,11 +54,11 @@ const MenuNav = ({ display, setDisplay, typeMenu, dataPanel }) => {
 };
 MenuNav.propTypes = {
     typeMenu: PropTypes.string,
-    dataPanel: PropTypes.string,
+    dataPanel: PropTypes.arrayOf(AnchorList),
 };
 MenuNav.defaultProps = {
     typeMenu: "",
-    dataPanel: "",
+    dataPanel: [],
 };
 
 export default MenuNav;

@@ -1,18 +1,20 @@
+/* eslint-disable no-nested-ternary */
 import PropTypes from "prop-types";
 
 import ButtonStyled from "./styled";
 
-const Button = ({ background, children }) => (
-    <ButtonStyled background={background}>{children}</ButtonStyled>
+const Button = ({ typeButton }) => (
+    <ButtonStyled typeButton={typeButton}>
+        {typeButton === "confirm" ? "✔" : typeButton === "cancel" ? "✘" : null}
+    </ButtonStyled>
 );
 
 Button.propTypes = {
-    children: PropTypes.node.isRequired,
-    background: PropTypes.string,
+    typeButton: PropTypes.string,
 };
 
 Button.defaultProps = {
-    background: "",
+    typeButton: "",
 };
 
 export default Button;

@@ -16,9 +16,9 @@ import {
     H3,
 } from "./styled";
 // eslint-disable-next-line react/prop-types
-const Menu = ({ payState, setPayState }) => {
+const Menu = ({ setPayState }) => {
     return (
-        <Container id={0} payState={payState}>
+        <Container>
             <DivMenu>
                 <Ammount>
                     <P>Total de compra</P>

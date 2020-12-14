@@ -86,7 +86,7 @@ const Tab = () => {
         },
     ];
     const list = data.map((form, index) => (
-        <Li>
+        <Li key={form[2][0]}>
             <Anchor value={form[2][0]} onClick={() => setTab(index)} id={index} actual={tab}>
                 {form[2][0]}
             </Anchor>
@@ -94,6 +94,7 @@ const Tab = () => {
     ));
     const inputUser = formUser.map((form) => (
         <FormInput
+            key={form.titleText}
             typeInput={form.typeInput}
             titleText={form.titleText}
             defaultValue={form.defaultValue}
@@ -105,6 +106,7 @@ const Tab = () => {
     ));
     const inputRoom = formRoom.map((form) => (
         <FormInput
+            key={form.titleText}
             typeInput={form.typeInput}
             titleText={form.titleText}
             defaultValue={form.defaultValue}
