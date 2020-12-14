@@ -58,3 +58,11 @@ export const dataMaster = [
         linkRef: "https://html5up.net/",
     },
 ];
+
+export const dataAlert = [
+    {
+        titleText: "Aceptar",
+        linkRef: "#n",
+        styleProp: "style1",
+    },
+];

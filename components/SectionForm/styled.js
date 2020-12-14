@@ -15,12 +15,21 @@ export const P = styled.p`
     display: flex;
     justify-content: center;
     padding: 1em;
+    
 `;
 export const Div = styled.div`
     align-items: center;
     justify-content: center;
-    padding: 0 !important;
+    padding: 5 !important;
 
+    flex-flow: row;
+    background: rgba(255, 255, 224, 0.4);
+        border-radius: 4px;
+        overflow: hidden;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        padding: 1em;    
+ 
     @media screen and (max-width: 980px) {
         display: block;
     }
@@ -32,9 +41,17 @@ export const Div = styled.div`
 `;
 export const Img = styled.img`
     width: 120px;
-    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(204deg) brightness(102%)
-        contrast(110%);
+    filter: invert(11%) sepia(26%) saturate(1361%) hue-rotate(193deg) brightness(94%)
+        contrast(87%);
+
+        @media screen and (max-width: 980px) {
+            width: 100px;
+        }
 `;
-export const Div2 = styled.div``;
+export const Div2 = styled.div`
+
+    
+ 
+`;
 export const Form = styled.form``;
 export const Input = styled.input``;

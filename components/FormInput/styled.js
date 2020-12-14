@@ -74,7 +74,7 @@ export const Input = styled.input`
         props.type === "number"
             ? `
             background-color: #2b304a;
-            border: none;
+            border: 2px solid #483D8B;
             display: block;
             outline: 0;
             padding: 0 1em;
@@ -96,13 +96,16 @@ export const Input = styled.input`
             ? `
             display: block;
             float: left;
-            text-decoration: none;
-			color: #ffffff;
+            width: 2em;
 			cursor: pointer; 
             position: relative;
-            cursor: default;
-            list-style: none;
-            margin-left: 2.5em;
+            margin-left: 10em;
+            background: rgba(212, 212, 255, 0.035);
+            content: '';
+            height: 0.8em;
+            @media screen and (max-width: 360px) {
+                margin-left: 3em;
+            }
         `
             : null};
     ${(props) =>
