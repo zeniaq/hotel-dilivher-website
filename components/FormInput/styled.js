@@ -74,7 +74,7 @@ export const Input = styled.input`
         props.type === "number"
             ? `
             background-color: #2b304a;
-            border: 2px solid #483D8B;
+            border: none;
             display: block;
             outline: 0;
             padding: 0 1em;

@@ -11,12 +11,10 @@ const SectionForm = ({ children, linkRef }) => {
                     <Img src="icons/user2.svg" alt="Profile icon" />
                 </P>
                 <Form name="contact" action={linkRef} method="POST">
-                    <Div2>
-                        {children}
+                    <Div2>{children}</Div2>      
                     <P>
                         <FormButton textButton="Confirmar" />
                     </P>
-                    </Div2>
                 </Form>
             </Div>
         </Section>

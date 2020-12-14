@@ -59,10 +59,4 @@ export const dataMaster = [
     },
 ];
 
-export const dataAlert = [
-    {
-        titleText: "Aceptar",
-        linkRef: "#n",
-        styleProp: "style1",
-    },
-];
+

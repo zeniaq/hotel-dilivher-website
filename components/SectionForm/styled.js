@@ -15,7 +15,7 @@ export const P = styled.p`
     display: flex;
     justify-content: center;
     padding: 1em;
-    
+
 `;
 export const Div = styled.div`
     align-items: center;
@@ -48,10 +48,6 @@ export const Img = styled.img`
             width: 100px;
         }
 `;
-export const Div2 = styled.div`
-
-    
- 
-`;
+export const Div2 = styled.div``;
 export const Form = styled.form``;
 export const Input = styled.input``;
