@@ -1,26 +1,28 @@
 import Table, { Row, TitleCell, ContentCell } from "../Table";
 import { titles, dataRows, result, dataresults } from "./tables";
-import { DivTable, DivTable2, H1, Button, DivContent, Section, DivH1, DivColor, H3} from "./styled";
+import { DivTable, DivTable2, H1, Button, DivContent, Section, DivH1, DivColor, H3, A} from "./styled";
 import React, { useRef } from 'react';
 import WarningMessage from "../WarningMessage/WarningMessage";
 import ReactToPrint from "react-to-print";
 
-const titleRow = titles.map((data) => <TitleCell data={data.Value} />);
+const titleRow = titles.map((data) => <TitleCell key={data.Value}>{data.Value}</TitleCell>);
 const rows = dataRows.map((data) => (
     <Row>
-        <ContentCell data={data.name} />
-        <ContentCell data={data.room} />
-        <ContentCell data={data.arrivaldate} />
-        <ContentCell data={data.departuredate} />
-        <ContentCell data={data.numbernights} />
-        <ContentCell data={data.costnight} />
-        <ContentCell data={data.subtotal} />
+        <ContentCell>{data.name}</ContentCell>
+        <ContentCell>{data.room}</ContentCell>
+        <ContentCell>{data.arrivaldate}</ContentCell>
+        <ContentCell>{data.departuredate}</ContentCell>
+        <ContentCell>{data.numbernights}</ContentCell>
+        <ContentCell>{data.costnight}</ContentCell>
+        <ContentCell>{data.subtotal}</ContentCell>
+
     </Row>
 ));
-const results = result.map((data) => <TitleCell data={data.Value} />);
+const results = result.map((data) => <TitleCell key={data.Value}>{data.Value}</TitleCell>);
 const rowsresult = dataresults.map((data) => (
     <Row>
-        <ContentCell data={data.total} />
+         <ContentCell>{data.total}</ContentCell>
+       
     </Row>
 ));
 
@@ -52,7 +54,7 @@ class ComponentToPrint extends React.PureComponent {
         return <Resume />;
     }
 }
-const ReservationSummaryPage = ({ typeMenu, linkRef }) => {
+const ReservationSummaryPage = () => {
     const componentRef = useRef();
     return (
         <>
@@ -62,17 +64,17 @@ const ReservationSummaryPage = ({ typeMenu, linkRef }) => {
             <ReactToPrint
                 trigger={() => (
                     
-                    <a href="#popup">
+                    <A href="#popup">
                     <Button type="submit">Descargar Resumen</Button>
-                    </a>  
+                    </A>  
                 )}
                 content={() => componentRef.current}
             /> 
             <br></br>
-            <a href="/controlpanel">
-                <Button>Modificar</Button>
+            <A href="/controlpanel" >
+            <Button type="submit">Modificar</Button>
 
-            </a>
+            </A>
             <WarningMessage  />
         </>
     );

@@ -1,10 +1,6 @@
 import { DivEmergent, DivEmergentContent, DivClose, Button} from "./styled";
-import ReactToPrint from "react-to-print";
-import React, { useRef } from 'react';
 
-
-const WarningMessage = ({ typeMenu, linkRef }) => {
-    const componentRef = useRef();
+const WarningMessage = () => {
     return (
         <>
             <DivEmergent id="popup" >
@@ -17,8 +13,6 @@ const WarningMessage = ({ typeMenu, linkRef }) => {
                     </DivClose>
                 </DivEmergentContent>
             </DivEmergent>
-
-            
         </>
     );
 };

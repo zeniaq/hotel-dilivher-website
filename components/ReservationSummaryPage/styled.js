@@ -113,4 +113,7 @@ export const DivContent = styled.div`
     
 `;
 export const Section = styled.section``;
+export const A = styled.a`
+text-decoration: none;
+`;
 
