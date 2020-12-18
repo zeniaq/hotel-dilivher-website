@@ -1,58 +1,26 @@
 import styled from "styled-components";
 
-export const DivTable = styled.div`
-    padding: 2em;
-    @media screen and (max-width: 980px) {
-        display: block;
-    }
-`;
+export const DivTable = styled.div``;
 export const H1 = styled.h1`
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-  
-    @media screen and (max-width: 980px) {
-        display: block;
-    }
 `;
 export const DivH1 = styled.div`
-background-color: #242943;
-    display: block;
-    margin: 2px;
-    margin-bottom: 35px;
+    background-color: #242943;
+    margin-bottom: 1em;
     border-radius: 3px;
-    padding: 2px 20px;
-
-    @media screen and (max-width: 980px) {
-        display: block;
-        font-size: 1rem;
-    }
+    padding: 0.8em;
 `;
 export const DivColor = styled.div`
-background: rgba(36,41,67,0.8);
-    display: block;
-    margin: 2px;
-    margin-bottom: 35px;
+    background: rgba(36, 41, 67, 0.8);
     border-radius: 3px;
-    padding: 2px 20px;
-   
+    padding: 1em;
 `;
 export const H3 = styled.h3`
-font-size: 1rem;
-font-weight: bold;
-text-align: center;
-
-@media screen and (max-width: 980px) {
-    display: block;
-}
-`;
-export const DivTable2 = styled.div`
-padding: 4 30em;
-
-@media screen and (max-width: 980px) {
-    display: block;
-    padding: 0 2em;
-}
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
 `;
 export const Button = styled.button`
     box-shadow: none;
@@ -72,7 +40,7 @@ export const Button = styled.button`
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
-
+    margin-top: 10px;
     background-color: #242943;
     box-shadow: inset 0 0 0 2px #ffffff;
     color: #ffffff;
@@ -86,34 +54,19 @@ export const Button = styled.button`
 export const DivContent = styled.div`
     align-items: center;
     justify-content: center;
-    padding: 5 !important;
-
-    padding: 1em 0 2em 0;
-    margin: 0 auto;
+    padding: 1em;
+    margin: auto;
     max-width: 100em;
     width: calc(100% - 20em);
-
-    flex-flow: row;
     background: rgba(255, 255, 224, 0.1);
-        border-radius: 4px;
-        overflow: hidden;
-        text-decoration: none;
-        margin-bottom: 5rem;
-        padding: 1em;    
- 
+    border-radius: 3px;
+    overflow: hidden;
+
     @media screen and (max-width: 980px) {
-        display: block;
-        padding: 4em 2 2em 0;
-        border-right: 0;
-        
-        width: calc(95% );
+        width: calc(95%);
     }
-    
-    border-bottom: solid 1px rgba(212, 212, 255, 0.1);
-    
 `;
 export const Section = styled.section``;
 export const A = styled.a`
-text-decoration: none;
+    text-decoration: none;
 `;
-

@@ -1,49 +1,49 @@
 import styled from "styled-components";
 
-export const DivEmergent = styled.div`
+export const Container = styled.div`
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     visibility: hidden;
     opacity: 0;
-
- :target{
-    visibility: visible;
-    opacity: 1;
-  }
+    :target {
+        visibility: visible;
+        opacity: 1;
+    }
 `;
-export const DivEmergentContent = styled.div`
-width: 46%;
-padding: 2%;
-border-radius: 7px;
-color: #000000;
-box-shadow: 0 0 5px #CCC;
-background: #FFF;
-position: relative;
-margin: 20% auto;
-transition: all 5s ease-in-out;
-text-align: center;
-font-weight: bold;
+export const Div = styled.div`
+    color: #000000;
+    box-shadow: 0 0 5px #ccc;
+    background: #fff;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    padding: 1em;
+    border-radius: 3px;
 `;
-export const DivClose = styled.div`
-position: absolute;
-top: 20px;
-right: 30px;
-font-size: 30px;
-font-weight: bold;
-text-decoration: none;
-color: #000000;
-transition: all 200ms;
+export const DivText = styled.div`
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
 `;
-export const Button = styled.button`
+export const DivActions = styled.div`
+    display: flex;
+    width: 100%;
+    margin: auto;
+`;
+export const Button = styled.a`
     box-shadow: none;
     border: 0;
     display: block;
-    margin: auto;
+    margin: 0px 10px;
     border-radius: 3px;
     cursor: pointer;
     font-size: 0.8em;
@@ -57,7 +57,6 @@ export const Button = styled.button`
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
-
     background-color: #242943;
     box-shadow: inset 0 0 0 2px #ffffff;
     color: #ffffff;
