@@ -1,0 +1,3 @@
+[submodule "zeniaq-design-system"]
+	path = zeniaq-design-system
+	url = https://github.com/zeniaq/zeniaq-design-system.git
